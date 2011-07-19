@@ -1,0 +1,2034 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+  <body>
+    <h2>Elementary File of MF</h2>
+    <table border="1">
+    <tr bgcolor="#ffaa11">
+      <th align="left">Header MF</th>      
+    </tr>
+    <xsl:for-each select="opt/MF">
+    <tr>
+      <td align="left">CHV1_status:<xsl:value-of select="header/CHV1_status"/>
+        CHV2_status:<xsl:value-of select="header/CHV2_status"/>
+        FREE_MEMORY:<xsl:value-of select="header/FREE_MEMORY"/>
+        File_characteristics:<xsl:value-of select="header/File_characteristics"/>
+        ID:<xsl:value-of select="header/ID"/>
+        LENGTH:<xsl:value-of select="header/LENGTH"/>
+        Number_of_CHVs:<xsl:value-of select="header/Number_of_CHVs"/>
+        Number_of_DFs:<xsl:value-of select="header/Number_of_DFs"/>
+        Number_of_EFs:<xsl:value-of select="header/Number_of_EFs"/>
+        TYPE:<xsl:value-of select="header/TYPE"/>
+        UNBLOCK_CHV1_status:<xsl:value-of select="header/UNBLOCK_CHV1_status"/>
+        UNBLOCK_CHV2_status:<xsl:value-of select="header/UNBLOCK_CHV2_status"/></td>
+    </tr>
+    </xsl:for-each>
+    </table>
+    <table border="1">
+    <tr bgcolor="#ff1111">
+      <th align="left">ICCID</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/EF/ICCID">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>  
+        <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#ff1111">
+      <th align="left">ELP</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/EF/ELP">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+        <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>  
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    </table>
+    <h2>Elementary File of 7F10</h2>
+    <table border="1">
+    <tr bgcolor="#ffaa11">
+      <th align="left">Header DF</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10">
+    <tr>
+      <td align="left">CHV1_status:<xsl:value-of select="header/CHV1_status"/>
+        CHV2_status:<xsl:value-of select="header/CHV2_status"/>
+        FREE_MEMORY:<xsl:value-of select="header/FREE_MEMORY"/>
+        File_characteristics:<xsl:value-of select="header/File_characteristics"/>
+        ID:<xsl:value-of select="header/ID"/>
+        LENGTH:<xsl:value-of select="header/LENGTH"/>
+        Number_of_CHVs:<xsl:value-of select="header/Number_of_CHVs"/>
+        Number_of_DFs:<xsl:value-of select="header/Number_of_DFs"/>
+        Number_of_EFs:<xsl:value-of select="header/Number_of_EFs"/>
+        TYPE:<xsl:value-of select="header/TYPE"/>
+        UNBLOCK_CHV1_status:<xsl:value-of select="header/UNBLOCK_CHV1_status"/>
+        UNBLOCK_CHV2_status:<xsl:value-of select="header/UNBLOCK_CHV2_status"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">ADN</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/ADN">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+                <xsl:if test=". != 'Empty'">
+                <tr>
+                    <td><xsl:value-of select="."/></td>
+                </tr>
+                </xsl:if>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">FDN</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/FDN">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <xsl:if test=". != 'Empty'">
+                <tr>
+                    <td><xsl:value-of select="."/></td>
+                </tr>
+                </xsl:if>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">SMS</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/SMS">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td align="left">Date:<xsl:value-of select="./Date"/>
+                Hour:<xsl:value-of select="./Hour"/>
+                Length_SMS:<xsl:value-of select="./Length_SMS"/>
+                Number:<xsl:value-of select="./Number"/>
+                Number_Service_Center:<xsl:value-of select="./Number_Service_Center"/>
+                Status:<xsl:value-of select="./Status"/>
+                Text:<xsl:value-of select="./Text"/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">CCP</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/CCP">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">MSISDN</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/MSISDN">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">SMSP</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/SMSP">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">SMSS</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/SMSS">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <tr>
+            <td><xsl:value-of select="content"/></td>
+        </tr>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">LND</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/LND">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">SMSR</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/SMSR">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">SDN</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/SDN">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">EXT1</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/EXT1">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">EXT2</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/EXT2">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">EXT3</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/EXT3">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">BDN</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/BDN">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11ff11">
+      <th align="left">EXT4</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F10/EF/EXT4">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    </table>
+    <h2>Elementary File of 7F20</h2>
+    <table border="1">
+    <tr bgcolor="#ffaa11">
+      <th align="left">Header DF</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20">
+    <tr>
+      <td align="left">CHV1_status:<xsl:value-of select="header/CHV1_status"/>
+        CHV2_status:<xsl:value-of select="header/CHV2_status"/>
+        FREE_MEMORY:<xsl:value-of select="header/FREE_MEMORY"/>
+        File_characteristics:<xsl:value-of select="header/File_characteristics"/>
+        ID:<xsl:value-of select="header/ID"/>
+        LENGTH:<xsl:value-of select="header/LENGTH"/>
+        Number_of_CHVs:<xsl:value-of select="header/Number_of_CHVs"/>
+        Number_of_DFs:<xsl:value-of select="header/Number_of_DFs"/>
+        Number_of_EFs:<xsl:value-of select="header/Number_of_EFs"/>
+        TYPE:<xsl:value-of select="header/TYPE"/>
+        UNBLOCK_CHV1_status:<xsl:value-of select="header/UNBLOCK_CHV1_status"/>
+        UNBLOCK_CHV2_status:<xsl:value-of select="header/UNBLOCK_CHV2_status"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">LP</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/LP">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">IMSI</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/IMSI">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">KC</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/KC">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">PLMNsel</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/PLMNsel">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">HPLMN</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/HPLMN">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">ACMmax</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/ACMmax">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">SST</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/SST">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">ACM</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/ACM">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">GID1</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/GID1">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">GID2</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/GID2">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">PUCT</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/PUCT">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">CBMI</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/CBMI">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">SPN</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/SPN">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">CBMID</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/CBMID">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">BCCH</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/BCCH">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">ACC</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/ACC">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">FPLMN</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/FPLMN">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">LOCI</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/LOCI">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">AD</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/AD">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">PHASE</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/PHASE">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">VGCS</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/VGCS">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">VGCSS</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/VGCSS">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">VBS</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/VBS">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">VBSS</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/VBSS">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">eMLPP</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/eMLPP">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">AAeM</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/AAeM">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">ECC</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/ECC">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">CBMIR</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/CBMIR">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">NIA</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/NIA">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">KcGPRS</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/KcGPRS">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>   
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">LOCIGPRS</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/LOCIGPRS">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">SUME</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/SUME">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">PLMNwACT</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/PLMNwACT">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">OPLMNwACT</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/OPLMNwACT">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">HPLMNwACT</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/HPLMNwACT">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">CPBCCH</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/CPBCCH">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#FFAAAA">
+      <th align="left">INVSCAN</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/EF/INVSCAN">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    </table>
+    <h2>Elementary File of 5F3C</h2>
+    <table border="1">
+    <tr bgcolor="#ffaa11">
+      <th align="left">Header DF</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/DF_5F3C">
+    <tr>
+      <td align="left">CHV1_status:<xsl:value-of select="header/CHV1_status"/>
+        CHV2_status:<xsl:value-of select="header/CHV2_status"/>
+        FREE_MEMORY:<xsl:value-of select="header/FREE_MEMORY"/>
+        File_characteristics:<xsl:value-of select="header/File_characteristics"/>
+        ID:<xsl:value-of select="header/ID"/>
+        LENGTH:<xsl:value-of select="header/LENGTH"/>
+        Number_of_CHVs:<xsl:value-of select="header/Number_of_CHVs"/>
+        Number_of_DFs:<xsl:value-of select="header/Number_of_DFs"/>
+        Number_of_EFs:<xsl:value-of select="header/Number_of_EFs"/>
+        TYPE:<xsl:value-of select="header/TYPE"/>
+        UNBLOCK_CHV1_status:<xsl:value-of select="header/UNBLOCK_CHV1_status"/>
+        UNBLOCK_CHV2_status:<xsl:value-of select="header/UNBLOCK_CHV2_status"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#11fdff">
+      <th align="left">MExEST</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/DF_5F3C/EF/MExEST">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#11fdff">
+      <th align="left">ORPK</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/DF_5F3C/EF/ORPK">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11fdff">
+      <th align="left">ARPK</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/DF_5F3C/EF/ARPK">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    <tr bgcolor="#11fdff">
+      <th align="left">TPRPK</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/DF_5F3C/EF/TPRPK">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    </table>
+    <h2>Elementary File of 5F70</h2>
+    <table border="1">
+    <tr bgcolor="#ffaa11">
+      <th align="left">Header DF</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/DF_5F70">
+    <tr>
+      <td align="left">CHV1_status:<xsl:value-of select="header/CHV1_status"/>
+        CHV2_status:<xsl:value-of select="header/CHV2_status"/>
+        FREE_MEMORY:<xsl:value-of select="header/FREE_MEMORY"/>
+        File_characteristics:<xsl:value-of select="header/File_characteristics"/>
+        ID:<xsl:value-of select="header/ID"/>
+        LENGTH:<xsl:value-of select="header/LENGTH"/>
+        Number_of_CHVs:<xsl:value-of select="header/Number_of_CHVs"/>
+        Number_of_DFs:<xsl:value-of select="header/Number_of_DFs"/>
+        Number_of_EFs:<xsl:value-of select="header/Number_of_EFs"/>
+        TYPE:<xsl:value-of select="header/TYPE"/>
+        UNBLOCK_CHV1_status:<xsl:value-of select="header/UNBLOCK_CHV1_status"/>
+        UNBLOCK_CHV2_status:<xsl:value-of select="header/UNBLOCK_CHV2_status"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#aaadbb">
+      <th align="left">SAI</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/DF_5F70/EF/SAI">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+    <tr>
+      <td><xsl:value-of select="content"/></td>
+    </tr>
+    </xsl:for-each>
+    <tr bgcolor="#aaadbb">
+      <th align="left">SLL</th>      
+    </tr>
+    <xsl:for-each select="opt/MF/DF_7F20/DF_5F70/EF/SLL">
+    <tr>
+        <th align="left">Header</th>
+    </tr>
+    <tr>
+      <td align="left">ID:<xsl:value-of select="header/ID"/>
+        SIZE:<xsl:value-of select="header/SIZE"/>
+        acINCREASE:<xsl:value-of select="header/acINCREASE"/>
+        acINVALIDATE:<xsl:value-of select="header/acINVALIDATE"/>
+        acREAD:<xsl:value-of select="header/acREAD"/>
+        acREHABILITATE:<xsl:value-of select="header/acREHABILITATE"/>
+        acUPDATE:<xsl:value-of select="header/acUPDATE"/>
+        status:<xsl:value-of select="header/status"/>
+        structure:<xsl:value-of select="header/structure"/></td>
+    </tr>
+    <tr>
+        <th align="left">Description</th>
+    </tr>    
+    <tr>
+      <td><xsl:value-of select="@description"/></td>
+    </tr>
+    <tr>
+        <th align="left">Content</th>
+    </tr>
+        <xsl:for-each select="content">          
+            <tr>
+                <td><xsl:value-of select="."/></td>
+            </tr>
+        </xsl:for-each>
+    </xsl:for-each>
+    </table>
+  </body>
+  </html>
+</xsl:template>
+</xsl:stylesheet>

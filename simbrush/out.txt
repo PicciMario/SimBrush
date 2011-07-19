@@ -1,0 +1,177 @@
+gcc -c -ggdb SIMbrush.c
+gcc -c -ggdb pcsc-wrappers.c
+pcsc-wrappers.c: In function ‘SIM_Establish_Context’:
+pcsc-wrappers.c:52: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:56: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:60: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c: In function ‘SIM_Release_Context’:
+pcsc-wrappers.c:87: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:91: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:95: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c: In function ‘Detect_Readers’:
+pcsc-wrappers.c:135: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:139: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:143: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:147: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c: In function ‘SIM_Connect’:
+pcsc-wrappers.c:183: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:187: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:191: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:195: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:199: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:203: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:207: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:211: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:212: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c: In function ‘SIM_Disconnect’:
+pcsc-wrappers.c:240: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:244: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:248: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:252: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c: In function ‘SIM_Status’:
+pcsc-wrappers.c:290: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:294: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:298: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:302: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:361: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:362: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c: In function ‘SIM_Begin_Transaction’:
+pcsc-wrappers.c:389: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:393: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:397: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:401: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:405: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c: In function ‘SIM_End_Transaction’:
+pcsc-wrappers.c:436: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:440: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:444: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:448: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:452: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c: In function ‘gsm_select’:
+pcsc-wrappers.c:500: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:508: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:512: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:516: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:520: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:524: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:528: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:532: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:549: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:559: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c: In function ‘gsm_get_response’:
+pcsc-wrappers.c:611: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:612: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:623: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:627: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:631: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:635: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:639: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:643: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:662: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:663: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c: In function ‘gsm_verify_chv’:
+pcsc-wrappers.c:725: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:737: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:749: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:753: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:757: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:761: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:765: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:769: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:787: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c: In function ‘gsm_read_transparent_file’:
+pcsc-wrappers.c:877: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:885: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:897: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:901: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:905: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:909: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:913: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:917: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:933: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c: In function ‘gsm_read_linear_fixed_file’:
+pcsc-wrappers.c:990: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c: In function ‘gsm_read_cyclic_file’:
+pcsc-wrappers.c:1052: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c: In function ‘gsm_read_record’:
+pcsc-wrappers.c:1127: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:1128: warning: incompatible implicit declaration of built-in function ‘printf’
+pcsc-wrappers.c:1139: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:1143: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:1147: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:1151: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:1155: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:1159: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:1178: warning: incompatible implicit declaration of built-in function ‘strcat’
+pcsc-wrappers.c:1179: warning: incompatible implicit declaration of built-in function ‘printf’
+gcc -c -ggdb dirtree.c
+dirtree.c: In function ‘get_status_after_command’:
+dirtree.c:69: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:86: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:97: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:113: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:134: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:155: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c: In function ‘create_node_contents’:
+dirtree.c:458: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c: In function ‘extract_root’:
+dirtree.c:667: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:678: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c: In function ‘nlist_get_element’:
+dirtree.c:765: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:771: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c: In function ‘nlist_add_element’:
+dirtree.c:811: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:827: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c: In function ‘print_n_list’:
+dirtree.c:956: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:969: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c: In function ‘gsm_find_node’:
+dirtree.c:1041: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1045: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1052: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1071: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1075: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1136: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1141: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1146: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1154: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1173: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c:1177: warning: incompatible implicit declaration of built-in function ‘strcat’
+dirtree.c: In function ‘visualizza_file_id_lista’:
+dirtree.c:1718: warning: incompatible implicit declaration of built-in function ‘strcat’
+gcc -c -ggdb utils.c
+utils.c: In function ‘send_warning’:
+utils.c:25: warning: incompatible implicit declaration of built-in function ‘printf’
+utils.c: In function ‘print_array’:
+utils.c:73: warning: incompatible implicit declaration of built-in function ‘printf’
+utils.c: In function ‘blist_add_element’:
+utils.c:140: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c:156: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c: In function ‘print_b_list’:
+utils.c:191: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c:194: warning: incompatible implicit declaration of built-in function ‘printf’
+utils.c:197: warning: incompatible implicit declaration of built-in function ‘printf’
+utils.c:203: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c: In function ‘blist_get_element’:
+utils.c:247: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c:253: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c: In function ‘blist_set_element’:
+utils.c:302: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c:308: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c: In function ‘reclist_add_element’:
+utils.c:386: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c:402: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c: In function ‘print_rec_list’:
+utils.c:438: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c:441: warning: incompatible implicit declaration of built-in function ‘printf’
+utils.c:445: warning: incompatible implicit declaration of built-in function ‘printf’
+utils.c:451: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c: In function ‘reclist_get_element’:
+utils.c:496: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c:502: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c: In function ‘reclist_set_element’:
+utils.c:552: warning: incompatible implicit declaration of built-in function ‘strcat’
+utils.c:558: warning: incompatible implicit declaration of built-in function ‘strcat’
+gcc -c -ggdb xml-results.c
+gcc -o SIMbrush SIMbrush.o pcsc-wrappers.o dirtree.o utils.o xml-results.o -lpthread -lpcsclite

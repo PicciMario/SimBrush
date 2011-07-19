@@ -1,0 +1,1891 @@
+<simcard level="raw">
+	<atr>
+	3F 2F 00 80 69 AF 03 07 01 59 00 5F 0A 0E 83 3E 9F 16 
+	</atr>
+	<mf id="3F 00">
+		<header>
+		00 00 00 2F 3F 00 01 00 00 00 00 00 09 01 03 10 08 00 81 8A 83 8A 90 00 
+		</header>
+		<df id="7F 20">
+			<header>
+			00 00 00 42 7F 20 02 00 00 00 00 00 09 11 00 15 08 00 81 8A 83 8A 90 00 
+			</header>
+			<ef>
+				<header>
+				00 00 00 04 6F 05 04 00 01 FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					02 01 00 03 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 09 6F 07 04 00 1E FF 1F 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 09 6F 20 04 00 11 FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 3C 6F 30 04 00 11 FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 01 6F 31 04 00 1B FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 03 6F 37 04 00 12 FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 09 6F 38 04 00 1B FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 09 6F 39 04 40 12 1B FF 01 02 03 03 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 04 6F 3E 04 00 1B FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 04 6F 3F 04 00 1B FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 05 6F 41 04 00 12 FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 18 6F 45 04 00 11 FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 11 6F 46 04 00 0B FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 10 6F 74 04 00 11 FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 02 6F 78 04 00 1E FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 0C 6F 7B 04 00 11 FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 0B 6F 7E 04 00 11 FF 1F 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 03 6F AD 04 00 0E FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					00 FF FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 01 6F AE 04 00 0E FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					03 
+					</content>
+				</body>
+			</ef>
+		</df>
+		<df id="7F 10">
+			<header>
+			00 00 00 73 7F 10 02 00 00 00 00 00 09 01 00 0F 08 00 81 8A 83 8A 90 00 
+			</header>
+			<ef>
+				<header>
+				00 00 0E BA 6F 3A 04 00 11 FB 22 01 02 01 1D 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 91 6F 3B 04 00 12 FB FF 01 02 01 1D 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 06 E0 6F 3C 04 00 11 FB BB 01 02 01 B0 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 46 6F 3D 04 00 11 FB BB 01 02 01 0E 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 3A 6F 40 04 00 11 FB BB 01 02 01 1D 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 50 6F 42 04 00 11 FB BB 01 02 01 28 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 02 6F 43 04 00 11 FF FF 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 01 2C 6F 44 04 00 11 FB FF 01 02 03 1E 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 01 34 6F 49 04 00 1B FB BB 01 02 01 1C 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 27 6F 4A 04 00 11 FB BB 01 02 01 0D 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 27 6F 4B 04 00 12 FB BB 01 02 01 0D 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 27 6F 4C 04 00 1B FB BB 01 02 01 0D 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 27 6F 4E 04 00 12 FB BB 01 02 01 0D 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+					<record>
+						<sw>
+						98 04 
+						</sw>
+						<content>
+						
+						</content>
+					</record>
+				</body>
+			</ef>
+		</df>
+		<ef>
+			<header>
+			00 00 00 0A 2F E2 04 00 0B FF FF 01 02 00 00 90 00 
+			</header>
+			<body >
+				<sw>
+				90 00 
+				</sw>
+				<content>
+				98 93 88 20 38 00 90 34 05 F4 
+				</content>
+			</body>
+		</ef>
+	</mf>
+</simcard>

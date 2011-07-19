@@ -1,0 +1,3321 @@
+<simcard level="raw">
+	<atr>
+	3B 3B 96 00 9B 44 20 10 60 6A 80 00 33 90 00 
+	</atr>
+	<mf>
+		<header>
+		00 00 6A 80 3F 00 01 00 0F 55 FF 03 15 B1 04 0C 08 00 83 8A 83 8A 00 8A 83 83 83 00 00 00 00 00 00 00 90 00 
+		</header>
+		<df>
+			<header>
+			00 00 6A 80 7F 20 02 00 0F F5 FF 01 15 B1 00 1D 08 00 83 8A 83 8A 00 8A 83 83 83 00 00 00 00 00 00 00 90 00 
+			</header>
+			<ef>
+				<header>
+				00 00 00 02 6F 05 04 00 01 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					01 FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 09 6F 07 04 00 18 F5 1F 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					08 29 43 33 12 10 47 92 23 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 09 6F 20 04 00 11 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					DF B6 F7 01 D5 EB D8 00 07 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 F0 6F 30 04 00 11 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					32 F4 05 02 F8 10 02 F8 01 02 F8 02 12 F4 30 22 F8 30 02 F6 01 62 F0 30 22 F6 01 13 00 14 32 F1 10 62 F8 30 06 F2 10 02 F2 10 82 F6 10 62 F2 10 02 F4 61 32 F2 30 12 F6 03 72 F2 20 32 F0 20 24 F4 20 22 F2 10 42 F0 10 56 F5 01 42 F2 20 32 F8 02 42 F4 19 04 F4 29 04 F4 09 04 F4 01 04 F4 20 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 01 6F 31 04 00 16 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					05 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 0B 6F 38 04 00 16 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					FF 3C FF FF 0F 00 7F 0F 30 0D 0F 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 02 6F 3E 04 00 16 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					00 00 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 02 6F 3F 04 00 16 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					FF FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 10 6F 45 04 00 11 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 11 6F 46 04 00 06 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 10 6F 48 04 00 15 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 10 6F 74 04 00 11 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					9F 7B 04 28 20 02 80 01 08 61 00 20 10 60 00 03 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 02 6F 78 04 00 16 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					00 04 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 0C 6F 7B 04 00 11 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					32 F4 02 32 F4 01 32 F4 03 32 F4 51 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 0B 6F 7E 04 00 11 F5 1F 01 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					FF FF FF FF 32 F4 33 FF FE FF 03 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 03 6F AD 04 00 08 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					00 00 00 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 01 6F AE 04 00 06 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					03 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 09 6F B7 04 00 05 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					99 F9 FF 11 F2 FF 19 F1 FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 20 6F 50 04 00 11 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 09 6F 52 04 00 11 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					1D 47 78 3D F5 D1 A4 00 04 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 0E 6F 53 04 00 11 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					C1 6C 31 5E FF FF FF 32 F4 33 00 A8 01 00 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 0E 6F 54 04 00 55 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					98 04 
+					</sw>
+					<content>
+					
+					</content>
+				</body>
+			</ef>
+		</df>
+		<df>
+			<header>
+			00 00 6A 80 7F 10 02 00 0F 55 FF 01 15 B1 00 0C 08 00 83 8A 83 8A 00 8A 83 83 83 00 00 00 00 00 00 00 90 00 
+			</header>
+			<ef>
+				<header>
+				00 00 14 50 6F 3A 04 00 11 F5 22 01 02 01 1A 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						53 74 6F 3B 52 61 63 68 65 6C 2F 31 07 81 70 45 64 84 48 F8 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4B 65 6E 64 69 65 2F 31 FF FF FF FF 08 81 41 01 87 38 42 43 52 FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						2E 78 20 20 4A 20 34 20 3B 2E 2F 31 07 81 70 89 23 11 33 F4 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						42 69 6C 61 6C 2F 31 FF FF FF FF FF 07 81 70 97 12 01 83 F5 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4B 69 6D 2F 31 FF FF FF FF FF FF FF 07 91 44 77 56 01 25 58 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 73 68 79 2F 31 FF FF FF FF FF 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 73 68 79 2F 36 FF FF FF FF FF 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4C 65 69 73 68 61 2F 31 FF FF FF FF 07 81 70 48 96 41 76 F2 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						53 61 69 66 FF FF FF FF FF FF FF FF 01 FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						53 65 66 2F 31 FF FF FF FF FF FF FF 07 81 70 59 71 55 81 F9 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4B 61 62 69 72 2F 31 FF FF FF FF FF 07 81 70 99 09 98 49 F9 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 73 68 2F 31 FF FF FF FF FF FF 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 73 68 2F 36 FF FF FF FF FF FF 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						53 74 6F 74 2F 31 FF FF FF FF FF FF 07 81 70 45 64 84 48 F8 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4C 65 65 2F 31 FF FF FF FF FF FF FF 07 81 70 48 96 41 76 F2 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4B 65 6D 61 2F 31 FF FF FF FF FF FF 08 81 41 01 87 38 42 43 52 FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						54 3B 42 6C 75 65 6C 69 6E 65 2F 31 07 81 10 19 62 62 66 F6 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						53 61 74 74 79 2F 31 FF FF FF FF FF 07 91 44 87 69 24 54 86 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						42 65 63 61 2F 31 FF FF FF FF FF FF 07 91 44 97 64 55 62 05 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4B 65 6E 64 69 2F 31 FF FF FF FF FF 08 81 41 01 87 38 42 43 52 FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4C 65 69 73 68 61 2F 31 FF FF FF FF 07 81 70 48 96 41 76 F2 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 73 68 79 2F 31 FF FF FF FF FF 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 73 68 79 2F 36 FF FF FF FF FF 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4F 3B 54 6F 6D 2F 31 FF FF FF FF FF 07 91 44 97 57 45 90 14 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						2E 20 4A 61 6E 67 79 20 3B 58 2F 31 07 81 70 89 23 11 33 F4 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						53 69 73 73 79 2F 31 FF FF FF FF FF 07 81 70 45 50 55 81 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						44 61 64 2F 31 FF FF FF FF FF FF FF 07 81 70 69 71 43 42 F4 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4B 65 72 75 2F 31 FF FF FF FF FF FF 08 81 41 01 87 38 42 43 52 FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4C 65 65 2F 31 FF FF FF FF FF FF FF 07 81 70 48 96 41 76 F2 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 65 65 64 79 3B 42 72 65 74 2F 31 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 65 65 64 79 3B 42 72 65 74 2F 36 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 73 68 79 2F 31 FF FF FF FF FF 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 73 68 79 2F 36 FF FF FF FF FF 07 81 70 05 50 65 68 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4B 65 6E 64 69 2F 31 FF FF FF FF FF 08 81 41 01 87 38 42 43 52 FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						44 69 6E 6B 2F 31 FF FF FF FF FF FF 07 81 70 28 38 19 46 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						54 61 72 61 2F 31 FF FF FF FF FF FF 07 81 70 58 92 52 58 F8 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						44 69 6E 6B 79 2F 31 FF FF FF FF FF 07 81 70 28 38 19 46 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4F 6C 69 76 61 2F 31 FF FF FF FF FF 07 81 70 28 81 09 84 F4 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4B 79 6C 65 2F 31 FF FF FF FF FF FF 07 81 70 58 92 58 81 F4 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4C 65 77 69 73 2F 31 FF FF FF FF FF 07 81 70 25 07 25 03 F6 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 73 73 2F 31 FF FF FF FF FF FF 07 81 70 67 72 69 58 F5 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						5A 6F 65 2F 31 FF FF FF FF FF FF FF 07 81 70 05 18 87 39 F6 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						53 69 73 73 2F 31 FF FF FF FF FF FF 07 81 70 45 50 55 81 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4E 65 77 20 4E 75 6D 62 3B 42 2F 31 07 81 70 87 78 17 65 F5 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						43 6F 6E 6E 61 2F 31 FF FF FF FF FF 07 81 70 08 64 39 22 F2 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						46 69 72 6D 61 6E 2F 31 FF FF FF FF 07 81 70 49 47 02 78 F1 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 61 63 68 65 6C 2F 31 FF FF FF FF 07 81 70 45 64 84 48 F8 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						42 69 6C 61 6C 2F 31 FF FF FF FF FF 07 81 70 87 78 17 65 F5 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 65 65 63 65 2F 31 FF FF FF FF FF 07 81 70 67 72 88 66 F0 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4C 65 61 6E 6E 65 2F 31 FF FF FF FF 07 91 44 57 40 56 76 02 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4A 75 67 6F 2F 31 FF FF FF FF FF FF 07 81 70 55 46 40 11 F6 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4A 61 6E 67 69 2F 31 FF FF FF FF FF 07 81 70 55 46 40 11 F6 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						54 6F 6D 2F 31 FF FF FF FF FF FF FF 07 91 44 97 57 45 90 14 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						48 61 6C 6C 3B 4B 79 6C 65 2F 31 FF 07 81 70 58 92 58 81 F4 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						48 61 76 69 7A 61 2F 31 FF FF FF FF 07 81 80 58 64 48 66 F4 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4E 61 6A 6D 61 2F 31 FF FF FF FF FF 07 81 70 98 87 52 49 F9 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						53 69 73 73 74 61 2F 31 FF FF FF FF 07 81 70 45 50 55 81 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4C 65 69 73 68 61 2F 31 FF FF FF FF 07 81 70 48 96 41 76 F2 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 62 2F 31 FF FF FF FF FF FF FF 07 81 70 28 46 60 34 F1 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4B 69 6D 7A 2F 31 FF FF FF FF FF FF 07 91 44 77 56 01 25 58 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						41 73 68 3B 52 6F 62 2F 31 FF FF FF 07 81 70 19 27 81 03 F2 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						57 61 74 74 3B 52 6F 62 2F 31 FF FF 07 81 70 28 46 60 34 F1 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						52 6F 68 65 65 6E 2F 31 FF FF FF FF 07 81 70 45 95 96 99 F7 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						5A 61 6B 65 65 2F 31 FF FF FF FF FF 02 81 70 FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 0A 28 6F 3B 04 00 12 F5 FF 05 02 01 1A 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 0D C0 6F 3C 04 00 11 F5 FF 05 02 01 B0 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 20 00 30 23 44 0C 91 44 97 72 43 71 64 00 00 01 10 21 22 70 14 00 A0 05 00 03 19 05 04 41 6E D0 BD EC A6 83 64 A0 39 BB 5C 86 BB 40 35 10 5A 3E 07 B1 71 72 10 3A 3D 07 B5 C3 6D D0 FD BD 2E 83 EA 70 D0 F8 AD 07 BD CD A0 30 88 FD AE 93 41 EE 77 7A 5E 76 81 C8 61 7B 9A 0C BA 87 E7 A0 F3 DB 5D 06 91 C3 74 50 FB 2D 77 A7 DD 2C 50 18 64 2E DF 41 68 F9 1C C4 C6 C9 41 E4 B0 3D 4D 9E 83 C4 6F 72 1E 74 0F CF 41 E6 77 DD 4D 06 A5 DD A0 30 68 5E BE 97 E5 2C 10 3A 3D 07 B9 CB E3 35 48 2C 7F AF CB FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 97 37 01 90 37 04 0B D0 4F 79 D8 7D 2E 03 00 00 01 10 61 61 30 44 00 97 C8 34 C8 2C 7F B7 41 4F 79 D8 7D 2E BB 40 D4 37 88 FC 76 87 E9 65 50 40 E6 AA C1 40 F4 37 A8 EA 4C 0E 8B C6 D3 1C 84 0C A7 E9 69 50 39 2C A7 A3 E3 F5 F0 BA 0C 1A A3 D3 6C B2 BC EC 3E CD 41 61 38 BC 1C 66 B3 40 F4 32 9E 0E 22 3E 9D 41 6A 11 44 7F 83 70 36 9A 6C 36 73 81 02 32 57 0D 06 BA A7 D9 6C 90 B8 0C A2 87 D7 65 37 C8 2C 7F B7 41 F9 77 5D 0E 1A CB CB E4 34 DD 05 A2 A2 C3 EE 35 28 FF AE BB 00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 20 00 30 23 44 0C 91 44 97 72 43 71 64 00 00 01 10 21 22 70 72 00 A0 05 00 03 19 05 01 83 E2 77 9D 0E B2 81 F2 E5 B0 7C 0E 0A 9F DF A0 B4 1B 94 76 93 D3 61 77 98 05 1A 87 E5 ED B2 1B 74 4F BB E7 F4 B7 1B 74 0F CF 41 F0 FA 1C 5D 26 83 C8 EF BB 1B 14 06 CD CB F7 B2 1C F4 86 97 DD 65 32 48 9C 07 D5 40 E7 B4 9C 3D 07 A5 DD 20 74 59 0E 9A AF DF 6F 36 88 2E CF A7 DD 20 19 A8 DC 16 87 E5 E1 39 08 5D 96 83 D2 6E 90 59 FE 76 D3 41 6F 33 08 5D 96 83 E6 EB F7 9B 0D 22 D7 E5 69 37 28 0C 32 A7 E5 FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 20 00 30 23 44 0C 91 44 97 72 43 71 64 00 00 01 10 21 22 70 63 00 A0 05 00 03 19 05 03 41 F3 B2 9B 0C 4A D3 41 6F 37 0B 74 2F BB 41 E8 32 E8 5E 76 D3 41 32 10 3D BC 2E 83 C2 A0 39 FA 7D 2F CB 41 E8 32 08 5D 0E CB C9 20 76 D8 9C 76 83 CC F2 77 1B 84 4E CF 41 73 F4 FB 5E 96 BB 40 C8 32 68 4E 0F CB E9 65 32 C8 2C 2F 87 D7 69 37 E8 5D A7 83 DC A0 7B D9 4D 07 C9 40 E8 F4 1C 64 7E BB CB 20 19 68 5E 76 93 41 69 3A E8 ED 66 81 D0 65 D0 BC 4C 06 9D EB 64 90 3B 4D 2F 83 64 20 74 7A 0E 6A 87 DB FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 20 00 30 23 44 0C 91 44 97 72 43 71 64 00 00 01 10 21 22 70 13 00 A0 05 00 03 19 05 02 51 2E 97 2B 05 A2 A3 CB 6E 10 1D 5D 06 8D DF EE B1 BC 4C 2F 83 C2 74 10 1D 5D 06 89 DF F4 77 9B 05 A2 A3 CB A0 73 5A CE 9E 83 E8 6F 36 19 54 B6 CB F3 31 D0 1C 5D 06 99 CB 6C 97 CB 05 2A DA E5 F9 18 48 CC 4E 97 ED 65 32 88 8E 2E B7 15 C6 F0 98 AE 03 C9 40 ED B7 9B 8E 9E 83 C2 E7 37 28 66 03 E5 E5 A0 37 9B 0C 22 87 ED 69 32 E8 2C 2F 9F DF F2 3C 48 5E 1E A7 CB F6 32 19 44 47 A7 E7 20 37 88 9C 26 BB E9 FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 20 00 30 23 44 0C 91 44 97 72 43 71 64 00 00 01 10 21 22 70 64 00 8F 05 00 03 19 05 05 DD 20 37 08 9D 9E 83 E6 EB B4 1B F4 76 83 D0 E9 39 C8 1C 1E 97 41 F0 72 99 5D 26 83 DE E6 10 A8 CE 06 99 D3 6E 32 88 9C 9E 83 64 20 31 88 2E AF BB 5C 2E D7 F1 FD 3E B3 CB A0 34 5D A1 48 9B 41 75 10 F9 ED A6 83 E6 65 37 19 44 4E CF 41 32 50 0C 06 82 C3 D9 20 94 FB 4D 07 B5 CB 29 90 98 06 8A C9 40 32 77 9A 5E 06 8D C3 F2 76 D9 0D BA A7 D9 A0 73 99 0E AA 87 00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 07 90 02 22 00 0C 91 44 97 16 37 24 44 00 00 01 10 12 02 22 35 00 58 D9 77 1D 84 0E DB CB A0 30 A8 9D 9E CF CB 64 D0 38 CC 66 EB 40 74 74 7A 0E 82 97 E5 F3 B7 FB E5 AE B7 C5 65 39 68 1C 66 B3 CB 64 50 98 0E 82 E5 74 30 19 E8 ED 06 C9 62 2F 58 0C 24 AE D3 41 EC B2 99 0E 72 BF 41 ED F2 7C 1E 3E 97 5D FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 97 37 01 90 37 04 0B D0 4F 79 D8 7D 2E 03 00 00 01 20 40 41 53 33 00 A0 C4 B7 FB 44 07 99 DF F2 73 99 0E A2 A3 C3 74 50 FE 5D 07 9D CB 74 50 DD CD 4E B7 D3 F4 32 19 D4 7E 8B D3 EC 32 28 ED A6 97 E5 EE 32 1D 24 96 BF EF F3 B4 FB 0C 0A B3 D9 20 72 38 0F 32 BF E5 20 75 7D 4E 07 05 62 2C 10 9C 5D 9F 83 DA F5 31 1A D4 7E CB CB 2E D0 B4 5C 06 DD EF 77 D7 5B 1E 76 9F CB AE F1 DB 55 5F BF E6 75 B9 19 44 7F 83 DA E1 75 19 34 AF CB CB A0 FC BB 7E 92 97 41 EE 37 1D D4 4E CF E7 69 F7 19 F4 AE D3 5D FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 77 58 10 06 50 04 0C 91 44 87 42 28 26 05 00 00 01 30 51 31 23 75 00 1F C4 37 28 FF AE 83 D6 EE F7 1D 74 47 97 E5 65 10 1D 5D 06 D1 D1 69 F7 19 94 9E FF 40 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 20 00 30 23 04 0C 91 44 87 06 84 61 43 00 00 01 30 71 71 60 32 00 16 CD 3C C8 5D BE 83 DC F5 B6 B8 2C 67 81 E4 69 7D 3A 0D C2 03 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 97 85 78 89 38 24 0C 91 44 57 93 19 64 99 00 00 01 30 71 91 55 80 00 2E CE 72 F9 0E 82 A3 DF 6F 77 19 E4 2E 97 EF 20 77 BD 2D 0E 87 41 BD 14 CB 2C 7F B7 41 E8 B0 3D AD 0F 87 C3 20 5D 8A 85 C7 03 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 97 37 01 90 37 44 14 D0 66 F9 BB 1D 79 CA C3 EE 73 19 00 00 01 30 81 80 24 10 00 A0 05 00 03 00 02 01 90 65 36 FB ED 02 3D DD 20 58 0C D4 0C CB 41 F9 77 1D 84 0E 93 41 81 98 CD 55 83 81 E6 69 3A 3D ED 3E 83 D2 6E 50 FE 5D 97 83 A0 E8 B7 BB 0C 32 D6 DD 64 17 28 49 07 9D D3 F6 F2 1C 94 7F D7 41 61 10 39 3D 1F BF EB 6E 3A E8 ED 06 85 41 62 79 D8 4D 06 B9 CB 77 10 1C FD 76 97 5D 20 6B 7A 9E A6 83 F2 EF BA 1C C4 7E 8F C3 6C D0 53 1E 76 9F CB A0 39 FA 0D 07 D1 DF A0 79 B9 0C A2 A3 CB A0 79 D8 9E 76 9F 41 FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 97 37 01 90 37 44 14 D0 66 F9 BB 1D 79 CA C3 EE 73 19 00 00 01 30 81 80 24 20 00 59 05 00 03 00 02 02 F2 EF 3A 68 FC AE B3 C9 A0 76 78 5D 06 BD DD A0 30 C8 5D BE 83 A6 6F 77 1E 54 94 A7 C7 F3 F9 DB 0D BA D6 72 35 17 C8 F8 96 83 E8 65 79 7B 0E B2 A7 E7 69 3A E8 2D 0F BB CF 65 D7 F8 ED AA AF 5F 70 F4 DB 5D 36 D7 DD 64 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 97 37 01 90 37 04 0B D0 4F 79 D8 7D 2E 03 00 00 01 30 81 90 62 31 00 97 43 74 98 0E 32 BF E5 20 F6 DB 7D 2E CB 41 E6 B7 1C C4 2E CF E7 A0 7B 9A 8E 06 35 C3 E7 F4 18 E4 AC B7 C5 65 F9 DC 05 1A A2 C3 74 10 FD 0D CA BF EB 72 D0 0C 24 2E CF E9 E5 39 9D 05 12 97 E7 F4 F2 9C 0E 32 CB D3 65 37 79 0E 7A BB 41 4F 79 D8 7D 2E 83 CC 6F 39 A8 0E 07 D1 DF A0 B0 1B 84 7E D7 E5 20 F3 5B 0E 52 D7 E7 74 90 0C 06 77 81 9A 6F 79 19 14 A6 83 DE F2 B0 FB 5C 76 8D DF AE FA FA D5 76 D3 00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 20 00 30 23 40 0C 91 44 87 06 84 61 43 00 00 01 30 02 11 25 14 00 A0 05 00 03 15 03 01 69 A0 30 1B 44 47 C3 E6 65 D0 1D FD 06 D5 E7 65 90 59 5E 2E 83 E8 65 3C 7D 0E 52 30 CB F4 D3 1C 34 2F 97 41 77 F4 1B 74 7F BB E9 20 7A 19 4F 07 D1 D1 E9 79 08 14 64 B3 41 79 58 1D 84 0E DB CB 20 FA 1B 44 86 81 D2 73 D0 3C 9C 07 B5 40 8A 69 5D 8C 0E BB 41 41 36 3B 8C 06 05 D9 E8 70 9B 5C 07 B1 D3 6C 76 18 0D 0A B2 D9 61 34 08 5D 07 05 D7 E2 B0 DC 05 0A CE E9 E1 33 DA 9C 96 83 AA 6C 76 18 0D 62 86 41 FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 20 00 30 23 40 0C 91 44 87 06 84 61 43 00 00 01 30 02 11 25 44 00 A0 05 00 03 15 03 02 D3 6C 76 18 1D 06 A5 D9 EC 30 3B 8C 7E 83 9A 75 74 B8 DD 0E 93 EB 72 90 34 3C 7F BF D9 41 36 3B 8C 06 29 98 61 50 9A CD 0E A3 C3 A0 34 9B 1D 06 85 DD F4 30 68 5E 17 A3 C3 EE F0 3A 0C 4A BB DD 69 D0 BA EE A6 D7 41 ED B4 3B AC AF 87 D9 E9 76 B9 EC 06 F9 82 6C 76 18 5D 6F 87 41 61 75 5A EE 4E 83 DA 69 B7 3B EC 06 B9 C3 61 B9 0B E4 7C DF 41 F3 B2 9B 0C 4A D3 41 F4 37 08 5E 86 C1 D9 65 50 DA 0D AA CB 41 FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 20 00 30 23 44 0C 91 44 87 06 84 61 43 00 00 01 30 02 11 25 74 00 5D 05 00 03 15 03 03 C7 30 37 3D 3C A6 83 D8 E9 39 3D 04 BA A6 E9 E8 B4 1B E4 7E 83 E8 E9 76 99 05 CA C3 EA A0 7B 9A CD 06 8D C3 F5 79 19 D4 AE B3 E9 69 38 BB 0C 7A 9B 41 F0 32 0C CE 2E 83 E8 30 10 5C 1E CE BB 5C 2E 85 32 A8 0D 2E 5B 41 26 33 88 04 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 07 90 02 22 00 0C 91 44 57 80 19 98 74 00 00 01 30 32 21 10 43 00 58 D9 77 1D 84 0E DB CB A0 30 A8 9D 9E CF CB 64 D0 38 CC 66 EB 40 74 74 7A 0E 82 97 E5 F3 B7 FB E5 AE B7 C5 65 39 68 1C 66 B3 CB 64 50 98 0E 8A E1 74 B3 19 E8 ED 06 C9 64 2F D8 0C 24 AE D3 41 EC B2 99 0E 72 BF 41 ED F2 7C 1E 3E 97 5D FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 07 90 02 22 00 0C 91 44 97 37 01 10 32 00 00 01 60 51 21 91 30 40 7F 41 37 28 E8 9E DF CB 72 10 14 FD 76 97 41 ED F2 7C 1E 3E 97 41 F7 F0 1C C4 2E 9B E9 20 F3 5B 0E CA BF EB A0 30 1D 14 BB E9 64 34 D0 DB 0D 92 DD 5E B0 9A 0B 04 65 97 C3 F3 32 68 1C 66 B3 41 31 D9 0C 44 7F 83 D8 E9 39 BD EC 06 D1 DF A0 34 1D 24 2E 9B DF F2 32 28 4D 07 A5 E7 A0 70 9D FE 6E 87 E9 E9 71 98 CD CE 83 C8 65 76 99 5E 26 BB 00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						01 07 91 44 87 07 90 02 22 00 0C 91 44 97 16 37 24 44 00 00 01 70 40 01 65 32 40 58 D9 77 1D 84 0E DB CB A0 30 A8 9D 9E CF CB 64 D0 38 CC 66 EB 40 74 74 7A 0E 82 97 E5 F3 B7 FB E5 AE B7 C5 65 39 68 1C 66 B3 CB 64 50 98 0E 8A C1 74 33 1A E8 ED 06 C1 68 2F D8 0D 24 AE D3 41 EC B2 99 0E 72 BF 41 ED F2 7C 1E 3E 97 5D FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 46 6F 3D 04 00 11 F5 FF 05 02 01 0E 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 82 6F 40 04 00 11 F5 FF 05 02 01 1A 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF 07 81 70 35 21 86 02 F2 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 50 6F 42 04 00 11 F5 FF 05 02 01 28 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF E1 FF FF FF FF FF FF FF FF FF FF FF FF 07 91 44 97 37 01 90 37 FF FF FF FF 00 00 FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 02 6F 43 04 00 11 F5 FF 05 02 00 00 90 00 
+				</header>
+				<body >
+					<sw>
+					90 00 
+					</sw>
+					<content>
+					7E FF 
+					</content>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 82 6F 44 04 00 11 FF FF 05 02 03 1A 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF 03 81 51 F0 FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF 03 81 51 F0 FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF 03 81 41 F0 FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF 03 81 41 F0 FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF 07 81 10 19 72 63 19 F4 FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 96 6F 47 04 00 11 F5 FF 05 02 01 1E 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						00 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 01 04 6F 49 04 00 16 F5 66 01 02 01 1A 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						43 75 73 74 20 53 65 72 76 69 63 65 07 91 44 97 37 01 40 05 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						41 63 63 6F 75 6E 74 FF FF FF FF FF 07 91 44 97 37 01 40 05 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						41 6E 73 77 65 72 20 50 68 6F 6E 65 07 91 44 97 37 01 10 32 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						56 6F 69 63 65 20 4D 65 64 69 61 FF 07 91 44 97 37 01 10 77 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						54 72 61 66 66 69 63 20 4E 65 77 73 03 81 42 F0 FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						54 65 78 74 20 4D 65 64 69 61 FF FF 03 81 72 F7 FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						44 69 72 20 45 6E 71 FF FF FF FF FF 04 81 11 08 00 FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4F 72 61 6E 67 65 20 57 6F 72 6C 64 07 91 44 97 37 01 20 74 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						4F 72 61 6E 67 65 20 47 75 69 64 65 07 91 44 97 37 01 40 25 FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 82 6F 4A 04 00 11 F5 FF 01 02 01 0D 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						00 FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						00 FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+			<ef>
+				<header>
+				00 00 00 1A 6F 4B 04 00 12 F5 FF 05 02 01 0D 90 00 
+				</header>
+				<body>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+					<record>
+						<sw>
+						90 00 
+						</sw>
+						<content>
+						FF FF FF FF FF FF FF FF FF FF FF FF FF 
+						</content>
+					</record>
+				</body>
+			</ef>
+		</df>
+		<ef>
+			<header>
+			00 00 00 0A 2F E2 04 00 0F F5 FF 05 02 00 00 90 00 
+			</header>
+			<body >
+				<sw>
+				90 00 
+				</sw>
+				<content>
+				98 44 21 25 21 11 47 10 29 F9 
+				</content>
+			</body>
+		</ef>
+	</mf>
+</simcard>
