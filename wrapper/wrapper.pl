@@ -1,10 +1,13 @@
-#! /usr/bin/perl
+#! /usr/bin/perl -w
 
 use XML::Simple;
 use Data::Dumper;
 use Regexp::Common qw /whitespace/;
 use File::Copy;
 use XML::XSLT;
+use Device::Gsm::Pdu;
+use Encode qw/encode decode/;
+use GSM::Nbit;
 #no warnings "all";
 
 my %act = (
@@ -1018,7 +1021,7 @@ while ($root_mf->[$x]){
 
 
 my $i=0; #counter for addressing all the DFs under the Master File
-my $n_df=0; #current Df being parsed
+my $n_df=0; #current DF being parsed
 #DF 7F20
 #MF absolute path in the XML tree (XML::Simple)
 my $root_mf1=$tree->{mf}->[0]->{df};
@@ -1722,8 +1725,7 @@ sub Parse_ELP {   #manca la norvegia
     #preferred languages of the user in order of priority. This information may be used by the ME for MMI purposes.
 
     my @h = @_;
-    my $out;
- 
+    my $out; 
     my %language = ('de' => "German",
                     'en' => "English",
                     'it' => "Italian",
@@ -1739,16 +1741,18 @@ sub Parse_ELP {   #manca la norvegia
                     'hu' => "Hungarian",
                     'pl' => "Polish",);
     $elp="";
-    my $i=0;
-    my @firstbit = " ";
-    my @secondbit = " ";
+    my $i=0;   
     my $a = 1;
     for ($i=0;$i<scalar($#h);$i=$i+2){
-        @firstbit = split(//,Hex2Bin($h[$i]));
-        @secondbit = split(//,Hex2Bin($h[$i+1]));
-        my $lan = $language{Trad2Sms(join('',$firstbit[1],$firstbit[2],$firstbit[3],$firstbit[4],$firstbit[5],$firstbit[6],$firstbit[7])).
-            Trad2Sms(join('',$secondbit[1],$secondbit[2],$secondbit[3],$secondbit[4],$secondbit[5],$secondbit[6],$secondbit[7]))};
-            $out="Language ".$a." is ".$lan."###";
+        my $byte1 = unpack("B*", pack("H*", $h[$i]));
+        my $byte2 = unpack("B*", pack("H*", $h[$i+1]));
+        $byte1 =~ s/^.//s;
+        $byte2 =~ s/^.//s;
+        my $ch1 = Trad2Sms($byte1);
+        my $ch2 = Trad2Sms($byte2);
+        #print "$ch1, $ch2\n";
+        my $lan = $language{$ch1.$ch2};        
+        $out="Language ".$a." is ".$lan."###";
         $elp=$elp.$out;
         $a++;
     }
@@ -1862,7 +1866,7 @@ sub Parse_ACMmax {
     my $totale1=0;
     my $totale2=0;
     my $totale3=0;    
-    for ($i=0;$i<8;$i++){ #convert bit in acmmax value
+    for ($i=0;$i<8;$i++){ #conversion bit/decimal
        $totale1=$totale1+(2**(23-$i))*($t1[$i]);  
        $totale2=$totale2+(2**(15-$i))*($t2[$i]);
        $totale3=$totale3+(2**(7-$i))*($t3[$i]);
@@ -1879,77 +1883,102 @@ sub Parse_SST {    #far apparire i servizi anche se non "allocati" nella SIM??
     
     my @h = @_;
     
+    #print "array h => @h";
+    
+    #first bit = 0: service not allocated, second bit has no meaning;
+    #first bit = 1 and second bit = 0: service allocated but not activated;
+    #first bit = 1 and second bit = 1: service allocated and activated.
+    
     my %results = ('00' =>" not allocated",
                    '01' =>" not allocated",
                    '10' =>" allocated but not activated",
                    '11' =>" allocated and activated",);
     
-    my @out1 = split(//,Hex2Bin($h[0]));
+    
+    # MSB ... LSB
+    #(b8) ... (b1)
+    # Service 1 => b2,b1
+    # Service 2 => b4,b3
+    # Service 3 => b6,b5
+    # Service 4 => b8,b7
+    my @out1 = split(//,Hex2Bin($h[0])); #print "out1 => @out1\n";
     my @out2 = split(//,Hex2Bin($h[1]));
     my @out3 = split(//,Hex2Bin($h[2]));
     my @out4 = split(//,Hex2Bin($h[3]));
     my @out5 = split(//,Hex2Bin($h[4]));
-    my @out6 = split(//,Hex2Bin($h[5]));
+    my @out6 = split(//,Hex2Bin($h[5])); 
     my @out7 = split(//,Hex2Bin($h[6]));
     my @out8 = split(//,Hex2Bin($h[7]));
     my @out9 = split(//,Hex2Bin($h[8]));
     my @out10 = split(//,Hex2Bin($h[9]));
-    my @out11 = split(//,Hex2Bin($h[10]));
+    my @out11 = split(//,Hex2Bin($h[10])); 
     my @out12 = split(//,Hex2Bin($h[11]));
-    #my @out13 = split(//,Hex2Bin($h[12]));
+    my @out13 = split(//,Hex2Bin($h[12]));
     
-    return $sst= "Service 1 : CHV1 disable function".$results{$out1[7].$out1[6]}."###".
-    "Service 2 : Abbreviated Dialling Numbers (ADN)".$results{$out1[5].$out1[4]}."###".
-    "Service 3 : Fixed Dialling Numbers (FDN)".$results{$out1[3].$out1[2]}."###".
-    "Service 4 : Short Message Storage (SMS)".$results{$out1[1].$out1[0]}."###".
-    "Service 5 : Advice of Charge (AoC)".$results{$out2[7].$out2[6]}."###".
-    "Service 6 : Capability Configuration Parameters (CCP)".$results{$out2[5].$out2[4]}."###".
-    "Service 7 : PLMN selector".$results{$out2[3].$out2[2]}."###".
-    "Service 8 : RFU".$results{$out2[1].$out2[0]}."###".
-    "Service 9 : MSISDN".$results{$out3[7].$out3[6]}."###".
-    "Service 10: Extension1".$results{$out3[5].$out3[4]}."###".
-    "Service 11: Extension2".$results{$out3[3].$out3[2]}."###".
-    "Service 12: SMS Parameters".$results{$out3[1].$out3[0]}."###".
-    "Service 13: Last Number Dialled (LND)".$results{$out4[7].$out[6]}."###".
-    "Service 14: Cell Broadcast Message Identifier".$results{$out4[5].$out[4]}."###".
-    "Service 15: Group Identifier Level 1".$results{$out4[3].$out[2]}."###".
-    "Service 16: Group Identifier Level 2".$results{$out4[1].$out[0]}."###".
-    "Service 17: Service Provider Name".$results{$out5[7].$out5[6]}."###".
-    "Service 18: Service Dialling Numbers (SDN)".$results{$out5[5].$out5[4]}."###".
-    "Service 19: Extension3".$results{$out5[3].$out5[2]}."###".
-    "Service 20: RFU".$results{$out5[1].$out5[0]}."###".
-    "Service 21: VGCS Group Identifier List (EFVGCS and EFVGCSS)".$results{$out6[7].$out6[6]}."###".
-    "Service 22: VBS Group Identifier List (EFVBS and EFVBSS)".$results{$out6[5].$out6[4]}."###".
-    "Service 23: enhanced Multi-Level Precedence and Pre-emption Service".$results{$out6[3].$out6[2]}."###".
-    "Service 24: Automatic Answer for eMLPP".$results{$out6[1].$out6[0]}."###".
-    "Service 25: Data download via SMS-CB".$results{$out7[7].$out7[6]}."###".
-    "Service 26: Data download via SMS-PP".$results{$out7[5].$out7[4]}."###".
-    "Service 27: Menu selection".$results{$out7[3].$out7[2]}."###".
-    "Service 28: Call control".$results{$out7[1].$out7[0]}."###".
-    "Service 29: Proactive SIM".$results{$out8[7].$out8[6]}."###".
-    "Service 30: Cell Broadcast Message Identifier Ranges".$results{$out8[5].$out8[4]}."###".
-    "Service 31: Barred Dialling Numbers (BDN)".$results{$out8[3].$out8[2]}."###".
-    "Service 32: Extension4".$results{$out8[1].$out8[0]}."###".
-    "Service 33: De-personalization Control Keys".$results{$out9[7].$out9[6]}."###".
-    "Service 34: Co-operative Network List".$results{$out9[5].$out9[4]}."###".
-    "Service 35: Short Message Status Reports".$results{$out9[3].$out9[2]}."###".
-    "Service 36: Network's indication of alerting in the MS".$results{$out9[1].$out9[0]}."###".
-    "Service 37: Mobile Originated Short Message control by SIM".$results{$out10[7].$out10[6]}."###".
-    "Service 38: GPRS".$results{$out10[5].$out10[4]}."###".
-    "Service 39: Image (IMG)".$results{$out10[3].$out10[2]}."###".
-    "Service 40: SoLSA (Support of Local Service Area)".$results{$out10[1].$out10[0]}."###".
-    "Service 41: USSD string data object supported in Call Control".$results{$out11[7].$out11[6]}."###".
-    "Service 42: RUN AT COMMAND command".$results{$out11[5].$out11[4]}."###".
-    "Service 43: User controlled PLMN Selector with Access Technology".$results{$out11[3].$out11[2]}."###".
-    "Service 44: Operator controlled PLMN Selector with Access Technology".$results{$out11[1].$out11[0]}."###".
-    "Service 45: HPLMN Selector with Access Technology".$results{$out12[7].$out12[6]}."###".
-    "Service 46: CPBCCH Information".$results{$out12[5].$out12[4]}."###".
-    "Service 47: Investigation Scan".$results{$out12[3].$out12[2]}."###".
-    "Service 48: Extended Capability Configuration Parameters".$results{$out12[1].$out12[0]}."###";
-    #"Service 49: MExe".$results{$out13[7].$out13[6]}."###".
-    #"Service 50: RFU".$results{$out13[5].$out13[4]}."###".
-    #"Service 51: RFU".$results{$out13[3].$out13[2]}."###".
-    #"Service 52: RFU".$results{$out13[1].$out13[0]}."###";
+    return $sst= "Service 1 : CHV1 disable function".                   $results{$out1[1].$out1[0]}."###".
+    "Service 2 : Abbreviated Dialling Numbers (ADN)".                   $results{$out1[3].$out1[2]}."###".
+    "Service 3 : Fixed Dialling Numbers (FDN)".                         $results{$out1[5].$out1[4]}."###".
+    "Service 4 : Short Message Storage (SMS)".                          $results{$out1[7].$out1[6]}."###".
+    
+    "Service 5 : Advice of Charge (AoC)".                               $results{$out2[1].$out2[0]}."###".
+    "Service 6 : Capability Configuration Parameters (CCP)".            $results{$out2[2].$out2[2]}."###".
+    "Service 7 : PLMN selector".                                        $results{$out2[5].$out2[4]}."###".
+    "Service 8 : RFU".                                                  $results{$out2[7].$out2[6]}."###".
+    
+    "Service 9 : MSISDN".                                               $results{$out3[1].$out3[0]}."###".
+    "Service 10: Extension1".                                           $results{$out3[3].$out3[2]}."###".
+    "Service 11: Extension2".                                           $results{$out3[5].$out3[4]}."###".
+    "Service 12: SMS Parameters".                                       $results{$out3[7].$out3[6]}."###".
+    
+    "Service 13: Last Number Dialled (LND)".                            $results{$out4[1].$out[0]}."###".
+    "Service 14: Cell Broadcast Message Identifier".                    $results{$out4[3].$out[2]}."###".
+    "Service 15: Group Identifier Level 1".                             $results{$out4[5].$out[4]}."###".
+    "Service 16: Group Identifier Level 2".                             $results{$out4[7].$out[6]}."###".
+    
+    "Service 17: Service Provider Name".                                $results{$out5[1].$out5[0]}."###".
+    "Service 18: Service Dialling Numbers (SDN)".                       $results{$out5[3].$out5[2]}."###".
+    "Service 19: Extension3".                                           $results{$out5[5].$out5[4]}."###".
+    "Service 20: RFU".                                                  $results{$out5[7].$out5[6]}."###".
+    
+    "Service 21: VGCS Group Identifier List (EFVGCS and EFVGCSS)".        $results{$out6[1].$out6[0]}."###".
+    "Service 22: VBS Group Identifier List (EFVBS and EFVBSS)".           $results{$out6[3].$out6[2]}."###".
+    "Service 23: enhanced Multi-Level Precedence and Pre-emption Service".$results{$out6[5].$out6[4]}."###".
+    "Service 24: Automatic Answer for eMLPP".                             $results{$out6[7].$out6[6]}."###".
+    
+    "Service 25: Data download via SMS-CB".                             $results{$out7[1].$out7[0]}."###".
+    "Service 26: Data download via SMS-PP".                             $results{$out7[3].$out7[2]}."###".
+    "Service 27: Menu selection".                                       $results{$out7[5].$out7[4]}."###".
+    "Service 28: Call control".                                         $results{$out7[7].$out7[6]}."###".
+    
+    "Service 29: Proactive SIM".                                        $results{$out8[1].$out8[0]}."###".
+    "Service 30: Cell Broadcast Message Identifier Ranges".             $results{$out8[3].$out8[2]}."###".
+    "Service 31: Barred Dialling Numbers (BDN)".                        $results{$out8[5].$out8[4]}."###".
+    "Service 32: Extension4".                                           $results{$out8[7].$out8[6]}."###".
+    
+    "Service 33: De-personalization Control Keys".                      $results{$out9[1].$out9[0]}."###".
+    "Service 34: Co-operative Network List".                            $results{$out9[3].$out9[2]}."###".
+    "Service 35: Short Message Status Reports".                         $results{$out9[5].$out9[4]}."###".
+    "Service 36: Network's indication of alerting in the MS".           $results{$out9[7].$out9[6]}."###".
+    
+    "Service 37: Mobile Originated Short Message control by SIM".       $results{$out10[1].$out10[0]}."###".
+    "Service 38: GPRS".                                                 $results{$out10[3].$out10[2]}."###".
+    "Service 39: Image (IMG)".                                          $results{$out10[5].$out10[4]}."###".
+    "Service 40: SoLSA (Support of Local Service Area)".                $results{$out10[7].$out10[6]}."###".
+    
+    "Service 41: USSD string data object supported in Call Control".    $results{$out11[1].$out11[0]}."###".
+    "Service 42: RUN AT COMMAND command".                               $results{$out11[3].$out11[2]}."###".
+    "Service 43: User controlled PLMN Selector with Access Technology". $results{$out11[5].$out11[4]}."###".
+    "Service 44: Operator controlled PLMN Selector with Access Technology".$results{$out11[7].$out11[6]}."###".
+    
+    "Service 45: HPLMN Selector with Access Technology".                $results{$out12[1].$out12[0]}."###".
+    "Service 46: CPBCCH Information".                                   $results{$out12[3].$out12[2]}."###".
+    "Service 47: Investigation Scan".                                   $results{$out12[5].$out12[4]}."###".
+    "Service 48: Extended Capability Configuration Parameters".         $results{$out12[7].$out12[6]}."###";
+    
+    "Service 49: MExe".                                                 $results{$out13[1].$out13[0]}."###".
+    "Service 50: RFU".                                                  $results{$out13[3].$out13[2]}."###".
+    "Service 51: RFU".                                                  $results{$out13[5].$out13[4]}."###".
+    "Service 52: RFU".                                                  $results{$out13[7].$out13[6]}."###";
 }
 ################################################################################################
 sub Parse_ACM{
@@ -2029,7 +2058,7 @@ sub Parse_CBMI {
     #Unused entries shall be set to 'FF FF'.
     for (my $i=0;$i<=(scalar($#h)/2);$i++){
         
-        if(($h[($i*2)].$h[$i*2+1]) == 'FFFF'){
+        if(($h[($i*2)].$h[$i*2+1]) eq 'FFFF'){
             $result = "Empty";
         }else{
             $result = $h[($i*2)].$h[$i*2+1];
@@ -2059,7 +2088,7 @@ sub Parse_SPN {
     my $spn3;
     for ($i=1;$i<17;$i++){ 
         @fin = split(//,Hex2Bin($h[$i]));
-        $spn3 = $spn3."\n".Trad2Sms(join('',$fin[1],$fin[2],$fin[3],$fin[4],$fin[5],$fin[6],$fin[7])); #text
+        $spn3 = $spn3."\n".Trad2Sms(join('',$fin[1],$fin[2],$fin[3],$fin[4],$fin[5],$fin[6],$fin[7])); #text                
     }
     $spn = $spn0.$spn1."###".$spn2.$spn3."###";
     return $spn; #Service Provider Name
@@ -2179,22 +2208,22 @@ sub Parse_AD {
     my $ad0 = "Initial value is: ".$h[0];
     my $ad1;
     #mode of operation for the MS
-        if ($h[0]==00){
+        if ($h[0]=='00'){
             $ad1 = "Normal operation!";
         }
-        if ($h[0]==80){
+        elsif ($h[0]=='80'){
             $ad1 = "Type approval operations!";
         }
-        if ($h[0]==01){
+        elsif ($h[0]=='01'){
             $ad1 = "Normal operations + specific facilities!";
         }
-        if ($h[0]==81){
+        elsif ($h[0]=='81'){
             $ad1 = "Type approval operations + specific facilities!";
         }
-        if ($h[0]==02){
+        elsif ($h[0]=='02'){
             $ad1 = "Maintenance(off line)!";
         }
-        if ($h[0]==04){
+        elsif ($h[0]=='04'){
             $ad1 = "Cell test operation!";
         }    
         my @temp1=split(//,Hex2Bin($h[0]));
@@ -2207,13 +2236,13 @@ sub Parse_AD {
         if ($temp1[0]==0){
             $ad3 = "Specific facilities";
         }
-        if ($temp1[1]==1){
+        elsif ($temp1[1]==1){
             $ad3 = "ME manufacturer specific information";
         }    
-        if ($temp3[0]==0){
+        elsif ($temp3[0]==0){
             $ad4 = "OFM to be disabled by the ME!";
         }
-        if ($temp3[0]==1){
+        elsif ($temp3[0]==1){
             $ad4 = "OFM to be activated by the ME!";
         }
         my $ad5 = "RFU: ";    
@@ -2242,13 +2271,13 @@ sub Parse_Phase {
     
     my $phase0 ="SIM Phase: ".$h[0];
     my $phase1;
-    if ($h[0]==00){
+    if ($h[0]=='00'){
        $phase1 = "Phase1";
     }
-    elsif ($h[0]==02){
+    elsif ($h[0]=='02'){
        $phase1 = "Phase2";
     }
-    elsif ($h[0]==03){
+    elsif ($h[0]=='03'){
        $phase1 = "Phase2 and PROFILE DOWNLOAD required";
     }
     else {
@@ -2437,8 +2466,8 @@ sub Parse_ECC{
         my @u = split(//,$h[$a+1]);
         my @v = split(//,$h[$a+2]);
         my $s = $i+1;        
-#        $ecc = $ecc."Emergency Call Code".$s." :".(Hex2Dec($t[0])+Hex2Dec($t[1])).
-#       (Hex2Dec($u[0])+Hex2Dec($u[1])).(Hex2Dec($v[0])+Hex2Dec($v[1]))."###";
+        $ecc = $ecc."Emergency Call Code".$s." :".(Hex2Dec($t[0])+Hex2Dec($t[1])).
+       (Hex2Dec($u[0])+Hex2Dec($u[1])).(Hex2Dec($v[0])+Hex2Dec($v[1]))."###";
         $a = $a + 3;           
     }
     return $ecc;
@@ -2532,20 +2561,20 @@ sub Parse_LOCIGPRS{
             if ($t[7] == 0){
                 $locigprs1 = "Updated";
             }
-            if ($t[7] == 1){
+            else{
                 $locigprs1 = "Not updated";
             }
         }
-        if ($t[6] == 1){
+        else{
             if ($t[7] == 0){
                 $locigprs1 = "PLMN not allowed";
             }
-            if ($t[7] == 1){
+            else{
                 $locigprs1 = "Routing Area not allowed";
             }
         }   
     }
-    if ($t[5] == 1){
+    else{
         if ($t[6] == 1){
             if ($t[7] == 1){
                 $locigprs1 = "Reserved";
@@ -2750,13 +2779,13 @@ sub Parse_SLL{
     if (($bit_conf[6] eq '0')&&($bit_conf[7] eq '0')){
         $sll2b = "icon is not to be used and may not be present";
     }
-    if (($bit_conf[6] eq '0')&&($bit_conf[7] eq '1')){
+    elsif (($bit_conf[6] eq '0')&&($bit_conf[7] eq '1')){
         $sll2b = "icon is self-explanatory, i.e. if displayed, it replaces the LSA name";
     }
-    if (($bit_conf[6] eq '1')&&($bit_conf[7] eq '0')){
+    elsif (($bit_conf[6] eq '1')&&($bit_conf[7] eq '0')){
         $sll2b = "icon is not self-explanatory, i.e. if displayed, it shall be displayed together with the LSA name";
     }
-    if (($bit_conf[6] eq '1')&&($bit_conf[7] eq '1')){
+    elsif (($bit_conf[6] eq '1')&&($bit_conf[7] eq '1')){
         $sll2b = "RFU";
     }
     #The idle mode support is used to indicate whether the ME shall favour camping on the LSA cells in
@@ -2765,7 +2794,7 @@ sub Parse_SLL{
     if ($bit_conf[5] eq '0'){
         $sll2c = "Idle mode support disabled";
     }
-    if ($bit_conf[5] eq '1'){
+    else{
         $sll2c = "Idle mode support enabled";
     }
     #The LSA indication for idle mode is used to indicate whether or not the ME shall display the LSA
@@ -2774,7 +2803,7 @@ sub Parse_SLL{
     if ($bit_conf[4] eq '0'){
         $sll2d = "LSA indication for idle mode disabled";
     }
-    if ($bit_conf[4] eq '1'){
+    else{
         $sll2d = "LSA indication for idle mode enabled";
     }
     
@@ -3136,91 +3165,70 @@ sub Parse_SMS{
     #message.
     
     my $ref = shift(@_);
-    my @h = @$ref;
+    my @h = @$ref; #h lungo 175 byte
     my $counter = shift(@_);
+    my $sms_msg = join('',@h);
+    #print "Lunghezza array h: ".$#h."\n";
+        
+    $status = $h[0];
+    my $a=$h[1];
+    #my $b=$h[2];
+    my $c;
+    $num = "";
+    for ($c=1;$c<$a;$c++){
+        $num = $num.chop($h[2+$c]).$h[2+$c];
+    }
     
-    my $message = join('',@h);
+    my $service_number = $num;
     
-#    $status = $h[0];
-#    my $a=$h[1];
-#    #my $b=$h[2];
-#    my $c;
-#    $num = "";
-#    for ($c=1;$c<$a;$c++){
-#        $num = $num.chop($h[2+$c]).$h[2+$c];
-#    }
-#    my $service_number = $num;
-#    my $d = $h[3+$c];
-#    my @e = split(//,($d));
-#    $f = (Hex2Dec($e[1])+Hex2Dec($e[0]*16));
-#    my $g=4+$c;
-#    my $i;
-#    $numt = "";
-#    for ($i=1;$i<($f/2)+1;$i++){
-#        $numt = $numt.chop($h[$g+$i]).$h[$g+$i];
-#    }   
-#    my $phone_number = $numt;
-#    my $l=$g+$i;
-#    my $m=0;
-#    for ($m=1;$m<8;$m++){
-#        $dat[$m] = chop($h[$l+1+$m]).$h[$l+1+$m];
-#    }
-#    $datesms = $dat[3]." ".$months{$dat[2]}." ".$dat[1];
-#    $hoursms = $dat[4].".".$dat[5].".".$dat[6];
-#    my $n = $h[$l+1+$m];
-#    my @o = split(//,($n));
-#    my $dd = Hex2Dec($o[0]);
-#    
-#    my $message_length = ((Hex2Dec($o[1]))+($dd*16));
-#    #print "Message_length: $message_length\n";
-#    
-#    my $t1 = $l + 2 + $m;
-#    my $t2 = $t1 + $message_length;
-#    my $data = " ";    
-#    for ($i=$t1; $i<$t2; $i++){
-#        $data = $data.$h[$i];
-#    }
-#        
-#    #print "testo: $data\n";
-#    
-#    my $length  = length($data); 
-#    my $message = "";
-#    my $len     = length($data);	
-#    my $bytes="";
-#    my $repeat = int(length($data)) / 2;
-#	
-#    for($i=0; $i < $repeat; $i++){
-#	my $hex = substr($data, $i * 2, 2);
-#	my $hex_b = unpack('b8',pack('H2', $hex));
-#	$bytes .= $hex_b;
-#    }
-#    #print "length bytes: ".length($bytes)."\n";
-#	
-#    #$repeat = $length || int(length($bytes) / 7);
-#    $repeat = int(length($bytes) / 7);
-#    #$repeat = $length;
-#    #print "repeat: $repeat\n";
-#    my $last_loop = int(length($bytes) / 7) - 1;
-#    
-#    for($i = 0; $i < $repeat; $i++){
-#    #    print "DEBUG bytes: $bytes\n";
-#        my $pos=$i*7;
-#        my $letter = substr($bytes, $pos, 7);
-#    #    print "DEBUG letter: $letter\n";
-#	#if(($i == $last_loop) && ($letter eq '0000000') && (not defined $length)){
-#	#	print "Possible edge case, can't be sure if last character is " .
-#	#	      'really @ or just a filler.';
-#	#}
-#	
-#        my $tmp = pack('b7', $letter);
-#    #    print "DEBUG tmp: $tmp\n";
-#	$message = $message.$tmp;
-#    }
-#    $message=~ s/[^[:print:]]//g;;
-#    print "message => $message\n";
-#    #$message =~ s/[:^print:]+//g;
-#    #print "message => $message\n";   
- 
+    my $d = $h[3+$c];
+    my @e = split(//,$d);
+    $f = (Hex2Dec($e[1])+Hex2Dec($e[0]*16));
+    my $g=4+$c;
+    my $i;
+    $numt = "";
+    for ($i=1;$i<($f/2)+1;$i++){
+        $numt = $numt.chop($h[$g+$i]).$h[$g+$i];
+    }   
+    
+    my $phone_number = $numt;
+    
+    my $l=$g+$i;
+    my $m=0;
+    for ($m=1;$m<8;$m++){
+        $dat[$m] = chop($h[$l+1+$m]).$h[$l+1+$m];
+    }
+    
+    $datesms = $dat[3]." ".$months{$dat[2]}." ".$dat[1];
+    $hoursms = $dat[4].".".$dat[5].".".$dat[6];
+    
+    my $n = $h[$l+1+$m];
+    my @o = split(//,($n));
+    my $dd = Hex2Dec($o[0]);
+    
+    my $message_length = ((Hex2Dec($o[1]))+($dd*16));
+    #il messaggio è codificato in esadecimale usando la codifica GSM 0338 1 7 bit
+    #la lunghezza rappresenta il numero di caratteri a 7 bit codificati nella string
+    #print "Message Length: $message_length\n";
+    
+    my $inf = $l + 2 + $m;
+    my $sms_text = "";
+    my $sms_text_bin = "";
+    my $sup = int($message_length*(7/8))+1;
+    #print "sup = $sup\n";
+    #determinazione della lunghezza effettiva di parole da 7 bit codificate nell'alfabeto GSM a 7 bit
+    for (my $i = 0; $i < $sup; $i++){
+        $sms_text .= $h[$inf+$i];
+    }
+    
+    #print "sms_text: $sms_text\n";
+    #print "sms_text length: ".length($sms_text)."\n";
+        
+    my $message = Device::Gsm::Pdu::pdu_to_latin1($sms_text);
+    #my $message1 = &decode_7bit($sms_text);
+   
+    #print "Message: $message\n";
+     
     #return $sms[$counter]={
     #            'Status'                => [$status],             
     #            'Number_Service_Center' => [$service_number],         
@@ -3229,15 +3237,43 @@ sub Parse_SMS{
     #            'Hour'                  => [$hoursms],    
     #            'Length_SMS'            => [$message_length],
     #            'Text'                  => [$message]          
-    #        };
+    #        };   
     
-    #return $sms[$counter]={
-    #            'Text'                  => [$message]          
-    #        };
     
     #il messaggio è tradotto nello script di reportistica
     #messaggio incluso nei tag <content>messaggio</content>
-    return $sms[$counter]=$message;
+    #print "sms: $message\n";
+    return $sms[$counter]=$sms_msg;   
+    
+}
+
+sub decode_7bit{
+    
+    my @data = (@_);
+    my $data = join('',@data);
+    my $message;
+    my $repeat = int(length($data)) / 2;
+	
+    for($i=0; $i < $repeat; $i++){
+            my $hex = substr($data, $i * 2, 2);
+            my $hex_b = unpack('b8',pack('H2', $hex));
+            $bytes .= $hex_b;
+    }
+    
+    $repeat = int(length($bytes) / 7);
+    my $last_loop = int(length($bytes) / 7) - 1;
+    for($i = 0; $i < $repeat; $i++){
+            my $letter = reverse substr($bytes, ($i * 7), 7);
+            
+            if(($i == $last_loop) && ($letter eq '0000000')){
+                    #cluck "Possible edge case, can't be sure if last character is " .
+                    #      'really @ or just a filler.'
+            }
+            
+            $message .= decode("gsm0338", pack('b7', $letter));
+            #$message .= Trad2Sms($letter);
+    }
+    return $message;    
 }
 
 ################################################################################################
@@ -4056,10 +4092,10 @@ close OUT;
 ##########################################################################################
 sub Hex2Bin {
     my $hex = $_[0];
-    my %h2b = ( 0 => "0000", 1 => "0001", 2 => "0010", 3 => "0011",
-             4 => "0100", 5 => "0101", 6 => "0110", 7 => "0111",   
-             8 => "1000", 9 => "1001", a => "1010", b => "1011",
-             c => "1100", d => "1101", e => "1110", f => "1111");
+    my %h2b = ( '0' => "0000", '1' => "0001", '2' => "0010", '3' => "0011",
+                '4' => "0100", '5' => "0101", '6' => "0110", '7' => "0111",   
+                '8' => "1000", '9' => "1001", 'a' => "1010", 'b' => "1011",
+                'c' => "1100", 'd' => "1101", 'e' => "1110", 'f' => "1111");
     (my $binary = $hex) =~ s/(.)/$h2b{lc $1}/g;
     return $binary;
 }
@@ -4069,10 +4105,10 @@ sub Hex2Bin {
 ##########################################################################################
 sub Hex2Dec {
     my $dec = $_[0];
-    my %ccc = ( 0 => "0", 1 => "1", 2 => "2", 3 => "3",
-             4 => "4", 5 => "5", 6 => "6", 7 => "7",   
-             8 => "8", 9 => "9", a => "10", b => "11",
-             c => "12", d => "13", e => "14", f => "15");
+    my %ccc = ( '0' => "0",  '1' => "1",  '2' => "2",  '3' => "3",
+                '4' => "4",  '5' => "5",  '6' => "6",  '7' => "7",   
+                '8' => "8",  '9' => "9",  'a' => "10", 'b' => "11",
+                'c' => "12", 'd' => "13", 'e' => "14", 'f' => "15");
     (my $fin = $dec) =~ s/(.)/$ccc{lc $1}/g;
     return $fin;
 }
@@ -4081,141 +4117,15 @@ sub Hex2Dec {
 ### SmsTraduction 
 ##########################################################################################
 sub Trad2Sms  {
-   my $tr = shift(@_);
-   my %s2s = (
-             '0000000' => '@', # number 0
-             '0000001' => '£',
-             '0000010' => '$',
-             '0000011' => '¥',
-             '0000100' => 'è', 
-             '0000101' => 'é',
-             '0000110' => 'ù',
-             '0000111' => 'ì',
-             '0001000' => 'ò',
-             '0001001' => 'Ç',
-             '0001010' => 'Ø',
-             '0001011' => 'ø',
-             '0001100' => 'Å',
-             '0001101' => 'å', 
-             '0001110' => ' ', # not representable
-             '0001111' => '_',
-             '0010000' => ' ',
-             '0010001' => ' ',
-             '0010010' => "\n",
-             '0010011' => '^',
-             '0010100' => '}',
-             '0010101' => '{',
-             '0010110' => '\\',
-             '0010111' => ']',
-             '0011000' => '~',
-             '0011001' => '[',
-             '0011010' => '|', 
-             '0011011' => '€',
-             '0011100' => 'Æ',
-             '0011101' => 'æ',
-             '0011110' => 'ß',
-             '0011111' => 'É',
-             '0100000' => ' ', # space
-             '0100001' => '!',
-             '0100010' => '"',
-             '0100011' => '#',
-             '0100100' => '¤',
-             '0100101' => '%',
-             '0100110' => '&',
-             '0100111' => "'",
-             '0101000' => '(',
-             '0101001' => ')',
-             '0101010' => '*',
-             '0101011' => '+',
-             '0101100' => ',',
-             '0101101' => '-',
-             '0101110' => '.',
-             '0101111' => '/',
-             '0110000' => '0',
-             '0110001' => '1',
-             '0110010' => '2',
-             '0110011' => '3',
-             '0110100' => '4',
-             '0110101' => '5',
-             '0110110' => '6',
-             '0110111' => '7',
-             '0111000' => '8',
-             '0111001' => '9',
-             '0111010' => ':',
-             '0111011' => ';',
-             '0111100' => '<',
-             '0111101' => '=',
-             '0111110' => '>',
-             '0111111' => '?',
-             '1000000' => '¡',
-             '1000001' => 'A',
-             '1000010' => 'B',
-             '1000011' => 'C',
-             '1000100' => 'D',
-             '1000101' => 'E', 
-             '1000110' => 'F',
-             '1000111' => 'G',
-             '1001000' => 'H',
-             '1001001' => 'I',
-             '1001010' => 'J',
-             '1001011' => 'K',
-             '1001100' => 'L',
-             '1001101' => 'M',
-             '1001110' => 'N',
-             '1001111' => 'O',
-             '1010000' => 'P', 
-             '1010001' => 'Q',
-             '1010010' => 'R',
-             '1010011' => 'S',
-             '1010100' => 'T',
-             '1010101' => 'U',
-             '1010110' => 'V',
-             '1010111' => 'W',
-             '1011000' => 'X',
-             '1011001' => 'Y',
-             '1011010' => 'Z', 
-             '1011011' => 'Ä',
-             '1011100' => 'Ö',
-             '1011101' => 'Ñ',
-             '1011110' => 'Ü',
-             '1011111' => '§',
-             '1100000' => ' ', #¿
-             '1100001' => 'a',
-             '1100010' => 'b',
-             '1100011' => 'c', 
-             '1100100' => 'd',
-             '1100101' => 'e',
-             '1100110' => 'f',
-             '1100111' => 'g',
-             '1101000' => 'h',
-             '1101001' => 'i',
-             '1101010' => 'j',
-             '1101011' => 'k',
-             '1101100' => 'l',
-             '1101101' => 'm',
-             '1101110' => 'n',
-             '1101111' => 'o',
-             '1110000' => 'p',
-             '1110001' => 'q',
-             '1110010' => 'r',
-             '1110011' => 's',
-             '1110100' => 't',
-             '1110101' => 'u',
-             '1110110' => 'v',
-             '1110111' => 'w',
-             '1111000' => 'x',
-             '1111001' => 'y',
-             '1111010' => 'z',
-             '1111011' => 'ä',
-             '1111100' => 'ö',
-             '1111101' => 'ñ',
-             '1111110' => 'ü',
-             '1111111' => ' '); #à
-   
-
-    (my $traduction = $tr) =~ s/(.......)/$s2s{lc $1}/;
-    return $traduction;
- }   
+   my $tr = shift(@_);   
+   $tr =reverse $tr; #copy of original $tr in reverse bit order
+   if ($tr eq '1111111') { #Substitution of 'à' => '1111111' character with space
+    $tr = '0000010';
+   }
+   my $ch = decode("gsm0338", pack("b7", $tr));
+   #print "ch => $ch\n";
+   return $ch;
+ }     
 ##########################################################################################
 ### SmsTraduction stop
 ##########################################################################################
