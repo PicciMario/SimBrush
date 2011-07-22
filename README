@@ -1,3 +1,65 @@
-Esempio di modifica al file readme
+***********************************
+* SimBrush - Smart Card Forensics *
+***********************************
 
-Aggiunto by Mario
+1) imager tool:
+it is used to size a SIM/USIM card
+-- it produces an XML file (e.g. filename.xml)
+-- installation and setup
+-- packages and libraries required
+-- example of usage
+
+2) wrapper tool:
+it is used to translate the raw image into an intellegible format
+-- it receives as input a raw XML image which has been obtained by means of the sizure tool
+-- it produces an XML document (e.g. filename.out.xml)
+-- list of Perl modules required on the target system:
+XML::Simple;
+Data::Dumper;
+Regexp::Common qw /whitespace/;
+File::Copy;
+XML::XSLT;
+Device::Gsm::Pdu;
+Encode qw/encode decode/;
+GSM::Nbit;
+
+
+
+3) reporting tool:
+it is used to create a fancy report which contains different levels of details
+-- packages required for installation
+-- ReportLab library (www.reportlab.com)
+-- python-messaging (https://github.com/pmarti/python-messaging)
+
+GitHub sutup
+Mini HowTo
+--per clonare un repository remoto: 
+$ git clone git@github.com:PicciMario/SimBrush.git
+
+--per valutare lo stato del repository locale
+$ git status
+
+--per effettuare una modifica al repository (dopo aver modificato il file Readme ad esempio)
+$ git commit -am "modifica al file Readme"
+
+--per sincronizzare il repository locale con quello remoto
+$ git push origin master 
+spiegazione: 
+--git => nome applicativo
+--push => operazione di upload
+--origin => nome del server su cui uplodare
+--master => nome del branch
+
+--per aggiungere un file al repository (es. prova_file.txt)
+$ git add prova_file.txt
+
+--per rimuovere un file
+$ git rm prova_file.txt
+$ git commit -am "rimosso il file prova_file.txt"
+
+
+
+
+
+
+
