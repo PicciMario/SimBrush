@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="template.xml"?>
+<opt>
+  <MF hash="b91f63fe80e1ac195d968aff0ee05688">
+    <DF_7F10>
+      <EF>
+        <ADN description="EF ADN '6F3A' (Abbreviated dialling numbers): This EF contains Abbreviated Dialling Numbers (ADN) and/or
+                  Supplementary Service Control strings (SSC). In addition it contains identifiers of associated
+                  network/bearer capabilities and identifiers of extension records. It may also contain an associated
+                  alpha-tagging.">
+          <content> Cust. Serv.    123</content>
+          <content> Emergency      112</content>
+          <content> Police         166</content>
+          <content> Ambulance      150</content>
+          <content> Fire Brigade   160</content>
+          <content> Voice Mail     120</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <header>
+            <ID>6F3A</ID>
+            <SIZE>7000</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>CHV2</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>CHV2</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>linear fixed</structure>
+          </header>
+        </ADN>
+      </EF>
+      <EF>
+        <FDN description="EF FDN '6F3B' (Fixed dialling numbers): This EF contains Fixed Dialling Numbers (FDN) and/or Supplementary
+                    Service Control strings (SSC). In addition it contains identifiers of associated network/bearer
+                    capabilities and identifiers of extension records. It may also contain an associated alpha-tagging.">
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <header>
+            <ID>6F3B</ID>
+            <SIZE>280</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV2</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>linear fixed</structure>
+          </header>
+        </FDN>
+      </EF>
+      <EF>
+        <SMS description="EF SMS '6F3C' (Short messages): This EF contains information in accordance with TS 23.040 [13] comprising
+                  short messages (and associated parameters) which have either been received by the MS from the network,
+                  or are to be used as an MS originated message.">
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <content>00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</content>
+          <header>
+            <ID>6F3C</ID>
+            <SIZE>5632</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>linear fixed</structure>
+          </header>
+        </SMS>
+      </EF>
+      <EF>
+        <CCP description="EF CCP '6F3D' (Capability configuration parameters): This EF contains parameters of required network and
+                    bearer capabilities and ME configurations associated with a call established using an abbreviated
+                    dialling number, a fixed dialling number, an MSISDN, a last number dialled, a service dialling
+                    number or a barred dialling number." header="">
+        </CCP>
+      </EF>
+      <EF>
+        <MSISDN description="EF MSISDN '6F40' (MSISDN): This EF contains MSISDN(s) related to the subscriber. In addition it contains
+                    identifiers of associated network/bearer capabilities and identifiers of extension records.
+                    It may also contain an associated alpha-tagging.">
+          <content>                                    </content>
+          <content>                                    </content>
+          <content>                                    </content>
+          <content>                                    </content>
+          <content>                                    </content>
+          <header>
+            <ID>6F40</ID>
+            <SIZE>140</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>linear fixed</structure>
+          </header>
+        </MSISDN>
+      </EF>
+      <EF>
+        <SMSP description="EF SMSP '6F42' (Short message service parameters): This EF contains values for Short Message Service header
+                    Parameters (SMSP), which can be used by the ME for user assistance in preparation of mobile
+                    originated short messages. For example, a service centre address will often be common to many short
+                    messages sent by the subscriber.">
+          <content>Alpha-Identifier: FFFFFFFFFFFFFFFFFFFFFFFFFFFF###Parameters Indicators: FD###TP-Destination Address: Parameter absent!###TS-Service Centre Address: Parameter present!###TP-Protocol Identifier: Parameter absent!###TP-Data Coding Scheme: Parameter absent!###TP-Validity Period: Parameter absent!### TS-Service Centre Address: 07915389190000F0FFFFFFFF###  </content>
+          <content>Alpha-Identifier: FFFFFFFFFFFFFFFFFFFFFFFFFFFF###Parameters Indicators: FF###TP-Destination Address: Parameter absent!###TS-Service Centre Address: Parameter absent!###TP-Protocol Identifier: Parameter absent!###TP-Data Coding Scheme: Parameter absent!###TP-Validity Period: Parameter absent!###    </content>
+          <content>Alpha-Identifier: FFFFFFFFFFFFFFFFFFFFFFFFFFFF###Parameters Indicators: FF###TP-Destination Address: Parameter absent!###TS-Service Centre Address: Parameter absent!###TP-Protocol Identifier: Parameter absent!###TP-Data Coding Scheme: Parameter absent!###TP-Validity Period: Parameter absent!###    </content>
+          <header>
+            <ID>6F42</ID>
+            <SIZE>126</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>linear fixed</structure>
+          </header>
+        </SMSP>
+      </EF>
+      <EF>
+        <SMSS description="EF SMSS '6F43' (SMS status): This EF contains status information relating to the short message service.
+                    The provision of this EF is associated with EFSMS. Both files shall be present together, or both
+                    absent from the SIM.">
+          <content>Last Used TP-MR: FF###SMS Memory Cap. Exceeded Not. Flag: FF Flag unset; memory capacity available!</content>
+          <header>
+            <ID>6F43</ID>
+            <SIZE>2</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </SMSS>
+      </EF>
+      <EF>
+        <LND description="EF LND '6F44' (Last number dialled): This EF contains the last numbers dialled (LND) and/or the respective
+                  supplementary service control strings (SSC). In addition it contains identifiers of associated
+                  network/bearer capabilities and identifiers of extension records. It may also contain associated
+                  alpha-tagging.">
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <content> Cust. Serv.    123</content>
+          <content>Empty</content>
+          <content>Empty</content>
+          <header>
+            <ID>6F44</ID>
+            <SIZE>336</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>cyclic</structure>
+          </header>
+        </LND>
+      </EF>
+      <EF>
+        <SMSR description="EF SMSR '6F47' (Short message status reports): This EF contains information in accordance with TS 23.040 [13]
+                  comprising short message status reports which have been received by the MS from the network. Each
+                  record is used to store the status report of a short message in a record of EFSMS. The first byte
+                  of each record is the link between the status report and the corresponding short message in EFSMS." header="">
+        </SMSR>
+      </EF>
+      <EF>
+        <SDN description="EF SDN '6F49' (Service Dialling Numbers): This EF contains special service numbers (SDN) and/or the respective
+                  supplementary service control strings (SSC). In addition it contains identifiers of associated
+                  network/bearer capabilities and identifiers of extension records. It may also contain associated
+                  alpha-tagging.">
+          <content> Cust. Serv.                          123                 </content>
+          <content> Emergency                            112                 </content>
+          <content> Police                               166                 </content>
+          <content> Ambulance                            150                 </content>
+          <content> Fire Brigade                         160                 </content>
+          <content> Voice Mail                           120                 </content>
+          <content> £òòß?5¡0B&gt;¡                          123                 </content>
+          <content> £éòÉ&gt;&lt;&gt;I                             112                 </content>
+          <content> £ìòÉ&gt;;8F8O                           166                 </content>
+          <content> £çò_J¡.?&gt;&lt;&gt;I                         150                 </content>
+          <content> £ìòÉ&gt;60¡=0                           160                 </content>
+          <content> £çòΓ;0A.?&gt;I0                         120                 </content>
+          <header>
+            <ID>6F49</ID>
+            <SIZE>600</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>linear fixed</structure>
+          </header>
+        </SDN>
+      </EF>
+      <EF>
+        <EXT1 description="EF EXT1 '6F4A' (Extension1): This EF contains extension data of an ADN/SSC, an MSISDN, or an LND. Extension
+                    data is caused by:
+ - an ADN/SSC (MSISDN, LND) which is greater than the 20 digit capacity of the
+                    ADN/SSC (MSISDN, LND)
+ Elementary File or where common digits are required to follow an ADN/SSC
+                    string of less than 20 digits. The remainder is stored in this EF as a record, which is identified
+                    by a specified identification byte inside the ADN/SSC (MSISDN, LND) Elementary File. The EXT1
+                    record in this case is specified as additional data;
+ - an associated called party subaddress.
+                    The EXT1 record in this case is specified as subaddress data.">
+          <content>The record tupe is: 00###The Extension data is: FFFFFFFFFFFFFFFFFFFFFF###The Identifier is: FF</content>
+          <content>The record tupe is: 00###The Extension data is: FFFFFFFFFFFFFFFFFFFFFF###The Identifier is: FF</content>
+          <content>The record tupe is: 00###The Extension data is: FFFFFFFFFFFFFFFFFFFFFF###The Identifier is: FF</content>
+          <header>
+            <ID>6F4A</ID>
+            <SIZE>39</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>linear fixed</structure>
+          </header>
+        </EXT1>
+      </EF>
+      <EF>
+        <EXT2 description="EF EXT2 '6F4B' (Extension2): This EF contains extension data of an FDN/SSC (see EXT2 in subclause 10.5.2).">
+          <content>The record tupe is: 00###The Extension data is: FFFFFFFFFFFFFFFFFFFFFF###The Identifier is: FF</content>
+          <content>The record tupe is: 00###The Extension data is: FFFFFFFFFFFFFFFFFFFFFF###The Identifier is: FF</content>
+          <content>The record tupe is: 00###The Extension data is: FFFFFFFFFFFFFFFFFFFFFF###The Identifier is: FF</content>
+          <header>
+            <ID>6F4B</ID>
+            <SIZE>39</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV2</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>linear fixed</structure>
+          </header>
+        </EXT2>
+      </EF>
+      <EF>
+        <EXT3 description="EF EXT3 '6F4C' (Extension3): This EF contains extension data of an SDN (see EXT3 in subclause 10.5.9)." header="">
+        </EXT3>
+      </EF>
+      <EF>
+        <BDN description="EF BDN '6F4D' (Barred Dialling Numbers): This EF contains Barred Dialling Numbers (BDN) and/or Supplementary
+                  Service Control strings (SSC). In addition it contains identifiers of associated network/bearer
+                  capabilities and identifiers of extension records. It may also contain an associated alpha-tagging." header="">
+        </BDN>
+      </EF>
+      <EF>
+        <EXT4 description="EF EXT4 '6F4E' (Extension4): This EF contains extension data of an BDN/SSC (see EXT4 in subclause 10.5.13)." header="">
+        </EXT4>
+      </EF>
+      <header>
+        <CHV1_status>3 attempt left</CHV1_status>
+        <CHV2_status>3 attempt left</CHV2_status>
+        <FREE_MEMORY>904</FREE_MEMORY>
+        <File_characteristics>clock stop allowed, low level preferred; Frequency required 13/4 MHz; 3V technology SIM; CHV1 disabled</File_characteristics>
+        <ID>7F10</ID>
+        <LENGTH>17</LENGTH>
+        <Number_of_CHVs>5</Number_of_CHVs>
+        <Number_of_DFs>0</Number_of_DFs>
+        <Number_of_EFs>12</Number_of_EFs>
+        <TYPE>DF</TYPE>
+        <UNBLOCK_CHV1_status>CHV1 initilized</UNBLOCK_CHV1_status>
+        <UNBLOCK_CHV2_status>CHV2 initilized</UNBLOCK_CHV2_status>
+      </header>
+    </DF_7F10>
+    <DF_7F20>
+      <DF_5F3C header="">
+        <EF>
+          <MExEST description="EF MExEST '4F40' (MExE Service Table): This EF indicates which MExE services are allocated, and whether, if allocated, the service is activated. If a service is
+                  not allocated or not activated in the SIM, the ME shall not select this service." header="">
+            <content></content>
+          </MExEST>
+        </EF>
+        <EF>
+          <ORPK description="EF OPRK '4F41' (Operator Root Public Key): This EF contains the descriptor(s ) of certificates containing the Operator Root Public Key. This EF shall only be
+                  allocated if the operator wishes to verify applications and certificates in the MExE operator domain using a root public
+                  key held on the SIM. Each record of this EF contains one certificate descriptor." header="">
+          </ORPK>
+        </EF>
+        <EF>
+          <ARPK description="EF APRK '4F42' (Administrator Root Public Key): This EF contains the descriptor(s ) of certificates containing the Administrator Root Public Key. This EF shall only be
+                  allocated if the SIM issuer wishes to control the Third Party certificates on the terminal using an Administrator Root
+                  Public Key held on the SIM. Each record of this EF contains one certificate descriptor." header="">
+          </ARPK>
+        </EF>
+        <EF>
+          <TPRPK description="EF TPRPK '4F43' (Third Party Root Public key): This EF contains descriptor(s ) of certificates containing the Third Party Root Public key (s). This EF shall only be
+                  allocated if the SIM issuer wishes to verify applications and certificates in the MExE Third Party domain using root
+                  public key(s) held on the SIM. This EF can contain one or more root public keys. Each record of this EF contains one
+                  certificate descriptor." header="">
+          </TPRPK>
+        </EF>
+      </DF_5F3C>
+      <DF_5F70 header="">
+        <EF>
+          <SAI description="EF SAI '4F30' (SoLSA Access Indicator): This EF contains the 'LSA only access indicator'. This EF shall always be allocated if DFSoLSA is present." header="">
+            <content></content>
+          </SAI>
+        </EF>
+        <EF>
+          <SLL description="EF SLL '4F31' (SoLSA LSA List): This EF contains information describing the LSAs that the user is subscribed to. This EF shall always be allocated if
+                  DFSoLSA is present.">
+            <header>
+              <ID>4F31</ID>
+              <SIZE>120</SIZE>
+              <acINCREASE>NEV</acINCREASE>
+              <acINVALIDATE>NEV</acINVALIDATE>
+              <acREAD>ADM</acREAD>
+              <acREHABILITATE>NEV</acREHABILITATE>
+              <acUPDATE>ADM</acUPDATE>
+              <status>File invalidated; File not readable or updatable when invalidated</status>
+              <structure>transparent</structure>
+            </header>
+          </SLL>
+        </EF>
+      </DF_5F70>
+      <EF>
+        <LP description="EF LP '6F05' (Language preference): This EF contains the codes for one or more languages.
+                  This information, determined by the user/operator, defines the preferred languages of the user
+                  in order of priority. This information may be used by the ME for MMI purposes.">
+          <content> Language 1 is English###Language 2 is German###</content>
+          <header>
+            <ID>6F05</ID>
+            <SIZE>2</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>ALW</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </LP>
+      </EF>
+      <EF>
+        <IMSI description="EF IMSI '6F07' (IMSI): This EF contains the International Mobile Subscriber Identity.">
+          <content>9284050120709309###Globul###Bulgaria</content>
+          <header>
+            <ID>6F07</ID>
+            <SIZE>9</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>CHV1</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </IMSI>
+      </EF>
+      <EF>
+        <KC description="EF Kc '6F20' (Chipering Key): This EF contains the ciphering key Kc and the ciphering key sequence number n.">
+          <content>5A E3 01 91 3B A8 9C 00</content>
+          <header>
+            <ID>6F20</ID>
+            <SIZE>9</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>NEV</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>NEV</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </KC>
+      </EF>
+      <EF>
+        <PLMNsel description="EF PLMNsel '6F30' (PLMN selector): This information determined by the user/operator defines the preferred
+                  PLMNs of the user in priority order.">
+          <content>1 PLMN: Cosmote###Greece###2 PLMN: Vodafone Albania (GSM 900/1800)###Albania###3 PLMN: ###4 PLMN: ###5 PLMN: Empty###6 PLMN: Empty###7 PLMN: Empty###</content>
+          <header>
+            <ID>6F30</ID>
+            <SIZE>24</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </PLMNsel>
+      </EF>
+      <EF>
+        <HPLMN description="EF HPLMN '6F31' (Higher Priority PLMN search period): This EF contains the interval of time between searches
+                  for the PLMN.">
+          <content>The time interval between two searches 0 minutes</content>
+          <header>
+            <ID>6F31</ID>
+            <SIZE>1</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </HPLMN>
+      </EF>
+      <EF>
+        <ACMmax description="EF ACMmax '6F37' (ACM maximum value): This EF contains the maximum value of the Accumulated Call Meter (ACM).">
+          <content>ACMmax: 0</content>
+          <header>
+            <ID>6F37</ID>
+            <SIZE>3</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>NEV</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>NEV</acREHABILITATE>
+            <acUPDATE>CHV2</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </ACMmax>
+      </EF>
+      <EF>
+        <SST description="EF SST '6F38' (SIM service table): This EF indicates which services are allocated, and whether,
+                  if allocated, the service is activated. If a service is not allocated or not activated in the SIM,
+                  the ME shall not select this service.">
+          <content>Service 1 : CHV1 disable function allocated and activated###Service 2 : Abbreviated Dialling Numbers (ADN) allocated and activated###Service 3 : Fixed Dialling Numbers (FDN) allocated and activated###Service 4 : Short Message Storage (SMS) allocated and activated###Service 5 : Advice of Charge (AoC) not allocated###Service 6 : Capability Configuration Parameters (CCP) allocated and activated###Service 7 : PLMN selector not allocated###Service 8 : RFU allocated and activated###Service 9 : MSISDN allocated and activated###Service 10: Extension1 allocated and activated###Service 11: Extension2 allocated and activated###Service 12: SMS Parameters allocated and activated###Service 13: Last Number Dialled (LND)###Service 14: Cell Broadcast Message Identifier###Service 15: Group Identifier Level 1###Service 16: Group Identifier Level 2###Service 17: Service Provider Name not allocated###Service 18: Service Dialling Numbers (SDN) not allocated###Service 19: Extension3 allocated and activated###Service 20: RFU allocated and activated###Service 21: VGCS Group Identifier List (EFVGCS and EFVGCSS) not allocated###Service 22: VBS Group Identifier List (EFVBS and EFVBSS) not allocated###Service 23: enhanced Multi-Level Precedence and Pre-emption Service not allocated###Service 24: Automatic Answer for eMLPP not allocated###Service 25: Data download via SMS-CB not allocated###Service 26: Data download via SMS-PP allocated and activated###Service 27: Menu selection allocated and activated###Service 28: Call control not allocated###Service 29: Proactive SIM not allocated###Service 30: Cell Broadcast Message Identifier Ranges not allocated###Service 31: Barred Dialling Numbers (BDN) not allocated###Service 32: Extension4 allocated and activated###Service 33: De-personalization Control Keys not allocated###Service 34: Co-operative Network List not allocated###Service 35: Short Message Status Reports not allocated###Service 36: Network's indication of alerting in the MS not allocated###Service 37: Mobile Originated Short Message control by SIM not allocated###Service 38: GPRS not allocated###Service 39: Image (IMG) allocated and activated###Service 40: SoLSA (Support of Local Service Area) not allocated###Service 41: USSD string data object supported in Call Control not allocated###Service 42: RUN AT COMMAND command not allocated###Service 43: User controlled PLMN Selector with Access Technology not allocated###Service 44: Operator controlled PLMN Selector with Access Technology not allocated###Service 45: HPLMN Selector with Access Technology allocated and activated###Service 46: CPBCCH Information not allocated###Service 47: Investigation Scan not allocated###Service 48: Extended Capability Configuration Parameters not allocated###</content>
+          <header>
+            <ID>6F38</ID>
+            <SIZE>12</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </SST>
+      </EF>
+      <EF>
+        <ACM description="EF ACM '6F39' (Accumulated call meter): This EF contains the total number of units for both the current
+                  call and the preceding calls.">
+          <content>ACM: 16777215</content>
+          <content>ACM: 16777215</content>
+          <content>ACM: 16777215</content>
+          <content>ACM: 16777215</content>
+          <content>ACM: 16777215</content>
+          <content>ACM: 16777215</content>
+          <content>ACM: 16777215</content>
+          <content>ACM: 0</content>
+          <content>ACM: 0</content>
+          <content>ACM: 0</content>
+          <header>
+            <ID>6F39</ID>
+            <SIZE>30</SIZE>
+            <acINCREASE>CHV1</acINCREASE>
+            <acINVALIDATE>NEV</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>NEV</acREHABILITATE>
+            <acUPDATE>CHV2</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>cyclic</structure>
+          </header>
+        </ACM>
+      </EF>
+      <EF>
+        <GID1 description="EF GID1 '6F3E' (Group Identifier Level 1): This EF contains identifiers for particular SIM-ME associations.
+                  It can be used to identify a group of SIMs for a particular application." header="">
+          <content></content>
+        </GID1>
+      </EF>
+      <EF>
+        <GID2 description="EF GID2 '6F3F' (Group Identifier Level 2): This EF contains identifiers for particular SIM-ME associations.
+                  It can be used to identify a group of SIMs for a particular application." header="">
+          <content></content>
+        </GID2>
+      </EF>
+      <EF>
+        <PUCT description="EF PUCT '6F41' (Price per unit and currency table): This EF contains the Price per Unit and Currency Table
+                  (PUCT). The PUCT is Advice of Charge related information which may be used by the ME in conjunction
+                  with EFACM to compute the cost of calls in the currency chosen by the subscriber, as specified in
+                  TS 22.024 [7]. This EF shall always be allocated if EFACM is allocated.">
+          <content>EPPU(Elementary Price Per Unit): 0###Price per unit = EPPU * 10^EX = 0###</content>
+          <header>
+            <ID>6F41</ID>
+            <SIZE>5</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>NEV</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>NEV</acREHABILITATE>
+            <acUPDATE>CHV2</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </PUCT>
+      </EF>
+      <EF>
+        <CBMI description="EF CBMI '6F45' (Cell broadcast message identifier selection): This EF contains the Message Identifier
+                  Parameters which specify the type of content of the cell broadcast messages that the subscriber
+                  wishes the MS to accept. Any number of CB Message Identifier Parameters may be stored in the SIM.
+                  No order of priority is applicable.">
+          <content>CB message Identifier 1 Empty###CB message Identifier 2 Empty###CB message Identifier 3 Empty###CB message Identifier 4 Empty###</content>
+          <header>
+            <ID>6F45</ID>
+            <SIZE>8</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>NEV</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>NEV</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </CBMI>
+      </EF>
+      <EF>
+        <SPN description="EF SPN '6F46' (Service Provider Name): This EF contains the service provider name and appropriate requirements
+                  for the display by the ME.">
+          <content>Display condition: PLMN required!###Service Provider Name: 
+B
+G
+ 
+G
+L
+O
+B
+U
+L
+ 
+ 
+ 
+ 
+ 
+ 
+ ###</content>
+          <header>
+            <ID>6F46</ID>
+            <SIZE>17</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>ALW</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </SPN>
+      </EF>
+      <EF>
+        <CBMID description="EF CBMID '6F48' (Cell Broadcast Message Identifier for Data Download): This EF contains the message
+                  identifier parameters which specify the type of content of the cell broadcast messages
+                  which are to be passed to the SIM." header="">
+          <content></content>
+        </CBMID>
+      </EF>
+      <EF>
+        <BCCH description="EF BCCH '6F74' (Broadcast control channels): This EF contains information concerning the BCCH according to
+                  TS 04.08 [15]. BCCH storage may reduce the extent of a Mobile Station's search of BCCH carriers when
+                  selecting a cell. The BCCH carrier lists in an MS shall be in accordance with the procedures specified
+                  in TS 04.08 [15]. The MS shall only store BCCH information from the System Information 2 message and
+                  not the 2bis extension message.">
+          <content>11 E1 41 12 0C DE 20 00 00 00 00 00 00 00 00 00</content>
+          <header>
+            <ID>6F74</ID>
+            <SIZE>16</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </BCCH>
+      </EF>
+      <EF>
+        <ACC description="EF ACC '6F78' (Access control class): This EF contains the assigned access control class(es). TS 22.011 [5]
+                  refers. The access control class is a parameter to control the RACH utilization. 15 classes are split
+                  into 10 classes randomly allocated to normal subscribers and 5 classes allocated to specific high
+                  priority users. For more information see TS 22.011 [5].">
+          <content>Number of the ACC: 6</content>
+          <header>
+            <ID>6F78</ID>
+            <SIZE>2</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </ACC>
+      </EF>
+      <EF>
+        <FPLMN description="EF FPLMN '6F7B' (Forbidden PLMNs): This EF contains the coding for four Forbidden PLMNs (FPLMN). It is read
+                  by the ME as part of the SIM initialization procedure and indicates PLMNs which the MS shall not
+                  automatically attempt to access. A PLMN is written to the EF if a network rejects a Location Update
+                  with the cause 'PLMN not allowed'. The ME shall manage the list as follows. When four FPLMNs are held
+                  in the EF, and rejection of a further PLMN is received by the ME from the network, the
+                  ME shall modify the EF using the UPDATE command. This new PLMN shall be stored in the fourth position,
+                  and the existing list 'shifted' causing the previous contents of the first position to be lost.
+                  When less than four FPLMNs exist in the EF, storage of an additional FPLMN shall not cause any
+                  existing FPLMN to be lost.">
+          <content>1 PLMN: Empty###2 PLMN: Empty###3 PLMN: Empty###4 PLMN: Empty###</content>
+          <header>
+            <ID>6F7B</ID>
+            <SIZE>12</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </FPLMN>
+      </EF>
+      <EF>
+        <LOCI description="EF LOCI '6F7E' (Location information): This EF contains the following Location Information:
+
+                 - Temporary Mobile Subscriber Identity (TMSI) 
+ - Location Area Information (LAI) 
+
+                 - TMSI TIME 
+ - Location update status.">
+          <content>Temporary Mobile Subscriber Identity TMSI: B408579A according to TS 04.08 [15]###Location Area Information LAI: 82F450076C according to TS 04.08 [15]###Current value of Periodic Location Updating Timer (T3212): 28 This byte is used by Phase 1 MEs, but it shall not be used by Phase 2 MEs.###Location update status: updated status of location update according to TS 04.08 [15]</content>
+          <header>
+            <ID>6F7E</ID>
+            <SIZE>11</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>CHV1</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </LOCI>
+      </EF>
+      <EF>
+        <AD description="EF AD '6FAD' (Administrative data): This EF contains information concerning the mode of operation
+                  according to the type of SIM, such as normal (to be used by PLMN subscribers for GSM operations),
+                  type approval (to allow specific use of the ME during type approval procedures of e.g. the radio
+                  equipment), cell testing (to allow testing of a cell before commercial use of this cell), manufacturer
+                  specific (to allow the ME manufacturer to perform specific proprietary auto-test in its ME during
+                  e.g. maintenance phases).">
+          <content>Initial value is: 00Normal operation!###Additional information: Specific facilities###RFU:  00000000 0000001###Length of MNC in the IMSI: 0001###</content>
+          <header>
+            <ID>6FAD</ID>
+            <SIZE>4</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>NEV</acINVALIDATE>
+            <acREAD>ALW</acREAD>
+            <acREHABILITATE>NEV</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </AD>
+      </EF>
+      <EF>
+        <PHASE description="EF Phase '6FAE' (Phase identification): This EF contains information concerning the phase of the SIM.">
+          <content>SIM Phase: 03###Phase2 and PROFILE DOWNLOAD required</content>
+          <header>
+            <ID>6FAE</ID>
+            <SIZE>1</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>ALW</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </PHASE>
+      </EF>
+      <EF>
+        <VGCS description="EF VGCS '6FB1' (Voice Group Call Service): This EF contains a list of those VGCS group identifiers the
+                  user has subscribed to. The elementary file is used by the ME for group call establishment and group
+                  call reception." header="">
+          <content></content>
+        </VGCS>
+      </EF>
+      <EF>
+        <VGCSS description="EF VGCSS '6FB2' (Voice Group Call Service Status): This EF contains the status of activation for the VGCS
+                  group identifiers. The elementary file is directly related to the EFVGCS. This EF shall always be
+                  allocated if EFVGCS is allocated." header="">
+          <content></content>
+        </VGCSS>
+      </EF>
+      <EF>
+        <VBS description="EF VBS '6FB3' (Voice Broadcast Service): This EF contains a list of those VBS group identifiers the user
+                  has subscribed to. The elementary file is used by the ME for broadcast call establishment and
+                  broadcast call reception." header="">
+          <content></content>
+        </VBS>
+      </EF>
+      <EF>
+        <VBSS description="EF VBSS '6FB4' (Voice Broadcast Service Status): This EF contains the status of activation for the VBS
+                  group identifiers. The elementary file is directly related to the EFVBS. This EF shall always be
+                  allocated if EFVBS is allocated." header="">
+          <content></content>
+        </VBSS>
+      </EF>
+      <EF>
+        <eMLPP description="EF eMLPP '6FB5' (enhanced Multi Level Pre-emption and Priority): This EF contains information about priority
+                  levels and fast call set-up conditions for the enhanced Multi Level Preemption and Priority service
+                  that which can be used by the subscriber." header="">
+          <content></content>
+        </eMLPP>
+      </EF>
+      <EF>
+        <AAeM description="EF AAeM '6FB6' (Automatic Answer for eMLPP Service): This EF contains those priority levels (of the Multi
+                  Level Pre-emption and Priority service) for which the mobile station shall answer automatically to
+                  incoming calls." header="">
+          <content></content>
+        </AAeM>
+      </EF>
+      <EF>
+        <ECC description="EF ECC '6FB7' (Emergency Call Codes): This EF contains up to 5 emergency call codes.">
+          <content> Emergency Call Code1 :21730###Emergency Call Code2 :101630###Emergency Call Code3 :303030###Emergency Call Code4 :303030###Emergency Call Code5 :303030###</content>
+          <header>
+            <ID>6FB7</ID>
+            <SIZE>15</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>NEV</acINVALIDATE>
+            <acREAD>ALW</acREAD>
+            <acREHABILITATE>NEV</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </ECC>
+      </EF>
+      <EF>
+        <CBMIR description="EF CBMIR '6F50' (Cell broadcast message identifier range selection): This EF contains ranges of cell
+                  broadcast message identifiers that the subscriber wishes the MS to accept. Any number of CB Message
+                  Identifier Parameter ranges may be stored in the SIM. No order of priority is applicable." header="">
+          <content></content>
+        </CBMIR>
+      </EF>
+      <EF>
+        <NIA description="EF NIA '6F51' (Network's Indication of Alerting): This EF contains categories and associated text related
+                  to the Network's indication of alerting in the MS service defined in TS 02.07 [3]." header="">
+        </NIA>
+      </EF>
+      <EF>
+        <KcGPRS description="EF KcGPRS '6F52' (GPRS Ciphering key KcGPRS): This EF contains the ciphering key KcGPRS and the ciphering
+                  key sequence number n for GPRS (see TS 23.060 [32]).">
+          <content>Ciphering key KcGPRS:  1111111111111111111111111111111111111111111111111111111111111111###Ciphering Key sequence number n for GPRS: 111###</content>
+          <header>
+            <ID>6F52</ID>
+            <SIZE>9</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>NEV</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>NEV</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </KcGPRS>
+      </EF>
+      <EF>
+        <LOCIGPRS description="EF LOCIGPRS '6F53' (GPRS location information): This EF contains the following Location Information:
+
+                  - Packet Temporary Mobile Subscriber Identity (P-TMSI);
+ - Packet Temporary Mobile Subscriber
+                  Identity signature value (P-TMSI signature value);
+ - Routing Area Information (RAI);
+
+                  - Routing Area update status.">
+          <content>P-TMSI Packet Temporary Mobile Subscriber Identity: 11111111111111111111111111111111###P-TMSI signature value: 111111111111111111111111###RAI Routing Area Information: 111111111111111111111111111111111111111011111111RFU is: 00000###Routing Area update status: Routing Area not allowed###</content>
+          <header>
+            <ID>6F53</ID>
+            <SIZE>14</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>NEV</acINVALIDATE>
+            <acREAD>CHV1</acREAD>
+            <acREHABILITATE>NEV</acREHABILITATE>
+            <acUPDATE>CHV1</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </LOCIGPRS>
+      </EF>
+      <EF>
+        <SUME description="EF SUME '6F54' (SetUpMenu Elements): This EF contains Simple TLVs related to the menu title to be used by a
+                  SIM card supporting the SIM API when issuing a SET UP MENU proactive command.">
+          <content>1</content>
+          <header>
+            <ID>6F54</ID>
+            <SIZE>20</SIZE>
+            <acINCREASE>NEV</acINCREASE>
+            <acINVALIDATE>ADM</acINVALIDATE>
+            <acREAD>ADM</acREAD>
+            <acREHABILITATE>ADM</acREHABILITATE>
+            <acUPDATE>ADM</acUPDATE>
+            <status>File invalidated; File not readable or updatable when invalidated</status>
+            <structure>transparent</structure>
+          </header>
+        </SUME>
+      </EF>
+      <EF>
+        <PLMNwACT description="EF PLMNwAcT '6F60' (User controlled PLMN Selector with Access Technology): This EF contains coding for
+                  n PLMNs, where n is at least eight. This information, determined by the user, defines the
+                  preferred PLMNs of the user in priority order. The EF also contains the Access Technologies for
+                  each PLMN in this list. (see TS 23.122 [51])." header="">
+          <content></content>
+        </PLMNwACT>
+      </EF>
+      <EF>
+        <OPLMNwACT description="EF OPLMNwAcT '6F61' (Operator controlled PLMN Selector with Access Technology): This EF contains coding
+                  for n PLMNs, where n is at least eight. This information, determined by the operator, defines
+                  the preferred PLMNs of the operator in priority order. The EF also contains the Access Technologies
+                  for each PLMN in this list (see TS 23.122 [51])." header="">
+          <content></content>
+        </OPLMNwACT>
+      </EF>
+      <EF>
+        <HPLMNwACT description="EF HPLMNwAcT '6F62' (HPLMN Selector with Access Technology): The HPLMN Selector with access technology data
+                  field shall contain the HPLMN code, or codes together with the respective access technology in
+                  priority order (see TS 23.122 [51])." header="">
+          <content></content>
+        </HPLMNwACT>
+      </EF>
+      <EF>
+        <CPBCCH description="EF CPBCCH '6F63' (CPBCCH Information): This EF contains information concerning the CPBCCH according to
+                  TS 04.18 [48] and TS 03.22 [45]. CPBCCH storage may reduce the extent of a Mobile Station's search
+                  of CPBCCH carriers when selecting a cell. The CPBCCH carrier lists shall be in accordance with the
+                  procedures specified in TS 04.18 [48], TS 04.60 [49] and TS 03.22 [45]. The MS stores CPBCCH
+                  information from the System Information 19 message, Packet System Information 3, and Packet System
+                  Information 3 bis on the SIM. The same CPBCCH carrier shall never occur twice in the list." header="">
+          <content></content>
+        </CPBCCH>
+      </EF>
+      <EF>
+        <INVSCAN description="EF InvScan '6F64' (Investigation Scan): This EF contains two flags used to control the investigation scan
+                  for higher prioritized PLMNs not offering voice services." header="">
+          <content></content>
+        </INVSCAN>
+      </EF>
+      <header>
+        <CHV1_status>3 attempt left</CHV1_status>
+        <CHV2_status>3 attempt left</CHV2_status>
+        <FREE_MEMORY>904</FREE_MEMORY>
+        <File_characteristics>clock stop allowed, low level preferred; Frequency required 13/4 MHz; 3V technology SIM; CHV1 disabled</File_characteristics>
+        <ID>7F20</ID>
+        <LENGTH>17</LENGTH>
+        <Number_of_CHVs>5</Number_of_CHVs>
+        <Number_of_DFs>0</Number_of_DFs>
+        <Number_of_EFs>24</Number_of_EFs>
+        <TYPE>DF</TYPE>
+        <UNBLOCK_CHV1_status>CHV1 initilized</UNBLOCK_CHV1_status>
+        <UNBLOCK_CHV2_status>CHV2 initilized</UNBLOCK_CHV2_status>
+      </header>
+    </DF_7F20>
+    <EF>
+      <ICCID description="EFICCID '2FE2' (ICC Identification): This EF provides a unique identification number for the SIM.">
+        <content>89 35 90 50 10 02 07 09 30 98 ###</content>
+        <header>
+          <ID>2FE2</ID>
+          <SIZE>10</SIZE>
+          <acINCREASE>NEV</acINCREASE>
+          <acINVALIDATE>NEV</acINVALIDATE>
+          <acREAD>ALW</acREAD>
+          <acREHABILITATE>NEV</acREHABILITATE>
+          <acUPDATE>NEV</acUPDATE>
+          <status>File invalidated; File not readable or updatable when invalidated</status>
+          <structure>transparent</structure>
+        </header>
+      </ICCID>
+    </EF>
+    <EF>
+      <ELP description="EFELP '2F05' (Extended language preference): This EF contains the codes for up to n languages.
+                  This information, determined by the user/operator, defines the preferred languages of the user
+                  in order of priority. This information may be used by the ME for MMI purposes.">
+        <content>Language 1 is ###Language 2 is English###Language 3 is German###Language 4 is ###Language 5 is ###Language 6 is ###Language 7 is ###Language 8 is ###Language 9 is ###Language 10 is ###</content>
+        <header>
+          <ID>2F05</ID>
+          <SIZE>20</SIZE>
+          <acINCREASE>NEV</acINCREASE>
+          <acINVALIDATE>ADM</acINVALIDATE>
+          <acREAD>ALW</acREAD>
+          <acREHABILITATE>ADM</acREHABILITATE>
+          <acUPDATE>CHV1</acUPDATE>
+          <status>File invalidated; File not readable or updatable when invalidated</status>
+          <structure>transparent</structure>
+        </header>
+      </ELP>
+    </EF>
+    <header>
+      <CHV1_status>3 attempt left</CHV1_status>
+      <CHV2_status>3 attempt left</CHV2_status>
+      <FREE_MEMORY>904</FREE_MEMORY>
+      <File_characteristics>clock stop allowed, low level preferred; Frequency required 13/4 MHz; 3V technology SIM; CHV1 disabled</File_characteristics>
+      <ID>3F00</ID>
+      <LENGTH>17</LENGTH>
+      <Number_of_CHVs>5</Number_of_CHVs>
+      <Number_of_DFs>5</Number_of_DFs>
+      <Number_of_EFs>12</Number_of_EFs>
+      <TYPE>MF</TYPE>
+      <UNBLOCK_CHV1_status>CHV1 initilized</UNBLOCK_CHV1_status>
+      <UNBLOCK_CHV2_status>CHV2 initilized</UNBLOCK_CHV2_status>
+    </header>
+  </MF>
+</opt>
