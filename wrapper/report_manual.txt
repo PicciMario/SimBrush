@@ -1,0 +1,78 @@
+SimBrush - reporter tool
+Mario Piccinelli <mario.piccinelli@gmail.com>
+
+The reporter tool is the last tool in the SimBrush examination chain. It is the one in charge with reading the wrapped xml file (the output of the wrapper tool) and creating with the data it contains a report in PDF format.
+
+----- USING THE REPORTER -------------------------------------------------
+
+The reporter is launched from the command line. It has one mandatory option (-f) to specify the wrapped XML file to work on. Other options are optional.
+
+Other options:
+
+-o filename: Specifies the name of the PDF file produced as output
+-h: Shows online help
+-v: Verbose mode (for debug purposes)
+-m filename: specifies the name of the MD5 file created by the wrapper
+-c filename: specifies the name of the original (unwrapped) file
+-i filename: specifies the name of the XML file containing investigation data
+
+----- INVESTIGATION DATA FILE FORMAT -------------------------------------
+
+It must be a valid XML file, something like this:
+
+<XML>
+<TAG> content </TAG>
+....
+</XML>
+
+The supported tags are:
+- case_number (Case number)
+- case_name (Case Name)     
+- inv_name (Investigator name)    
+- sim_number (SIM number)     
+- sim_desc (SIM description) 
+
+----- WRAPPED XML DATA STRUCTURE -----------------------------------------
+
+The wrapped xml file must have the following structure:
+
+OPT node
+- MF node
+--- header for top level (one element)
+--- EF nodes
+--- other nodes (DF_7F10   DF_7F20)
+----- header (one element)
+----- EF nodes
+----- other nodes (DF_5F3C   DF_5F70)
+------- header (one element)
+------- EF nodes
+
+So we provided only four fixed levels of gerarchy: the top level (just the main header), the EF files in the main level (must be EF files, for example ICCID and ELP), other files (for example DF_7F10 and DF_7F20), which in turn contains a header and can hold EF files or different files, which can again contain only EF files. It is not provided the code to arrange a gerarchy of more than these levels, so for now the third level nodes MUST contain just EF files.
+
+The header data must follow these rules:
+- the name of the node is "header"
+- is always contained in the element it belongs to
+- can contain an arbitrary number of elements, each of them is defined by a name (the name of the tag) and a data field (the content of the tag.
+  example: 
+	<header>
+		<ID>6F3A</ID>
+		<SIZE>7000</SIZE>
+
+An EF file always starts as: <EF><NAME description="description">, where NAME is the name of the EF file and description is the text which describes the file in the report.
+
+An EF file s content can be organized in two mutual exclusive ways:
+- <content> text nodes: they contain a block of text, in which the special sequence ### is seen as a newline.
+  If a node content contains the reserved word "Empty" then it is regarded as empty and not reported in the output document.
+- <content> complex nodes: content nodes with an underlying structure, like:
+	<content>
+		<field1>text1</field1>
+		<field2>text2</field2>
+  In this case the tool will create a table like this:
+  
+  Field name     | Field content
+  ---------------------------------
+  field1         | text1
+  field2         | text2
+  
+  it is recommended to use this kind of notation for representing complex content.
+
