@@ -1,5 +1,5 @@
 # ----------- Imports --------------------------------------------------------------------------------
-import time, string, logging, getopt, sys, os, time
+import time, string, logging, getopt, sys, os, time, hashlib
 from xml.dom.minidom import *
 
 from reportlab.rl_config import defaultPageSize
@@ -22,6 +22,9 @@ from messaging.sms import SmsDeliver
 filename = ""
 outputFile = "report.pdf"
 reportVersion = "1.0"
+
+md5_filename = ""
+original_filename = ""
 
 # Array to store document data
 Story=[]
@@ -84,10 +87,12 @@ def usage():
 	print("-h  \t\t\tthis help")
 	print("-v  \t\t\tverbose")
 	print("-o outputfilename \t(default: report.pdf)")
+	print("-m md5file\t\tMD5 file built by the wrapper, to write on the report")
+	print("-c originalfilename\toriginal filename, to calculate its hash")
 	print("")
 
 try:
-	opts, args = getopt.getopt(sys.argv[1:], "hf:o:v")
+	opts, args = getopt.getopt(sys.argv[1:], "hf:o:vm:c:")
 except getopt.GetoptError:
 	usage()
 	sys.exit(0)
@@ -103,6 +108,10 @@ for o,a in opts:
 		filename = a
 	elif o == "-o":
 		outputFile = a
+	elif o == "-m":
+		md5_filename = a
+	elif o == "-c":
+		original_filename = a
 
 if (len(filename) == 0):
 	usage()
@@ -413,13 +422,80 @@ styles=getSampleStyleSheet()
 styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
 
 # ----------- First Page --------------------------------------------------------------------
+
+# globals for storing the two calculated MD5s
+md5String1 = ""
+md5String2 = ""
+
+# header about the original file (if passed by command line)
+
+originalFileHeader = []
+
+if (len(original_filename) > 0):
+	log.info("Passed name of the unwrapped file \"%s\""%original_filename)
+	try:
+		f = file(original_filename ,'rb')
+		
+		md5 = hashlib.md5()
+		while True:
+			data = f.read()
+			if not data:
+				break
+			md5.update(data)
+		md5String1 = md5.hexdigest()
+		
+		f.close()
+		originalFileHeader.append(['Original file name', original_filename])
+		originalFileHeader.append(['Original file MD5 (calculated by reporter)', md5String1])
+		originalFileHeader.append(['Creation date of original file', time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(os.path.getmtime(original_filename)))],)
+	except:
+		log.warning("Unable to calculate MD5 of original file \"%s\""%original_filename)
+
+if (len(originalFileHeader) > 0):
+	t=Table(originalFileHeader, colWidths=[200, 300])
+	t.setStyle(tableStyleStandard)                   
+	Story.append(t)
+	Story.append(Spacer(1, 6))
+
+# header about the wrapped filename and the original MD5 value (if passed by command line)
+
+wrappedFileHeader = []
+
+wrappedFileHeader.append(['Wrapped XML file', filename])
+
+if (len(md5_filename) > 0):
+	log.info("Reading MD5 from external file \"%s\""%md5_filename)
+	try:
+		f = open(md5_filename, 'r')
+		md5String2 = f.read()
+		f.close()
+		wrappedFileHeader.append(['Original file MD5 (calculated by wrapper)', md5String2])
+	except:
+		log.warning("Unable to open MD5 file \"%s\""%md5_filename)
+
+wrappedFileHeader.append(['Creation date of wrapped file', time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(os.path.getmtime(filename)))],)
+
+if (len(wrappedFileHeader) > 0):
+	t=Table(wrappedFileHeader, colWidths=[200, 300])
+	t.setStyle(tableStyleStandard)                   
+	Story.append(t)
+	Story.append(Spacer(1, 6))
+
+# other header data
+
 coverData = [
-	['Input XML file', filename],
-	['Creation date of input file', time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(os.path.getmtime(filename)))],
 	['Creation date of this report', time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())],
 ]
 
-t=Table(coverData, colWidths=[150, 300])
+if (len(md5String1) > 0 and len(md5String2) > 0):
+	if (md5String1 == md5String2):
+		coverData.append(['MD5 check', 'passed'])
+		log.info("MD5 check passed")
+	else:
+		coverData.append(['MD5 check', 'failed'])
+		log.info("MD5 check failed")
+
+t=Table(coverData, colWidths=[200, 300])
 t.setStyle(tableStyleStandard)                   
 Story.append(t)
 
@@ -465,7 +541,7 @@ Story.append(toc)
 Story.append(PageBreak())
 
 # ----------- Acquire the XML tree from the input file ----------------------------------------------
-print("\nAnalyzing \"%s\"..."%filename)
+print("Analyzing \"%s\"..."%filename)
 manifest = parse(filename)
 
 # Root elements
