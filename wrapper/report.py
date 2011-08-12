@@ -101,7 +101,7 @@ def usage():
 	print("")
 
 try:
-	opts, args = getopt.getopt(sys.argv[1:], "hf:o:vm:c:")
+	opts, args = getopt.getopt(sys.argv[1:], "hf:o:vm:c:i:")
 except getopt.GetoptError:
 	usage()
 	sys.exit(0)
@@ -121,6 +121,8 @@ for o,a in opts:
 		md5_filename = a
 	elif o == "-c":
 		original_filename = a
+	elif o == "-i":
+		investigation_filename = a
 
 if (len(filename) == 0):
 	usage()
@@ -429,8 +431,8 @@ def checkSingleChild(node):
 # Adds a record to a table
 def addRow(tableData, one, two):
 	tableData.append([
-		Paragraph("<font size=8>%s</font>"%one, styles["Normal"]),
-		Paragraph("<font size=8>%s</font>"%two, styles["Normal"])
+		Paragraph("<font size=10>%s</font>"%one, styles["Normal"]),
+		Paragraph("<font size=10>%s</font>"%two, styles["Normal"])
 		])
 
 # ----------- Default style --------------------------------------------------------------------
@@ -447,6 +449,35 @@ md5String2 = ""
 
 investigationHeader = []
 
+if (len(investigation_filename) > 0):
+	log.info("Passed name of investigation file \"%s\""%investigation_filename)
+	try:
+		data = parse(investigation_filename)
+		
+		tags = [
+			['case_number', 'Case number'],
+			['case_name', 'Case Name'],
+			['inv_name', 'Investigator name'],
+			['sim_number', 'SIM number'],
+			['sim_desc', 'SIM description'],
+		]
+		
+		for tag in tags:	
+			elem = data.getElementsByTagName(tag[0])
+			if (len(elem) > 0):
+				elem = elem[0].firstChild.toxml()
+				addRow(investigationHeader, tag[1], elem)
+
+	except IOError:
+		log.warning("Unable to open investigation data file \"%s\""%investigation_filename)
+	except:
+		log.warning("XML error while reading investigation data file \"%s\""%investigation_filename)
+
+if (len(investigationHeader) > 0):
+	t=Table(investigationHeader, colWidths=[200, 300])
+	t.setStyle(tableStyleStandard)                   
+	Story.append(t)
+	Story.append(Spacer(1, 20))
 
 # header about the original file (if passed by command line)
 
@@ -476,7 +507,7 @@ if (len(originalFileHeader) > 0):
 	t=Table(originalFileHeader, colWidths=[200, 300])
 	t.setStyle(tableStyleStandard)                   
 	Story.append(t)
-	Story.append(Spacer(1, 6))
+	Story.append(Spacer(1, 20))
 
 # header about the wrapped filename and the original MD5 value (if passed by command line)
 
@@ -500,7 +531,7 @@ if (len(wrappedFileHeader) > 0):
 	t=Table(wrappedFileHeader, colWidths=[200, 300])
 	t.setStyle(tableStyleStandard)                   
 	Story.append(t)
-	Story.append(Spacer(1, 6))
+	Story.append(Spacer(1, 20))
 
 # other header data
 

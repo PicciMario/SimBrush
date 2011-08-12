@@ -1,0 +1,23 @@
+<xml>
+
+<case_number>
+123
+</case_number>
+
+<case_name>
+Il caso della SIM che non quadra
+</case_name>
+
+<inv_name>
+Mario Piccinelli
+</inv_name>
+
+<sim_number>
+035/123456
+</sim_number>
+
+<sim_desc>
+Questa SIM contiene dati di prova utilizzati per testare il funzionamento del sistema di analisi SimBrush, versione 1.0
+</sim_desc>
+
+</xml>
