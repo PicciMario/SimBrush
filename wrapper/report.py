@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # ----------- Imports --------------------------------------------------------------------------------
 import time, string, logging, getopt, sys, os, time, hashlib
 from xml.dom.minidom import *
@@ -416,6 +418,13 @@ def checkSingleChild(node):
 	number = checkNumberOfChildNodes(node)
 	if (number != 1):
 		log.warning("Top level EF file containing first child \"%s\" has %i child nodes. Ignoring ones after first."%(node.childNodes[1].localName, number))	
+
+# Adds a record to a table
+def addRow(tableData, one, two):
+	tableData.append([
+		Paragraph("<font size=8>%s</font>"%one, styles["Normal"]),
+		Paragraph("<font size=8>%s</font>"%two, styles["Normal"])
+		])
 
 # ----------- Default style --------------------------------------------------------------------
 styles=getSampleStyleSheet()
