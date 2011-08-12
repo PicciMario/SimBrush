@@ -14,9 +14,9 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch, cm
 
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, PageBreak, Table, TableStyle, NextPageTemplate
-from  reportlab.platypus.doctemplate import PageTemplate, BaseDocTemplate, _doNothing
-from  reportlab.platypus.tableofcontents import TableOfContents
-from  reportlab.platypus.frames import Frame
+from reportlab.platypus.doctemplate import PageTemplate, BaseDocTemplate, _doNothing
+from reportlab.platypus.tableofcontents import TableOfContents
+from reportlab.platypus.frames import Frame
 
 from messaging.sms import SmsDeliver
 
@@ -25,8 +25,12 @@ filename = ""
 outputFile = "report.pdf"
 reportVersion = "1.0"
 
+# file containing carved file MD5 hash as calculated by wrapper
 md5_filename = ""
+# carved file
 original_filename = ""
+# XML file with investigation data
+investigation_filename = ""
 
 # Array to store document data
 Story=[]
@@ -83,14 +87,17 @@ log.addHandler(ch)
 # ----------- Command Line Parameters ---------------------------------------------------------------
 def usage():
 	print("")
-	print("SimBrush data reporter (ver. %s)\n"%reportVersion)
+	print("SimBrush data reporter (ver. %s)"%reportVersion)
+	print("")
 	print("Usage: report.py -f inputfilename")
+	print("")
 	print("Other options:")
-	print("-h  \t\t\tthis help")
-	print("-v  \t\t\tverbose")
-	print("-o outputfilename \t(default: report.pdf)")
-	print("-m md5file\t\tMD5 file built by the wrapper, to write on the report")
-	print("-c originalfilename\toriginal filename, to calculate its hash")
+	print("-h  \t\tThis help")
+	print("-v  \t\tVerbose")
+	print("-o filename \tOutput report file name(default: report.pdf)")
+	print("-m md5file\tMD5 file built by the wrapper, to write on the report")
+	print("-c filename\tOriginal file (from carver) name, to calculate its hash")
+	print("-i filename\tFile containing investigation data")
 	print("")
 
 try:
@@ -435,6 +442,11 @@ styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
 # globals for storing the two calculated MD5s
 md5String1 = ""
 md5String2 = ""
+
+# header about investigation data
+
+investigationHeader = []
+
 
 # header about the original file (if passed by command line)
 
