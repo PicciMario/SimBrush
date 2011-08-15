@@ -520,20 +520,39 @@ if (len(originalFileHeader) > 0):
 	Story.append(Spacer(1, 20))
 
 # header about the wrapped filename and the original MD5 value (if passed by command line)
-
 wrappedFileHeader = []
 
 wrappedFileHeader.append(['Wrapped XML file', filename])
 
+# if user passed a MD5 file by command line...
 if (len(md5_filename) > 0):
 	log.info("Reading MD5 from external file \"%s\""%md5_filename)
 	try:
 		f = open(md5_filename, 'r')
 		md5String2 = f.read()
 		f.close()
-		wrappedFileHeader.append(['Original file MD5 (calculated by wrapper)', md5String2])
 	except:
 		log.warning("Unable to open MD5 file \"%s\""%md5_filename)
+
+# if I can find an HASH value in the wrapped file...
+wrappedFileMF = manifest.getElementsByTagName("MF")
+if (len(wrappedFileMF) > 0):
+	wrappedFileMF = wrappedFileMF[0]
+	try:
+		md5String3 = wrappedFileMF.attributes['hash'].value
+		if (len(md5String2) != 0):
+			if (md5String2 != md5String3):
+				log.warning("Conflicting hash values between MD5 file \"%s\" and HASH value in wrapped file \"%s\". Using MD5 file."%(md5_filename, filename))
+			else:
+				log.info("Passed the same hash values from MD5 file \"%s\" and HASH value in wrapped file \"%s\"."%(md5_filename, filename))
+		else:
+			md5String2 = md5String3
+			log.info("Using original file md5 value from wrapped file HASH attribute.")
+	except:
+		log.info("No HASH attribute in MF element of wrapped xml file \"%s\""%filename)
+	
+if (len(md5String2) != 0):
+	wrappedFileHeader.append(['Original file MD5 (calculated by wrapper)', md5String2])
 
 wrappedFileHeader.append(['Creation date of wrapped file', time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(os.path.getmtime(filename)))],)
 
