@@ -112,7 +112,7 @@ for o,a in opts:
 		ch.setLevel(logging.INFO)
 	elif o == "-h":
 		usage()
-		system.exit(0)
+		sys.exit(0)
 	elif o == "-f":
 		filename = a
 	elif o == "-o":
@@ -530,6 +530,7 @@ if (len(md5_filename) > 0):
 	try:
 		f = open(md5_filename, 'r')
 		md5String2 = f.read()
+		wrappedFileHeader.append(['External MD5 check file', md5_filename])
 		f.close()
 	except:
 		log.warning("Unable to open MD5 file \"%s\""%md5_filename)
@@ -550,7 +551,8 @@ if (len(wrappedFileMF) > 0):
 			log.info("Using original file md5 value from wrapped file HASH attribute.")
 	except:
 		log.info("No HASH attribute in MF element of wrapped xml file \"%s\""%filename)
-	
+
+# at last, if a hash from the wrapper is available I'm printing it
 if (len(md5String2) != 0):
 	wrappedFileHeader.append(['Original file MD5 (calculated by wrapper)', md5String2])
 
