@@ -2,7 +2,7 @@
 
 # SimBrush SIM Management Interface
 # This interface provides all the facilities required to manage a single SIM, wrapping all other utilities:
-# carver, wrapper, reporter as well as case data and hash checking
+# carver, wrapper, reporter as well as case data and hash checking.
 
 from Tkinter import *
 import subprocess, logging, sys, os, sqlite3
