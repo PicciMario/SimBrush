@@ -1,5 +1,13 @@
+#!/usr/bin/env python
+
+# SimBrush SIM Management Interface
+# This interface provides all the facilities required to manage a single SIM, wrapping all other utilities:
+# carver, wrapper, reporter as well as case data and hash checking
+
 from Tkinter import *
 import subprocess, logging, sys, os, sqlite3
+
+#################################################################################################################
 
 class ConfigDB:
 	def __init__(self, path, configFile):
@@ -111,7 +119,7 @@ class ConfigDB:
 			self.log.warning("Error while trying to write key \"%s\" with value \"%s\" into config database."%(key, value))
 			self.log.debug("Error: %s"%sys.exc_info()[1])
 	
-
+#################################################################################################################
 
 class SimUI:
 	
@@ -187,6 +195,8 @@ class SimUI:
 	def quitUi(self):
 		self.configDB.closeConfigFile()
 		self.frame.quit()
+
+#################################################################################################################
 
 root = Tk()
 app = SimUI(root)
