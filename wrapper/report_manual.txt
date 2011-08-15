@@ -3,6 +3,18 @@ Mario Piccinelli <mario.piccinelli@gmail.com>
 
 The reporter tool is the last tool in the SimBrush examination chain. It is the one in charge with reading the wrapped xml file (the output of the wrapper tool) and creating with the data it contains a report in PDF format.
 
+CARVER
+|
+| original (carved) file
+|
+WRAPPER
+|
+| wrapped file
+|
+REPORTER
+|
+| pdf report
+
 ----- USING THE REPORTER -------------------------------------------------
 
 The reporter is launched from the command line. It has one mandatory option (-f) to specify the wrapped XML file to work on. Other options are optional.
@@ -15,6 +27,24 @@ Other options:
 -m filename: specifies the name of the MD5 file created by the wrapper
 -c filename: specifies the name of the original (unwrapped) file
 -i filename: specifies the name of the XML file containing investigation data
+
+----- MD5 CHECK ----------------------------------------------------------
+
+The reporter tool provides another layer of integrity check to the data analyzed. It is known that:
+
+- The carving tool creates an original file and a MD5 file of it.
+- The wrapping tool checks for integrity the original file versus its MD5 file.
+- In the wrapped file it is provided the MD5 value discussed before as an attribute HASH in the MF tag.
+
+The reporter tool, for what concerns the wrapped file:
+- reads (if present) the MD5 data from the wrapped file and displays it in the cover page of the report.
+- it can also accept an external MD5 file. If both the MD5s are provided, they are checked for consistency. If they are not identical, a warning is shown and the MD5 file prevails.
+And for what concerns the original file:
+- it can also accept the name of the original file; in that case it calculates the MD5 of the file and displays it in the cover page.
+If both the previous cases are present:
+- it checks whether the calculated MD5 and the passed one (either by exteral MD5 file or in the wrapped file) are consistent.
+
+In a normal case it is not needed to provide a MD5 file. The integrity check should be made between the MD5 in the wrapped file and the MD5 calculated from the original file. This way we can be sure the original file has not been modified after the calculation of the wrapped version.
 
 ----- INVESTIGATION DATA FILE FORMAT -------------------------------------
 
