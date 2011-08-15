@@ -1,40 +1,22 @@
 from Tkinter import *
 import subprocess, logging, sys, os, sqlite3
 
-class SimUI:
-	
-	def __init__(self, master):
+class ConfigDB:
+	def __init__(self, path, configFile):
 		
 		# ---------- Globals --------------------------------------------------------------------------------
 		
-		self.path = "../wrapper/images/"
-		self.configFile = "simdata.sbr"	
+		self.path = path
+		self.configFile = configFile
 		
 		# config file database connection
 		self.configConn = None
-		self.configCursor = None	
-		
-		# ---------- User Interface -------------------------------------------------------------------------
-		
-		self.frame = Frame(master)
-		self.frame.pack()
-		
-		self.button = Button(self.frame, text="QUIT", fg="red", command=self.quitUi)
-		self.button.pack(side=LEFT)
-		
-		self.hi_there = Button(self.frame, text="HELLO", fg="blue", command=self.createReport)
-		self.hi_there.pack(side=LEFT)
-		
-		self.openConfigFile = Button(self.frame, text="Open Config File", fg="blue", command=self.openConfigFile)
-		self.openConfigFile.pack(side=LEFT)
+		self.configCursor = None
 
-		self.closeConfigFileButton = Button(self.frame, text="Close Config File", fg="blue", command=self.closeConfigFile)
-		self.closeConfigFileButton.pack(side=LEFT)
-		
 		# ----------- Logger --------------------------------------------------------------------------------
 
 		# Logger
-		self.log = logging.getLogger('SIM Manager')
+		self.log = logging.getLogger('Config DB Manager')
 		self.log.setLevel(logging.DEBUG)
 		#create console handler and set level to debug
 		ch = logging.StreamHandler()
@@ -44,8 +26,8 @@ class SimUI:
 		#add formatter to ch
 		ch.setFormatter(formatter)
 		#add ch to logger
-		self.log.addHandler(ch)
-	
+		self.log.addHandler(ch)			
+
 	# open sqlite3 config file $path+$configFile
 	def openConfigFile(self):
 	
@@ -56,7 +38,7 @@ class SimUI:
 		if (os.path.isfile("%s"%fullConfigPath) == 0):
 			self.log.critical("Unable to open config file \"%s\": file doesn't exist."%fullConfigPath)
 			self.log.debug("Error: %s"%sys.exc_info()[1])
-			sys.exit(1)
+			return
 		
 		# try to connect to database file
 		try:
@@ -65,15 +47,10 @@ class SimUI:
 		except:
 			self.log.critical("Unable to open config file \"%s\": file may be damaged."%fullConfigPath)
 			self.log.debug("Error: %s"%sys.exc_info()[1])
-			sys.exit(1)	
-		
-		self.readConfigKey("mille")	
-		self.writeConfigKey("newkey", "dioprete")
-		self.readConfigKey("newkey")
+			return\
 	
 	# close sqlite3 config file	
 	def closeConfigFile(self):
-		self.log.info("Closing configuration database connection.")
 		try:
 			self.configConn.commit()
 			self.configConn.close()
@@ -133,7 +110,56 @@ class SimUI:
 		except:
 			self.log.warning("Error while trying to write key \"%s\" with value \"%s\" into config database."%(key, value))
 			self.log.debug("Error: %s"%sys.exc_info()[1])
+	
+
+
+class SimUI:
+	
+	def __init__(self, master):
 		
+		# ---------- Globals --------------------------------------------------------------------------------
+		
+		self.path = "../wrapper/images/"
+		self.configFile = "simdata.sbr"	
+		self.configDB = ConfigDB(self.path, self.configFile)
+		
+		# ---------- User Interface -------------------------------------------------------------------------
+		
+		self.frame = Frame(master)
+		self.frame.pack()
+		
+		self.button = Button(self.frame, text="QUIT", fg="red", command=self.quitUi)
+		self.button.pack(side=LEFT)
+		
+		self.hi_there = Button(self.frame, text="HELLO", fg="blue", command=self.createReport)
+		self.hi_there.pack(side=LEFT)
+		
+		self.openConfigFile = Button(self.frame, text="Open Config File", fg="blue", command=self.configDB.openConfigFile)
+		self.openConfigFile.pack(side=LEFT)
+
+		self.closeConfigFileButton = Button(self.frame, text="Close Config File", fg="blue", command=self.configDB.closeConfigFile)
+		self.closeConfigFileButton.pack(side=LEFT)
+		
+		# ----------- Logger --------------------------------------------------------------------------------
+
+		# Logger
+		self.log = logging.getLogger('SIM Manager')
+		self.log.setLevel(logging.DEBUG)
+		#create console handler and set level to debug
+		ch = logging.StreamHandler()
+		ch.setLevel(logging.DEBUG)
+		#create formatter
+		formatter = logging.Formatter("%(name)s - %(levelname)s - %(message)s")
+		#add formatter to ch
+		ch.setFormatter(formatter)
+		#add ch to logger
+		self.log.addHandler(ch)
+	
+		# ----------- Config DB -----------------------------------------------------------------------------
+	
+		self.configDB.openConfigFile()
+		self.configDB.writeConfigKey("ottimismo", "che vola")
+		self.configDB.readConfigKey("ottimismo")
 					
 	
 	def say_hi(self):
@@ -159,7 +185,7 @@ class SimUI:
 		print("retval: %i"%retval)
 	
 	def quitUi(self):
-		self.closeConfigFile()
+		self.configDB.closeConfigFile()
 		self.frame.quit()
 
 root = Tk()
