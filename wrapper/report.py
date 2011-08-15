@@ -439,6 +439,14 @@ def addRow(tableData, one, two):
 styles=getSampleStyleSheet()
 styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
 
+# ----------- Acquire the XML tree from the input file ----------------------------------------------
+print("Analyzing \"%s\"..."%filename)
+try:
+	manifest = parse(filename)
+except:
+	log.critical("Unable to parse data file \"%s\". Quitting."%filename)
+	sys.exit(1)
+
 # ----------- First Page --------------------------------------------------------------------
 
 # globals for storing the two calculated MD5s
@@ -593,8 +601,7 @@ Story.append(toc)
 Story.append(PageBreak())
 
 # ----------- Acquire the XML tree from the input file ----------------------------------------------
-print("Analyzing \"%s\"..."%filename)
-manifest = parse(filename)
+
 
 # Root elements
 OPT_node = manifest.getElementsByTagName("opt")[0]
