@@ -475,6 +475,8 @@ if (len(investigation_filename) > 0):
 			if (len(elem) > 0):
 				elem = elem[0].firstChild.toxml()
 				addRow(investigationHeader, tag[1], elem)
+			else:
+				log.info("No %s (tag %s) in investigation file %s"%(tag[1], tag[0], investigation_filename))
 
 	except IOError:
 		log.warning("Unable to open investigation data file \"%s\""%investigation_filename)
