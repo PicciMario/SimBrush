@@ -143,15 +143,6 @@ class SimUI:
 		self.wrapperExe = ""
 		self.reportExe = "../wrapper/report.py"
 		
-		# files names
-		
-		# output file of the wrapper
-		self.wrappedFilename = ""
-		# output pdf report
-		self.reportFilename = ""
-		# reporter log
-		self.reportLogFilename = ""
-		
 		# ---------- User Interface -------------------------------------------------------------------------
 		
 		self.frame = Frame(master)
@@ -189,47 +180,76 @@ class SimUI:
 		openStatus = self.configDB.openConfigFile()
 		if (openStatus != 0):
 			self.log.critical("Unable to open configuration file. Quitting.")
-			sys.exit(1)
-	
-		# ----------- Read config data ---------------------------------------------------------------------
-		
-		self.wrappedFilename = self.configDB.readConfigKey("wrapped_filename")
-		self.reportFilename = self.configDB.readConfigKey("report_filename")				
-		self.reportLogFilename = self.configDB.readConfigKey("report_log_filename")
-	
-	def say_hi(self):
-		print("mille")
+			sys.exit(1)			
+
 	
 	def createReport(self):
 		self.log.info("Creating SimBrush report.")
 		
 		# report filename (default if not present in config db)
-		if (self.reportFilename == None):
-			self.reportFilename = "report.pdf"
-			self.configDB.writeConfigKey("report_filename", self.reportFilename)
+		reportFilename = self.configDB.readConfigKey("report_filename")
+		if (reportFilename == None):
+			reportFilename = "report.pdf"
+			self.configDB.writeConfigKey("report_filename", reportFilename)
 		
 		# report log filename (default if not present in config db)
-		if (self.reportLogFilename == None):
-			self.reportLogFilename = "reporter_log.txt"
-			self.configDB.writeConfigKey("report_log_filename", self.reportLogFilename)
+		reportLogFilename = self.configDB.readConfigKey("report_log_filename")
+		if (reportLogFilename == None):
+			reportLogFilename = "reporter_log.txt"
+			self.configDB.writeConfigKey("report_log_filename", reportLogFilename)
 		
-		# wrapped filename (default if not present in config db)
-		if (self.wrappedFilename == None):
-			self.wrappedFilename = "w_test.xml"
-			self.configDB.writeConfigKey("wrapped_filename", self.wrappedFilename)
-		if (os.path.isfile("%s%s"%(self.path, self.wrappedFilename)) == 0):
-			self.log.error("Trying to create report from unexisting wrapped file %s%s"%(self.path, self.wrappedFilename))
+		# wrapped filename
+		wrappedFilename = self.configDB.readConfigKey("wrapped_filename")
+		if (wrappedFilename == None):
+			self.log.error("Wrapped file not listed in config file.")
 			return 1
+		if (os.path.isfile("%s%s"%(self.path, wrappedFilename)) == 0):
+			self.log.error("Trying to create report from unexisting wrapped file %s%s"%(self.path, wrappedFilename))
+			return 1
+			
+		# build investigation data XML file from data in the config DB
+		investFilename = "%sinvdata.tmp"%self.path
+		investData = []
+		
+		# invest tags: xml tag, config key
+		investTags = [
+			['case_number', 'case_number'],
+			['case_name', 'case_name'],
+			['inv_name', 'inv_name'],
+			['sim_number', 'sim_number'],
+			['sim_desc', 'sim_desc'],
+		]
+		
+		investFileAvailable = 0
+		try:
+			investFile = open(investFilename, 'w')
+			investFile.write("<xml>\n")	
+			for investTag in investTags:
+				xmlTag = investTag[0]
+				configKey = investTag[1]
+				configValue = self.configDB.readConfigKey(configKey)
+				if (configValue != None):
+					investFile.write("<%s>\n%s\n</%s>\n"%(xmlTag, configValue, xmlTag))
+			investFileAvailable = 1
+			investFile.write("</xml>\n")
+			investFile.close()
+		except:
+			self.log.error("Unable to write investigation file data")
+			self.log.debug("Error: %s"%sys.exc_info()[1])
 		
 		# build command sequence
 		command = [
 			self.reportExe,
 			"-f",
-			"%s%s"%(self.path, self.wrappedFilename),
+			"%s%s"%(self.path, wrappedFilename),
 			"-o",
-			"%s%s"%(self.path, self.reportFilename),
+			"%s%s"%(self.path, reportFilename),
 			"-v"
 		]
+		
+		if (investFileAvailable == 1):
+			command.append("-i")
+			command.append(investFilename)
 		
 		# print command sequence
 		commandString = ""
@@ -253,17 +273,25 @@ class SimUI:
 		
 		# write reporter log file
 		try:
-			reportFile = open("%s%s"%(self.path, self.reportLogFilename), 'w')
+			reportFile = open("%s%s"%(self.path, reportLogFilename), 'w')
 			for row in reporterLogData:
 				reportFile.write(row)
 			reportFile.close()
-			self.log.info("Written reporter log to file %s%s"%(self.path, self.reportLogFilename))
+			self.log.info("Written reporter log to file %s%s"%(self.path, reportLogFilename))
 		except:
-			self.log.warning("Error while trying to write reporter log file %s%s."%(self.path, self.reportLogFilename))
+			self.log.warning("Error while trying to write reporter log file %s%s."%(self.path, reportLogFilename))
 			self.log.debug("Error: %s"%sys.exc_info()[1])			
 	
+		# remove temp investigation xml data file
+		if (os.path.isfile(investFilename) != 0):
+			try:
+				os.remove(investFilename)
+			except:
+				self.log.warning("Unable to remove temp investigation xml data file %s"%investFilename)
+				
 	def quitUi(self):
 		self.configDB.closeConfigFile()
+		self.log.info("Quitting.")
 		self.frame.quit()
 
 #################################################################################################################

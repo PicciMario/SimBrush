@@ -480,8 +480,10 @@ if (len(investigation_filename) > 0):
 
 	except IOError:
 		log.warning("Unable to open investigation data file \"%s\""%investigation_filename)
+		log.warning("Error: %s"%sys.exc_info()[1])
 	except:
 		log.warning("XML error while reading investigation data file \"%s\""%investigation_filename)
+		log.warning("Error: %s"%sys.exc_info()[1])
 
 if (len(investigationHeader) > 0):
 	t=Table(investigationHeader, colWidths=[200, 300])
