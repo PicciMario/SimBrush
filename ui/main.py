@@ -206,7 +206,14 @@ class SimUI:
 		if (os.path.isfile("%s%s"%(self.path, wrappedFilename)) == 0):
 			self.log.error("Trying to create report from unexisting wrapped file %s%s"%(self.path, wrappedFilename))
 			return 1
-			
+		
+		# carved filename
+		carvedFilename = self.configDB.readConfigKey("carved_filename")
+		if (carvedFilename != None):
+			if (os.path.isfile("%s%s"%(self.path, carvedFilename)) == 0):
+				self.log.warning("Unable to find carved file %s%s, maybe forcefully removed?"%(self.path, carvedFilename))
+				carvedFilename = None
+		
 		# build investigation data XML file from data in the config DB
 		investFilename = "%sinvdata.tmp"%self.path
 		investData = []
@@ -250,6 +257,11 @@ class SimUI:
 		if (investFileAvailable == 1):
 			command.append("-i")
 			command.append(investFilename)
+		
+		if (carvedFilename != None):
+			command.append("-c")
+			command.append("%s%s"%(self.path, carvedFilename))
+		
 		
 		# print command sequence
 		commandString = ""
