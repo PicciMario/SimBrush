@@ -131,7 +131,7 @@ if (len(filename) == 0):
 	
 if (os.path.isfile(filename) == 0):
 	usage()
-	print("File \"filename\" does not exist!\n")
+	print("File \"%s\" does not exist!\n"%filename)
 	sys.exit(0)
 
 # ----------- Document template ---------------------------------------------------------------------

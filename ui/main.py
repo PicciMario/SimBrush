@@ -39,6 +39,11 @@ class ConfigDB:
 	# open sqlite3 config file $path+$configFile
 	def openConfigFile(self):
 	
+		# open configuration sqlite3 file
+		# return:
+		# 1 - fail
+		# 0 - ok 
+	
 		fullConfigPath = "%s%s"%(self.path, self.configFile)
 		self.log.info("Opening config file \"%s\""%fullConfigPath)
 		
@@ -46,16 +51,17 @@ class ConfigDB:
 		if (os.path.isfile("%s"%fullConfigPath) == 0):
 			self.log.critical("Unable to open config file \"%s\": file doesn't exist."%fullConfigPath)
 			self.log.debug("Error: %s"%sys.exc_info()[1])
-			return
+			return 1
 		
 		# try to connect to database file
 		try:
 			self.configConn = sqlite3.connect("%s"%fullConfigPath)
 			self.configCursor = self.configConn.cursor()
+			return 0
 		except:
 			self.log.critical("Unable to open config file \"%s\": file may be damaged."%fullConfigPath)
 			self.log.debug("Error: %s"%sys.exc_info()[1])
-			return\
+			return 1
 	
 	# close sqlite3 config file	
 	def closeConfigFile(self):
@@ -128,8 +134,23 @@ class SimUI:
 		# ---------- Globals --------------------------------------------------------------------------------
 		
 		self.path = "../wrapper/images/"
+		
 		self.configFile = "simdata.sbr"	
 		self.configDB = ConfigDB(self.path, self.configFile)
+		
+		# executables for SimBrush tools
+		self.carveExe = ""
+		self.wrapperExe = ""
+		self.reportExe = "../wrapper/report.py"
+		
+		# files names
+		
+		# output file of the wrapper
+		self.wrappedFilename = ""
+		# output pdf report
+		self.reportFilename = ""
+		# reporter log
+		self.reportLogFilename = ""
 		
 		# ---------- User Interface -------------------------------------------------------------------------
 		
@@ -163,34 +184,83 @@ class SimUI:
 		#add ch to logger
 		self.log.addHandler(ch)
 	
-		# ----------- Config DB -----------------------------------------------------------------------------
+		# ----------- Open config DB ------------------------------------------------------------------------
 	
-		self.configDB.openConfigFile()
-		self.configDB.writeConfigKey("ottimismo", "che vola")
-		self.configDB.readConfigKey("ottimismo")
-					
+		openStatus = self.configDB.openConfigFile()
+		if (openStatus != 0):
+			self.log.critical("Unable to open configuration file. Quitting.")
+			sys.exit(1)
+	
+		# ----------- Read config data ---------------------------------------------------------------------
+		
+		self.wrappedFilename = self.configDB.readConfigKey("wrapped_filename")
+		self.reportFilename = self.configDB.readConfigKey("report_filename")				
+		self.reportLogFilename = self.configDB.readConfigKey("report_log_filename")
 	
 	def say_hi(self):
 		print("mille")
 	
 	def createReport(self):
-		self.log.info("Creating report...")
+		self.log.info("Creating SimBrush report.")
 		
+		# report filename (default if not present in config db)
+		if (self.reportFilename == None):
+			self.reportFilename = "report.pdf"
+			self.configDB.writeConfigKey("report_filename", self.reportFilename)
+		
+		# report log filename (default if not present in config db)
+		if (self.reportLogFilename == None):
+			self.reportLogFilename = "reporter_log.txt"
+			self.configDB.writeConfigKey("report_log_filename", self.reportLogFilename)
+		
+		# wrapped filename (default if not present in config db)
+		if (self.wrappedFilename == None):
+			self.wrappedFilename = "w_test.xml"
+			self.configDB.writeConfigKey("wrapped_filename", self.wrappedFilename)
+		if (os.path.isfile("%s%s"%(self.path, self.wrappedFilename)) == 0):
+			self.log.error("Trying to create report from unexisting wrapped file %s%s"%(self.path, self.wrappedFilename))
+			return 1
+		
+		# build command sequence
 		command = [
-			"../wrapper/report.py",
+			self.reportExe,
 			"-f",
-			"../wrapper/images/w_test.xml",
+			"%s%s"%(self.path, self.wrappedFilename),
+			"-o",
+			"%s%s"%(self.path, self.reportFilename),
 			"-v"
 		]
+		
+		# print command sequence
+		commandString = ""
+		for element in command:
+			commandString = "%s %s"%(commandString, element)
+		self.log.debug("Executing: %s"%commandString)
+		
+		# run command
 		p = subprocess.Popen(command, shell=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 		
+		# save stdout to array for logging
+		reporterLogData = []
 		while True:
 			o = p.stdout.readline()
 			if o == '' and p.poll() != None: break
-			print o
+			reporterLogData.append(o)
 		
 		retval = p.wait()
-		print("retval: %i"%retval)
+		reporterLogData.append("Return Value: %i"%retval)
+		self.log.info("Reporter tool ended with exit status: %s"%retval)
+		
+		# write reporter log file
+		try:
+			reportFile = open("%s%s"%(self.path, self.reportLogFilename), 'w')
+			for row in reporterLogData:
+				reportFile.write(row)
+			reportFile.close()
+			self.log.info("Written reporter log to file %s%s"%(self.path, self.reportLogFilename))
+		except:
+			self.log.warning("Error while trying to write reporter log file %s%s."%(self.path, self.reportLogFilename))
+			self.log.debug("Error: %s"%sys.exc_info()[1])			
 	
 	def quitUi(self):
 		self.configDB.closeConfigFile()
