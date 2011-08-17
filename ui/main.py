@@ -181,40 +181,47 @@ class SimUI(Frame):
 		
 		# left content frame
 		
-		leftContentFrame = Frame(self, height=2, bd=1, relief=SUNKEN)
+		leftContentFrame = LabelFrame(self, height=2, bd=1, relief=SUNKEN, text="Investigation Data", labelanchor="n")
 		leftContentFrame.grid(column=0, row=2, sticky="nsw", padx=10, pady=10)
 		
 		entryWidth = 35
 		rowNum = 0
+		modifiedBgColor = "yellow"
 		
 		Label(leftContentFrame, text="Investigator name").grid(row=rowNum, column=0)
 		self.invNameEntry = Entry(leftContentFrame, width=entryWidth)
 		self.invNameEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.invNameEntry.bind("<Key>", lambda e: self.invNameEntry.config(bg=modifiedBgColor))
 		rowNum += 1
 		
 		Label(leftContentFrame, text="Case number").grid(row=rowNum, column=0)
 		self.caseNumberEntry = Entry(leftContentFrame, width=entryWidth)
 		self.caseNumberEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.caseNumberEntry.bind("<Key>", lambda e: self.caseNumberEntry.config(bg=modifiedBgColor))
 		rowNum += 1
 		
 		Label(leftContentFrame, text="Case name").grid(row=rowNum, column=0)
 		self.caseNameEntry = Entry(leftContentFrame, width=entryWidth)
 		self.caseNameEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.caseNameEntry.bind("<Key>", lambda e: self.caseNameEntry.config(bg=modifiedBgColor))
 		rowNum += 1
 		
 		Label(leftContentFrame, text="SIM number").grid(row=rowNum, column=0)
 		self.simNumberEntry = Entry(leftContentFrame, width=entryWidth)
 		self.simNumberEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.simNumberEntry.bind("<Key>", lambda e: self.simNumberEntry.config(bg=modifiedBgColor))
 		rowNum += 1
 		
 		Label(leftContentFrame, text="SIM description").grid(row=rowNum, column=0)
 		self.simDescriptionText = Text(leftContentFrame, height=5, width=entryWidth+5, bd=2, relief="sunken", wrap=WORD)
 		self.simDescriptionText.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.simDescriptionText.bind("<Key>", lambda e: self.simDescriptionText.config(bg=modifiedBgColor))
 		rowNum += 1	
 		
 		Label(leftContentFrame, text="Note").grid(row=rowNum, column=0)
 		self.noteText = Text(leftContentFrame, height=5, width=entryWidth+5, bd=2, relief="sunken", wrap=WORD)
 		self.noteText.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.noteText.bind("<Key>", lambda e: self.noteText.config(bg=modifiedBgColor))
 		rowNum += 1
 
 		self.createReportButton = Button(leftContentFrame, text="Update investigation data", fg="blue", command=self.saveInvData)
@@ -222,10 +229,51 @@ class SimUI(Frame):
 		
 		# right content frame
 		
-		rightContentFrame = Frame(self)
-		rightContentFrame.grid(column=1, row=2, sticky="ew")
+		rightContentFrame = LabelFrame(self, height=2, bd=1, relief=SUNKEN, text="Archive content", labelanchor="n")
+		rightContentFrame.grid(column=1, row=2, sticky="ewn", padx=10, pady=10)
+		
+		entryWidth = 35
+		rowNum = 0
+		
+		Label(rightContentFrame, text="Carved file").grid(row=rowNum, column=0)
+		self.carvedFileEntry = Entry(rightContentFrame, width=entryWidth)
+		self.carvedFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1		
+
+		Label(rightContentFrame, text="Carver log").grid(row=rowNum, column=0)
+		self.carverLogFileEntry = Entry(rightContentFrame, width=entryWidth)
+		self.carverLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1	
+
+		Label(rightContentFrame, text="Carved file MD5").grid(row=rowNum, column=0)
+		self.carvedFileMd5Entry = Entry(rightContentFrame, width=entryWidth)
+		self.carvedFileMd5Entry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1		
+		
+		Label(rightContentFrame, text="Wrapped file").grid(row=rowNum, column=0)
+		self.wrappedFileEntry = Entry(rightContentFrame, width=entryWidth)
+		self.wrappedFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1
+		
+		Label(rightContentFrame, text="Wrapper log").grid(row=rowNum, column=0)
+		self.wrapperLogFileEntry = Entry(rightContentFrame, width=entryWidth)
+		self.wrapperLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1
+		
+		Label(rightContentFrame, text="Report file").grid(row=rowNum, column=0)
+		self.reportFileEntry = Entry(rightContentFrame, width=entryWidth)
+		self.reportFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		self.createReportButton = Button(rightContentFrame, text="Create Report", fg="blue", command=self.createReport)
-		self.createReportButton.grid(row=0, column=0)
+		self.createReportButton.grid(row=rowNum, column=2)
+		rowNum += 1
+
+		Label(rightContentFrame, text="Report log").grid(row=rowNum, column=0)
+		self.reportLogFileEntry = Entry(rightContentFrame, width=entryWidth)
+		self.reportLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1
+		
+		#self.createReportButton = Button(rightContentFrame, text="Create Report", fg="blue", command=self.createReport)
+		#self.createReportButton.grid(row=0, column=0)
 		
 		# ----------- Logger --------------------------------------------------------------------------------
 
@@ -257,36 +305,93 @@ class SimUI(Frame):
 		
 		# updating text fields in the left column
 		
+		leftColumnEntries = [
+			self.invNameEntry,
+			self.caseNumberEntry,
+			self.caseNameEntry,
+			self.simNumberEntry			
+		]
+		
+		leftColumnTexts = [
+			self.simDescriptionText,
+			self.noteText
+		]
+		
+		for element in leftColumnEntries:
+			element.delete(0,END)
+		for element in leftColumnTexts:
+			element.delete(1.0, END)
+		for element in leftColumnEntries+leftColumnTexts:
+			element.config(bg="white")
+		
 		invNameNew = self.configDB.readConfigKey("inv_name")
-		self.invNameEntry.delete(0, END)
 		if (invNameNew != None):
 			self.invNameEntry.insert(0, invNameNew)
 		
 		caseNumberNew = self.configDB.readConfigKey("case_number")
-		self.caseNumberEntry.delete(0, END)
 		if (caseNumberNew != None):
 			self.caseNumberEntry.insert(0, caseNumberNew)
 
 		caseNameNew = self.configDB.readConfigKey("case_name")
-		self.caseNameEntry.delete(0, END)
 		if (caseNameNew != None):
 			self.caseNameEntry.insert(0, caseNameNew)		
 
 		simNumberNew = self.configDB.readConfigKey("sim_number")
-		self.simNumberEntry.delete(0, END)
 		if (simNumberNew != None):
 			self.simNumberEntry.insert(0, simNumberNew)
 		
 		simDescrNew = self.configDB.readConfigKey("sim_descr")
-		self.simDescriptionText.delete(1.0, END)
 		if (simDescrNew != None):
 			self.simDescriptionText.insert(1.0, simDescrNew)
 
 		noteNew = self.configDB.readConfigKey("note")
-		self.noteText.delete(1.0, END)
 		if (noteNew != None):
 			self.noteText.insert(1.0, noteNew)
-	
+		
+		# updating file names in right column
+		
+		rightColumnElements = [
+			self.carvedFileEntry,
+			self.carverLogFileEntry,
+			self.carvedFileMd5Entry,
+			self.wrappedFileEntry,
+			self.wrapperLogFileEntry,
+			self.reportFileEntry,
+			self.reportLogFileEntry
+		]
+		
+		for element in rightColumnElements:
+			element.delete(0, END)
+			element.config(bg="white")
+
+		carvedFileNew = self.configDB.readConfigKey("carved_filename")
+		if (carvedFileNew != None):
+			self.carvedFileEntry.insert(0, carvedFileNew)
+
+		carvedLogFileNew = self.configDB.readConfigKey("carver_log_filename")
+		if (carvedLogFileNew != None):
+			self.carverLogFileEntry.insert(0, carvedLogFileNew)
+
+		carvedMd5New = self.configDB.readConfigKey("carved_md5")
+		if (carvedMd5New != None):
+			self.carvedFileMd5Entry.insert(0, carvedMd5New)
+
+		wrappedFileNew = self.configDB.readConfigKey("wrapped_filename")
+		if (wrappedFileNew != None):
+			self.wrappedFileEntry.insert(0, wrappedFileNew)
+
+		wrapperLogNew = self.configDB.readConfigKey("wrapped_log_filename")
+		if (wrapperLogNew != None):
+			self.wrapperLogFileEntry.insert(0, wrapperLogNew)
+
+		reportFileNew = self.configDB.readConfigKey("report_filename")
+		if (reportFileNew != None):
+			self.reportFileEntry.insert(0, reportFileNew)
+
+		reportLogFileNew = self.configDB.readConfigKey("report_log_filename")
+		if (reportLogFileNew != None):
+			self.reportLogFileEntry.insert(0, reportLogFileNew)		
+
 	def saveInvData(self):
 		self.log.info("Updating investigation data")
 		
