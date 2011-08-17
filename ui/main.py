@@ -127,9 +127,14 @@ class ConfigDB:
 	
 #################################################################################################################
 
-class SimUI:
+class SimUI(Frame):
 	
-	def __init__(self, master):
+	def __init__(self, master=None):
+	
+		Frame.__init__(self, master)
+		#master.geometry("%dx%d%+d%+d" % (700, 400, 0, 0))
+		self.grid()
+		self.columnconfigure(0, weight=1)
 		
 		# ---------- Globals --------------------------------------------------------------------------------
 		
@@ -145,20 +150,71 @@ class SimUI:
 		
 		# ---------- User Interface -------------------------------------------------------------------------
 		
-		self.frame = Frame(master)
-		self.frame.pack()
 		
-		self.button = Button(self.frame, text="QUIT", fg="red", command=self.quitUi)
-		self.button.pack(side=LEFT)
+		#masterFrame = Frame(master)
+		#self.frame.pack()
 		
-		self.hi_there = Button(self.frame, text="HELLO", fg="blue", command=self.createReport)
-		self.hi_there.pack(side=LEFT)
+		#self.button = Button(self.frame, text="QUIT", fg="red", command=self.quitUi)
+		#self.button.pack(side=LEFT)
 		
-		self.openConfigFile = Button(self.frame, text="Open Config File", fg="blue", command=self.configDB.openConfigFile)
-		self.openConfigFile.pack(side=LEFT)
+		#self.hi_there = Button(self.frame, text="HELLO", fg="blue", command=self.createReport)
+		#self.hi_there.pack(side=LEFT)
+		
+		#self.openConfigFile = Button(self.frame, text="Open Config File", fg="blue", command=self.configDB.openConfigFile)
+		#self.openConfigFile.pack(side=LEFT)
 
-		self.closeConfigFileButton = Button(self.frame, text="Close Config File", fg="blue", command=self.configDB.closeConfigFile)
-		self.closeConfigFileButton.pack(side=LEFT)
+		#self.closeConfigFileButton = Button(self.frame, text="Close Config File", fg="blue", command=self.configDB.closeConfigFile)
+		#self.closeConfigFileButton.pack(side=LEFT)
+		
+		titleFrame = Frame(self)
+		titleFrame.grid(column=0, row=0, columnspan=2, sticky="EW", padx=10, pady=10)
+		Label(titleFrame, text="SimBrush v. 1.0", border=3, relief="raised", width=100).pack()
+		
+		simPathFrame = Frame(self)
+		simPathFrame.grid(column=0, row=1, columnspan=2)
+		self.simPathLabel = Label(simPathFrame, text="Sim data path: %s"%self.path).pack()
+		
+		# left content frame
+		
+		leftContentFrame = Frame(self, height=2, bd=1, relief=SUNKEN)
+		leftContentFrame.grid(column=0, row=2, sticky="nsw", padx=10, pady=10)
+		
+		entryWidth = 35
+		rowNum = 0
+		
+		Label(leftContentFrame, text="Investigator name").grid(row=rowNum, column=0)
+		self.invNameEntry = Entry(leftContentFrame, width=entryWidth)
+		self.invNameEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1
+		
+		Label(leftContentFrame, text="Case number").grid(row=rowNum, column=0)
+		self.caseNumberEntry = Entry(leftContentFrame, width=entryWidth)
+		self.caseNumberEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1
+		
+		Label(leftContentFrame, text="Case name").grid(row=rowNum, column=0)
+		self.caseNameEntry = Entry(leftContentFrame, width=entryWidth)
+		self.caseNameEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1
+		
+		Label(leftContentFrame, text="SIM number").grid(row=rowNum, column=0)
+		self.simNumberEntry = Entry(leftContentFrame, width=entryWidth)
+		self.simNumberEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1
+		
+		Label(leftContentFrame, text="SIM description").grid(row=rowNum, column=0)
+		self.simDescriptionText = Text(leftContentFrame, height=5, width=entryWidth+5, bd=2, relief="sunken", wrap=WORD)
+		self.simDescriptionText.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1	
+		
+		Label(leftContentFrame, text="Note").grid(row=rowNum, column=0)
+		self.noteText = Text(leftContentFrame, height=5, width=entryWidth+5, bd=2, relief="sunken", wrap=WORD)
+		self.noteText.grid(row=rowNum, column=1, padx=5, pady=2)
+		rowNum += 1	
+		
+		rightContentFrame = Frame(self)
+		rightContentFrame.grid(column=1, row=2, sticky="ew")
+		rightLabel = Label(rightContentFrame, text="right frame", relief="raised").pack()
 		
 		# ----------- Logger --------------------------------------------------------------------------------
 
@@ -180,9 +236,46 @@ class SimUI:
 		openStatus = self.configDB.openConfigFile()
 		if (openStatus != 0):
 			self.log.critical("Unable to open configuration file. Quitting.")
-			sys.exit(1)			
+			sys.exit(1)	
+		
+		self.updateUI()		
 
+	def updateUI(self):
 	
+		self.log.info("Updating UI")
+		
+		# updating text fields in the left column
+		
+		invNameNew = self.configDB.readConfigKey("inv_name")
+		self.invNameEntry.delete(0, END)
+		if (invNameNew != None):
+			self.invNameEntry.insert(0, invNameNew)
+		
+		caseNumberNew = self.configDB.readConfigKey("case_number")
+		self.caseNumberEntry.delete(0, END)
+		if (caseNumberNew != None):
+			self.caseNumberEntry.insert(0, caseNumberNew)
+
+		caseNameNew = self.configDB.readConfigKey("case_name")
+		self.caseNameEntry.delete(0, END)
+		if (caseNameNew != None):
+			self.caseNameEntry.insert(0, caseNameNew)		
+
+		simNumberNew = self.configDB.readConfigKey("sim_number")
+		self.simNumberEntry.delete(0, END)
+		if (simNumberNew != None):
+			self.simNumberEntry.insert(0, simNumberNew)
+		
+		simDescrNew = self.configDB.readConfigKey("sim_descr")
+		self.simDescriptionText.delete(1.0, END)
+		if (simDescrNew != None):
+			self.simDescriptionText.insert(1.0, simDescrNew)
+
+		noteNew = self.configDB.readConfigKey("note")
+		self.noteText.delete(1.0, END)
+		if (noteNew != None):
+			self.noteText.insert(1.0, noteNew)
+
 	def createReport(self):
 		self.log.info("Creating SimBrush report.")
 		
@@ -308,6 +401,12 @@ class SimUI:
 
 #################################################################################################################
 
+#app = SimUI()
+#app.mainloop()
+
 root = Tk()
-app = SimUI(root)
-root.mainloop()
+root.title("SimBrush")
+#root.geometry("700x400")
+app = SimUI()
+app.pack()
+app.mainloop()
