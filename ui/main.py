@@ -5,7 +5,7 @@
 # carver, wrapper, reporter as well as case data and hash checking.
 
 from Tkinter import *
-import subprocess, logging, sys, os, sqlite3
+import subprocess, logging, sys, os, sqlite3, tkMessageBox
 
 #################################################################################################################
 
@@ -217,7 +217,7 @@ class SimUI(Frame):
 		self.noteText.grid(row=rowNum, column=1, padx=5, pady=2)
 		rowNum += 1
 
-		self.createReportButton = Button(leftContentFrame, text="Update investigation data", fg="blue", command=self.updateInvData)
+		self.createReportButton = Button(leftContentFrame, text="Update investigation data", fg="blue", command=self.saveInvData)
 		self.createReportButton.grid(row=rowNum, column=0, columnspan=2)
 		
 		# right content frame
@@ -287,16 +287,21 @@ class SimUI(Frame):
 		if (noteNew != None):
 			self.noteText.insert(1.0, noteNew)
 	
-	def updateInvData(self):
+	def saveInvData(self):
 		self.log.info("Updating investigation data")
 		
-		self.configDB.writeConfigKey("inv_name", self.invNameEntry.get())
-		self.configDB.writeConfigKey("case_number", self.caseNumberEntry.get())
-		self.configDB.writeConfigKey("case_name", self.caseNameEntry.get())
-		self.configDB.writeConfigKey("sim_number", self.simNumberEntry.get())
-		self.configDB.writeConfigKey("sim_descr", self.simDescriptionText.get(1.0, END))
-		self.configDB.writeConfigKey("note", self.noteText.get(1.0, END))
-		
+		try:
+			self.configDB.writeConfigKey("inv_name", self.invNameEntry.get())
+			self.configDB.writeConfigKey("case_number", self.caseNumberEntry.get())
+			self.configDB.writeConfigKey("case_name", self.caseNameEntry.get())
+			self.configDB.writeConfigKey("sim_number", self.simNumberEntry.get())
+			self.configDB.writeConfigKey("sim_descr", self.simDescriptionText.get(1.0, END))
+			self.configDB.writeConfigKey("note", self.noteText.get(1.0, END))
+			tkMessageBox.showinfo("Updated successfully", "Investigation data updated correctly.")
+		except:
+			self.log.warning("Error while trying to update investigation data.")
+			tkMessageBox.showerror("Error", "Error while trying to update investigation data.")
+
 		self.updateUI()
 
 	def createReport(self):
