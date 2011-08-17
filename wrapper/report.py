@@ -467,7 +467,8 @@ if (len(investigation_filename) > 0):
 			['case_name', 'Case Name'],
 			['inv_name', 'Investigator name'],
 			['sim_number', 'SIM number'],
-			['sim_desc', 'SIM description'],
+			['sim_descr', 'SIM description'],
+			['note', 'Note']
 		]
 		
 		for tag in tags:	

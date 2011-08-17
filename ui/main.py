@@ -110,9 +110,9 @@ class ConfigDB:
 		oldValue = self.readConfigKey(key)
 		
 		if (oldValue == None):
-			query = "INSERT INTO simdata VALUES (\"%s\", \"%s\")"%(key, value)
+			query = "INSERT INTO simdata VALUES (\"%s\", \"%s\")"%(key, value.rstrip('\n').strip())
 		else:
-			query = "UPDATE simdata SET value=\"%s\" WHERE id=\"%s\""%(value, key)
+			query = "UPDATE simdata SET value=\"%s\" WHERE id=\"%s\""%(value.rstrip('\n').strip(), key)
 
 		try:
 			result = self.configCursor.execute(query)
@@ -466,12 +466,13 @@ class SimUI(Frame):
 			['case_name', 'case_name'],
 			['inv_name', 'inv_name'],
 			['sim_number', 'sim_number'],
-			['sim_desc', 'sim_desc'],
+			['sim_descr', 'sim_descr'],
+			['note', 'note']
 		]
 		
 		investFileAvailable = 0
 		try:
-			investFile = open(investFilename, 'w')
+			investFile = codecs.open(investFilename, 'w', 'utf-8')
 			investFile.write("<xml>\n")	
 			for investTag in investTags:
 				xmlTag = investTag[0]
@@ -537,7 +538,7 @@ class SimUI(Frame):
 			self.log.debug("Error: %s"%sys.exc_info()[1])			
 	
 		# remove temp investigation xml data file
-		if (os.path.isfile(investFilename) != 0):
+		if (os.path.isfile(investFilename) != 0 and 1 == 2):
 			try:
 				os.remove(investFilename)
 			except:
