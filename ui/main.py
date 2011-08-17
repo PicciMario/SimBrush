@@ -538,7 +538,7 @@ class SimUI(Frame):
 			self.log.debug("Error: %s"%sys.exc_info()[1])			
 	
 		# remove temp investigation xml data file
-		if (os.path.isfile(investFilename) != 0 and 1 == 2):
+		if (os.path.isfile(investFilename) != 0):
 			try:
 				os.remove(investFilename)
 			except:
