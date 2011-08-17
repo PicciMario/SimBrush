@@ -5,7 +5,7 @@
 # carver, wrapper, reporter as well as case data and hash checking.
 
 from Tkinter import *
-import subprocess, logging, sys, os, sqlite3, tkMessageBox
+import subprocess, logging, sys, os, sqlite3, tkMessageBox, codecs
 
 #################################################################################################################
 
