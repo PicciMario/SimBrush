@@ -124,6 +124,11 @@ class ConfigDB:
 		except:
 			self.log.warning("Error while trying to write key \"%s\" with value \"%s\" into config database."%(key, value))
 			self.log.debug("Error: %s"%sys.exc_info()[1])
+		
+		try:
+			self.configConn.commit()
+		except:
+			self.log.debug("Unable to commit after writing configuration key.")
 	
 #################################################################################################################
 
@@ -210,11 +215,17 @@ class SimUI(Frame):
 		Label(leftContentFrame, text="Note").grid(row=rowNum, column=0)
 		self.noteText = Text(leftContentFrame, height=5, width=entryWidth+5, bd=2, relief="sunken", wrap=WORD)
 		self.noteText.grid(row=rowNum, column=1, padx=5, pady=2)
-		rowNum += 1	
+		rowNum += 1
+
+		self.createReportButton = Button(leftContentFrame, text="Update investigation data", fg="blue", command=self.updateInvData)
+		self.createReportButton.grid(row=rowNum, column=0, columnspan=2)
+		
+		# right content frame
 		
 		rightContentFrame = Frame(self)
 		rightContentFrame.grid(column=1, row=2, sticky="ew")
-		rightLabel = Label(rightContentFrame, text="right frame", relief="raised").pack()
+		self.createReportButton = Button(rightContentFrame, text="Create Report", fg="blue", command=self.createReport)
+		self.createReportButton.grid(row=0, column=0)
 		
 		# ----------- Logger --------------------------------------------------------------------------------
 
@@ -275,6 +286,18 @@ class SimUI(Frame):
 		self.noteText.delete(1.0, END)
 		if (noteNew != None):
 			self.noteText.insert(1.0, noteNew)
+	
+	def updateInvData(self):
+		self.log.info("Updating investigation data")
+		
+		self.configDB.writeConfigKey("inv_name", self.invNameEntry.get())
+		self.configDB.writeConfigKey("case_number", self.caseNumberEntry.get())
+		self.configDB.writeConfigKey("case_name", self.caseNameEntry.get())
+		self.configDB.writeConfigKey("sim_number", self.simNumberEntry.get())
+		self.configDB.writeConfigKey("sim_descr", self.simDescriptionText.get(1.0, END))
+		self.configDB.writeConfigKey("note", self.noteText.get(1.0, END))
+		
+		self.updateUI()
 
 	def createReport(self):
 		self.log.info("Creating SimBrush report.")
