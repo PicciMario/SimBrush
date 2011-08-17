@@ -171,9 +171,9 @@ class SimUI(Frame):
 		#self.closeConfigFileButton = Button(self.frame, text="Close Config File", fg="blue", command=self.configDB.closeConfigFile)
 		#self.closeConfigFileButton.pack(side=LEFT)
 		
-		titleFrame = Frame(self)
-		titleFrame.grid(column=0, row=0, columnspan=2, sticky="EW", padx=10, pady=10)
-		Label(titleFrame, text="SimBrush v. 1.0", border=3, relief="raised", width=100).pack()
+		titleFrame = Frame(self, height=2, bd=3, relief="raised", bg="gray")
+		titleFrame.grid(column=0, row=0, columnspan=2, sticky="nsew", padx=10, pady=10)
+		Label(titleFrame, text="SimBrush v. 1.0", bg="gray").pack()
 		
 		simPathFrame = Frame(self)
 		simPathFrame.grid(column=0, row=1, columnspan=2)
@@ -272,6 +272,16 @@ class SimUI(Frame):
 		self.reportLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		rowNum += 1
 		
+		# status frame
+		
+		statusFrame = Frame(self, height=2, bd=1, relief=SUNKEN, bg="gray")
+		statusFrame.grid(column=0, row=3, columnspan=2, sticky="nsew", padx=10, pady=3)
+		
+		self.statusLabelText = StringVar()
+		self.statusLabelText.set("SimBrush loaded")
+		statusLabel = Label(statusFrame, bg="gray", textvariable=self.statusLabelText)
+		statusLabel.pack()
+		
 		#self.createReportButton = Button(rightContentFrame, text="Create Report", fg="blue", command=self.createReport)
 		#self.createReportButton.grid(row=0, column=0)
 		
@@ -298,6 +308,10 @@ class SimUI(Frame):
 			sys.exit(1)	
 		
 		self.updateUI()		
+
+	def status(self, text):
+		self.statusLabelText.set(text)
+		self.update_idletasks()
 
 	def updateUI(self):
 	
@@ -411,6 +425,8 @@ class SimUI(Frame):
 
 	def createReport(self):
 		self.log.info("Creating SimBrush report.")
+		
+		self.status("Creating report, please wait...")
 		
 		# report filename (default if not present in config db)
 		reportFilename = self.configDB.readConfigKey("report_filename")
@@ -526,6 +542,9 @@ class SimUI(Frame):
 				os.remove(investFilename)
 			except:
 				self.log.warning("Unable to remove temp investigation xml data file %s"%investFilename)
+		
+		self.updateUI()
+		self.status("Report generation completed.")
 				
 	def quitUi(self):
 		self.configDB.closeConfigFile()
