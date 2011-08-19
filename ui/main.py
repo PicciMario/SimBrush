@@ -4,17 +4,20 @@
 # This interface provides all the facilities required to manage a single SIM, wrapping all other utilities:
 # carver, wrapper, reporter as well as case data and hash checking.
 
+# ----------- SIM MANAGER VERSION -----------------------------------------------------------------------
+softwareVersion = "1.0-beta1"
+
 from Tkinter import *
-import subprocess, logging, sys, os, sqlite3, tkMessageBox, codecs
+import subprocess, logging, sys, os, sqlite3, tkMessageBox, codecs, getopt
 
 #################################################################################################################
 
 class ConfigDB:
-	def __init__(self, path, configFile):
+	def __init__(self, newPath, configFile):
 		
 		# ---------- Globals --------------------------------------------------------------------------------
 		
-		self.path = path
+		self.path = newPath
 		self.configFile = configFile
 		
 		# config file database connection
@@ -134,7 +137,7 @@ class ConfigDB:
 
 class SimUI(Frame):
 	
-	def __init__(self, master=None):
+	def __init__(self, path, master=None):
 	
 		Frame.__init__(self, master)
 		#master.geometry("%dx%d%+d%+d" % (700, 400, 0, 0))
@@ -143,7 +146,7 @@ class SimUI(Frame):
 		
 		# ---------- Globals --------------------------------------------------------------------------------
 		
-		self.path = "../wrapper/images/"
+		self.path = path
 		
 		self.configFile = "simdata.sbr"	
 		self.configDB = ConfigDB(self.path, self.configFile)
@@ -173,7 +176,7 @@ class SimUI(Frame):
 		
 		titleFrame = Frame(self, height=2, bd=3, relief="raised", bg="gray")
 		titleFrame.grid(column=0, row=0, columnspan=2, sticky="nsew", padx=10, pady=10)
-		Label(titleFrame, text="SimBrush v. 1.0", bg="gray").pack()
+		Label(titleFrame, text="SimBrush v. %s"%softwareVersion, bg="gray").pack()
 		
 		simPathFrame = Frame(self)
 		simPathFrame.grid(column=0, row=1, columnspan=2)
@@ -562,12 +565,36 @@ class SimUI(Frame):
 
 #################################################################################################################
 
-#app = SimUI()
-#app.mainloop()
+def usage():
+	print("")
+	print("SimBrush Sim Manager v. %s"%softwareVersion)
+	print("")
+	print("Usage: main.py -p projectpath")
+	print("")
+
+path = ""
+
+try:
+	opts, args = getopt.getopt(sys.argv[1:], "hp:")
+except getopt.GetoptError:
+	usage()
+	sys.exit(0)
+
+for o,a in opts:
+	if o == "-h":
+		usage()
+		sys.exit(0)
+	elif o == "-p":
+		path = a
+
+if (len(path) == 0):
+	usage()
+	#sys.exit(0)
+	# DEBUG ONLY!!!
+	path = "../wrapper/images/"
 
 root = Tk()
 root.title("SimBrush")
-#root.geometry("700x400")
-app = SimUI()
+app = SimUI(path=path)
 app.pack()
 app.mainloop()

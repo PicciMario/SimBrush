@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# ----------- REPORTER VERSION -----------------------------------------------------------------------
+reportVersion = "1.0-beta1"
+
 # ----------- Imports --------------------------------------------------------------------------------
 import time, string, logging, getopt, sys, os, time, hashlib
 from xml.dom.minidom import *
@@ -23,7 +26,6 @@ from messaging.sms import SmsDeliver
 # ----------- Globals -------------------------------------------------------------------------------
 filename = ""
 outputFile = "report.pdf"
-reportVersion = "1.0"
 
 # file containing carved file MD5 hash as calculated by wrapper
 md5_filename = ""
