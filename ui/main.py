@@ -223,9 +223,17 @@ class SimUI(Frame):
 		self.noteText.grid(row=rowNum, column=1, padx=5, pady=2)
 		self.noteText.bind("<Key>", lambda e: self.noteText.config(bg=modifiedBgColor))
 		rowNum += 1
+		
+		# left frame, buttons bar
+		
+		buttonsLeftFrame = Frame(leftContentFrame, height=2, bd=1, relief="raised", bg="white")
+		buttonsLeftFrame.grid(column=0, row=rowNum, columnspan=2, sticky="nsew", padx=10, pady=10)
 
-		self.createReportButton = Button(leftContentFrame, text="Update investigation data", fg="blue", command=self.saveInvData)
-		self.createReportButton.grid(row=rowNum, column=0, columnspan=2)
+		updateInvDataButton = Button(buttonsLeftFrame, text="Update investigation data", fg="blue", command=self.saveInvData)
+		updateInvDataButton.grid(row=0, column=0)
+
+		clearInvDataButton = Button(buttonsLeftFrame, text="Reload investigation data", fg="blue", command=self.updateUI)
+		clearInvDataButton.grid(row=0, column=1)
 		
 		# right content frame
 		
