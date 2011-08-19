@@ -89,7 +89,7 @@ log.addHandler(ch)
 # ----------- Command Line Parameters ---------------------------------------------------------------
 def usage():
 	print("")
-	print("SimBrush data reporter (ver. %s)"%reportVersion)
+	print("SimBrush Data Reporter (ver. %s)"%reportVersion)
 	print("")
 	print("Usage: report.py -f inputfilename")
 	print("")
@@ -441,8 +441,12 @@ def addRow(tableData, one, two):
 styles=getSampleStyleSheet()
 styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
 
+# ----------- Start analysis ------------------------------------------------------------------------
+print("\nSimBrush reporter version %s"%reportVersion)
+print("Timestamp: %s"%time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime()))
+
 # ----------- Acquire the XML tree from the input file ----------------------------------------------
-print("Analyzing \"%s\"..."%filename)
+print("Analyzing input file \"%s\"..."%filename)
 try:
 	manifest = parse(filename)
 except:
