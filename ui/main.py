@@ -191,37 +191,37 @@ class SimUI(Frame):
 		rowNum = 0
 		modifiedBgColor = "yellow"
 		
-		Label(leftContentFrame, text="Investigator name").grid(row=rowNum, column=0)
+		Label(leftContentFrame, text="Investigator name").grid(row=rowNum, column=0, sticky="w")
 		self.invNameEntry = Entry(leftContentFrame, width=entryWidth)
 		self.invNameEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		self.invNameEntry.bind("<Key>", lambda e: self.invNameEntry.config(bg=modifiedBgColor))
 		rowNum += 1
 		
-		Label(leftContentFrame, text="Case number").grid(row=rowNum, column=0)
+		Label(leftContentFrame, text="Case number").grid(row=rowNum, column=0, sticky="w")
 		self.caseNumberEntry = Entry(leftContentFrame, width=entryWidth)
 		self.caseNumberEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		self.caseNumberEntry.bind("<Key>", lambda e: self.caseNumberEntry.config(bg=modifiedBgColor))
 		rowNum += 1
 		
-		Label(leftContentFrame, text="Case name").grid(row=rowNum, column=0)
+		Label(leftContentFrame, text="Case name").grid(row=rowNum, column=0, sticky="w")
 		self.caseNameEntry = Entry(leftContentFrame, width=entryWidth)
 		self.caseNameEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		self.caseNameEntry.bind("<Key>", lambda e: self.caseNameEntry.config(bg=modifiedBgColor))
 		rowNum += 1
 		
-		Label(leftContentFrame, text="SIM number").grid(row=rowNum, column=0)
+		Label(leftContentFrame, text="SIM number").grid(row=rowNum, column=0, sticky="w")
 		self.simNumberEntry = Entry(leftContentFrame, width=entryWidth)
 		self.simNumberEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		self.simNumberEntry.bind("<Key>", lambda e: self.simNumberEntry.config(bg=modifiedBgColor))
 		rowNum += 1
 		
-		Label(leftContentFrame, text="SIM description").grid(row=rowNum, column=0)
+		Label(leftContentFrame, text="SIM description").grid(row=rowNum, column=0, sticky="w")
 		self.simDescriptionText = Text(leftContentFrame, height=5, width=entryWidth+5, bd=2, relief="sunken", wrap=WORD)
 		self.simDescriptionText.grid(row=rowNum, column=1, padx=5, pady=2)
 		self.simDescriptionText.bind("<Key>", lambda e: self.simDescriptionText.config(bg=modifiedBgColor))
 		rowNum += 1	
 		
-		Label(leftContentFrame, text="Note").grid(row=rowNum, column=0)
+		Label(leftContentFrame, text="Note").grid(row=rowNum, column=0, sticky="w")
 		self.noteText = Text(leftContentFrame, height=5, width=entryWidth+5, bd=2, relief="sunken", wrap=WORD)
 		self.noteText.grid(row=rowNum, column=1, padx=5, pady=2)
 		self.noteText.bind("<Key>", lambda e: self.noteText.config(bg=modifiedBgColor))
@@ -246,39 +246,41 @@ class SimUI(Frame):
 		entryWidth = 35
 		rowNum = 0
 		
-		Label(rightContentFrame, text="Carved file").grid(row=rowNum, column=0)
+		Label(rightContentFrame, text="Carved file").grid(row=rowNum, column=0, sticky="w")
 		self.carvedFileEntry = Entry(rightContentFrame, width=entryWidth)
 		self.carvedFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		rowNum += 1		
 
-		Label(rightContentFrame, text="Carver log").grid(row=rowNum, column=0)
+		Label(rightContentFrame, text="Carver log").grid(row=rowNum, column=0, sticky="w")
 		self.carverLogFileEntry = Entry(rightContentFrame, width=entryWidth)
 		self.carverLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		rowNum += 1	
 
-		Label(rightContentFrame, text="Carved file MD5").grid(row=rowNum, column=0)
+		Label(rightContentFrame, text="Carved file MD5").grid(row=rowNum, column=0, sticky="w")
 		self.carvedFileMd5Entry = Entry(rightContentFrame, width=entryWidth)
 		self.carvedFileMd5Entry.grid(row=rowNum, column=1, padx=5, pady=2)
 		rowNum += 1		
 		
-		Label(rightContentFrame, text="Wrapped file").grid(row=rowNum, column=0)
+		Label(rightContentFrame, text="Wrapped file").grid(row=rowNum, column=0, sticky="w")
 		self.wrappedFileEntry = Entry(rightContentFrame, width=entryWidth)
 		self.wrappedFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		rowNum += 1
 		
-		Label(rightContentFrame, text="Wrapper log").grid(row=rowNum, column=0)
+		Label(rightContentFrame, text="Wrapper log").grid(row=rowNum, column=0, sticky="w")
 		self.wrapperLogFileEntry = Entry(rightContentFrame, width=entryWidth)
 		self.wrapperLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		rowNum += 1
 		
-		Label(rightContentFrame, text="Report file").grid(row=rowNum, column=0)
+		Label(rightContentFrame, text="Report file").grid(row=rowNum, column=0, sticky="w")
 		self.reportFileEntry = Entry(rightContentFrame, width=entryWidth)
 		self.reportFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.reportFileEntry.bind("<Double-Button-1>", 
+			lambda e: self.openFile("%s%s"%(self.path, self.reportFileEntry.get())))
 		self.createReportButton = Button(rightContentFrame, text="Create Report", fg="blue", command=self.createReport)
 		self.createReportButton.grid(row=rowNum, column=2)
 		rowNum += 1
 
-		Label(rightContentFrame, text="Report log").grid(row=rowNum, column=0)
+		Label(rightContentFrame, text="Report log").grid(row=rowNum, column=0, sticky="w")
 		self.reportLogFileEntry = Entry(rightContentFrame, width=entryWidth)
 		self.reportLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
 		rowNum += 1
@@ -562,6 +564,17 @@ class SimUI(Frame):
 		self.configDB.closeConfigFile()
 		self.log.info("Quitting.")
 		self.frame.quit()
+	
+	def openFile(self, file):
+		
+		self.status("Opening file %s..."%file)
+		# os dependant
+		
+		# mac os:
+		os.system("open " + file);
+		
+		# windows:
+		#os.system("start " + file);
 
 #################################################################################################################
 
