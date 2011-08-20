@@ -227,8 +227,11 @@ class SimUI(Frame):
 		rightContentFrame = LabelFrame(self, height=2, bd=1, relief=SUNKEN, text="Archive content", labelanchor="n")
 		rightContentFrame.grid(column=1, row=2, sticky="ewn", padx=10, pady=10)
 		
+		labelText = "Double click on a file name to open it in your standard application."
+		Label(rightContentFrame, text=labelText, anchor="w").grid(column=0, row=0, sticky="nsew", columnspan=3)
+		
 		entryWidth = 35
-		rowNum = 0
+		rowNum = 1
 		
 		def applyRightLabelStyle(element):
 			element.config(width=entryWidth, anchor="w", bd=1, relief=SUNKEN)
@@ -238,6 +241,8 @@ class SimUI(Frame):
 		self.carvedFileLabel = Label(rightContentFrame, textvariable=self.carvedFileString)
 		applyRightLabelStyle(self.carvedFileLabel)
 		self.carvedFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
+		self.carvedFileLabel.bind("<Double-Button-1>", 
+			lambda e: self.openFile("%s%s"%(self.path, self.carvedFileString.get())))
 		rowNum += 1		
 
 		Label(rightContentFrame, text="Carver log").grid(row=rowNum, column=0, sticky="w")
@@ -245,6 +250,8 @@ class SimUI(Frame):
 		self.carverLogFileLabel = Label(rightContentFrame, textvariable=self.carverLogFileString)
 		applyRightLabelStyle(self.carverLogFileLabel)
 		self.carverLogFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
+		self.carverLogFileLabel.bind("<Double-Button-1>", 
+			lambda e: self.openFile("%s%s"%(self.path, self.carverLogFileString.get())))
 		rowNum += 1	
 
 		Label(rightContentFrame, text="Carved file MD5").grid(row=rowNum, column=0, sticky="w")
@@ -252,6 +259,8 @@ class SimUI(Frame):
 		self.carvedFileMd5Label = Label(rightContentFrame, textvariable=self.carvedFileMd5String)
 		applyRightLabelStyle(self.carvedFileMd5Label)
 		self.carvedFileMd5Label.grid(row=rowNum, column=1, padx=5, pady=4)
+		self.carvedFileMd5Label.bind("<Double-Button-1>", 
+			lambda e: self.openFile("%s%s"%(self.path, self.carvedFileMd5String.get())))
 		rowNum += 1		
 		
 		Label(rightContentFrame, text="Wrapped file").grid(row=rowNum, column=0, sticky="w")
@@ -259,6 +268,8 @@ class SimUI(Frame):
 		self.wrappedFileLabel = Label(rightContentFrame, textvariable=self.wrappedFileString)
 		applyRightLabelStyle(self.wrappedFileLabel)
 		self.wrappedFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
+		self.wrappedFileLabel.bind("<Double-Button-1>", 
+			lambda e: self.openFile("%s%s"%(self.path, self.wrappedFileString.get())))
 		rowNum += 1
 		
 		Label(rightContentFrame, text="Wrapper log").grid(row=rowNum, column=0, sticky="w")
@@ -266,6 +277,8 @@ class SimUI(Frame):
 		self.wrapperLogFileLabel = Label(rightContentFrame, textvariable=self.wrapperLogFileString)
 		applyRightLabelStyle(self.wrapperLogFileLabel)
 		self.wrapperLogFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
+		self.wrapperLogFileLabel.bind("<Double-Button-1>", 
+			lambda e: self.openFile("%s%s"%(self.path, self.wrapperLogFileString.get())))
 		rowNum += 1
 		
 		Label(rightContentFrame, text="Report file").grid(row=rowNum, column=0, sticky="w")
@@ -284,6 +297,8 @@ class SimUI(Frame):
 		self.reportLogFileLabel = Label(rightContentFrame, textvariable=self.reportLogFileString)
 		applyRightLabelStyle(self.reportLogFileLabel)
 		self.reportLogFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
+		self.reportLogFileLabel.bind("<Double-Button-1>", 
+			lambda e: self.openFile("%s%s"%(self.path, self.reportLogFileString.get())))
 		rowNum += 1
 		
 		# status frame
@@ -295,9 +310,6 @@ class SimUI(Frame):
 		self.statusLabelText.set("SimBrush loaded")
 		statusLabel = Label(statusFrame, bg="gray", textvariable=self.statusLabelText)
 		statusLabel.pack()
-		
-		#self.createReportButton = Button(rightContentFrame, text="Create Report", fg="blue", command=self.createReport)
-		#self.createReportButton.grid(row=0, column=0)
 		
 		# ----------- Logger --------------------------------------------------------------------------------
 
@@ -559,6 +571,11 @@ class SimUI(Frame):
 	def openFile(self, file):
 		
 		self.status("Opening file %s..."%file)
+		
+		if (os.path.isfile(file) == 0):
+			self.status("Selected file unavailable...")
+			return
+		
 		# os dependant
 		
 		# mac os:
