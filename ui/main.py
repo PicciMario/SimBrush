@@ -158,22 +158,6 @@ class SimUI(Frame):
 		
 		# ---------- User Interface -------------------------------------------------------------------------
 		
-		
-		#masterFrame = Frame(master)
-		#self.frame.pack()
-		
-		#self.button = Button(self.frame, text="QUIT", fg="red", command=self.quitUi)
-		#self.button.pack(side=LEFT)
-		
-		#self.hi_there = Button(self.frame, text="HELLO", fg="blue", command=self.createReport)
-		#self.hi_there.pack(side=LEFT)
-		
-		#self.openConfigFile = Button(self.frame, text="Open Config File", fg="blue", command=self.configDB.openConfigFile)
-		#self.openConfigFile.pack(side=LEFT)
-
-		#self.closeConfigFileButton = Button(self.frame, text="Close Config File", fg="blue", command=self.configDB.closeConfigFile)
-		#self.closeConfigFileButton.pack(side=LEFT)
-		
 		titleFrame = Frame(self, height=2, bd=3, relief="raised", bg="gray")
 		titleFrame.grid(column=0, row=0, columnspan=2, sticky="nsew", padx=10, pady=10)
 		Label(titleFrame, text="SimBrush v. %s"%softwareVersion, bg="gray").pack()
@@ -246,43 +230,60 @@ class SimUI(Frame):
 		entryWidth = 35
 		rowNum = 0
 		
+		def applyRightLabelStyle(element):
+			element.config(width=entryWidth, anchor="w", bd=1, relief=SUNKEN)
+		
 		Label(rightContentFrame, text="Carved file").grid(row=rowNum, column=0, sticky="w")
-		self.carvedFileEntry = Entry(rightContentFrame, width=entryWidth)
-		self.carvedFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.carvedFileString = StringVar()
+		self.carvedFileLabel = Label(rightContentFrame, textvariable=self.carvedFileString)
+		applyRightLabelStyle(self.carvedFileLabel)
+		self.carvedFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
 		rowNum += 1		
 
 		Label(rightContentFrame, text="Carver log").grid(row=rowNum, column=0, sticky="w")
-		self.carverLogFileEntry = Entry(rightContentFrame, width=entryWidth)
-		self.carverLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.carverLogFileString = StringVar()
+		self.carverLogFileLabel = Label(rightContentFrame, textvariable=self.carverLogFileString)
+		applyRightLabelStyle(self.carverLogFileLabel)
+		self.carverLogFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
 		rowNum += 1	
 
 		Label(rightContentFrame, text="Carved file MD5").grid(row=rowNum, column=0, sticky="w")
-		self.carvedFileMd5Entry = Entry(rightContentFrame, width=entryWidth)
-		self.carvedFileMd5Entry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.carvedFileMd5String = StringVar()
+		self.carvedFileMd5Label = Label(rightContentFrame, textvariable=self.carvedFileMd5String)
+		applyRightLabelStyle(self.carvedFileMd5Label)
+		self.carvedFileMd5Label.grid(row=rowNum, column=1, padx=5, pady=4)
 		rowNum += 1		
 		
 		Label(rightContentFrame, text="Wrapped file").grid(row=rowNum, column=0, sticky="w")
-		self.wrappedFileEntry = Entry(rightContentFrame, width=entryWidth)
-		self.wrappedFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.wrappedFileString = StringVar()
+		self.wrappedFileLabel = Label(rightContentFrame, textvariable=self.wrappedFileString)
+		applyRightLabelStyle(self.wrappedFileLabel)
+		self.wrappedFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
 		rowNum += 1
 		
 		Label(rightContentFrame, text="Wrapper log").grid(row=rowNum, column=0, sticky="w")
-		self.wrapperLogFileEntry = Entry(rightContentFrame, width=entryWidth)
-		self.wrapperLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.wrapperLogFileString = StringVar()
+		self.wrapperLogFileLabel = Label(rightContentFrame, textvariable=self.wrapperLogFileString)
+		applyRightLabelStyle(self.wrapperLogFileLabel)
+		self.wrapperLogFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
 		rowNum += 1
 		
 		Label(rightContentFrame, text="Report file").grid(row=rowNum, column=0, sticky="w")
-		self.reportFileEntry = Entry(rightContentFrame, width=entryWidth)
-		self.reportFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
-		self.reportFileEntry.bind("<Double-Button-1>", 
-			lambda e: self.openFile("%s%s"%(self.path, self.reportFileEntry.get())))
+		self.reportFileString = StringVar()
+		self.reportFileLabel = Label(rightContentFrame, textvariable=self.reportFileString)
+		applyRightLabelStyle(self.reportFileLabel)
+		self.reportFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
+		self.reportFileLabel.bind("<Double-Button-1>", 
+			lambda e: self.openFile("%s%s"%(self.path, self.reportFileString.get())))
 		self.createReportButton = Button(rightContentFrame, text="Create Report", fg="blue", command=self.createReport)
 		self.createReportButton.grid(row=rowNum, column=2)
 		rowNum += 1
 
 		Label(rightContentFrame, text="Report log").grid(row=rowNum, column=0, sticky="w")
-		self.reportLogFileEntry = Entry(rightContentFrame, width=entryWidth)
-		self.reportLogFileEntry.grid(row=rowNum, column=1, padx=5, pady=2)
+		self.reportLogFileString = StringVar()
+		self.reportLogFileLabel = Label(rightContentFrame, textvariable=self.reportLogFileString)
+		applyRightLabelStyle(self.reportLogFileLabel)
+		self.reportLogFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
 		rowNum += 1
 		
 		# status frame
@@ -378,46 +379,36 @@ class SimUI(Frame):
 		# updating file names in right column
 		
 		rightColumnElements = [
-			self.carvedFileEntry,
-			self.carverLogFileEntry,
-			self.carvedFileMd5Entry,
-			self.wrappedFileEntry,
-			self.wrapperLogFileEntry,
-			self.reportFileEntry,
-			self.reportLogFileEntry
+			self.carvedFileLabel,
+			self.carverLogFileLabel,
+			self.carvedFileMd5Label,
+			self.wrappedFileLabel,
+			self.wrapperLogFileLabel,
+			self.reportFileLabel,
+			self.reportLogFileLabel
 		]
 		
 		for element in rightColumnElements:
-			element.delete(0, END)
 			element.config(bg="white")
 
-		carvedFileNew = self.configDB.readConfigKey("carved_filename")
-		if (carvedFileNew != None):
-			self.carvedFileEntry.insert(0, carvedFileNew)
-
-		carvedLogFileNew = self.configDB.readConfigKey("carver_log_filename")
-		if (carvedLogFileNew != None):
-			self.carverLogFileEntry.insert(0, carvedLogFileNew)
-
-		carvedMd5New = self.configDB.readConfigKey("carved_md5")
-		if (carvedMd5New != None):
-			self.carvedFileMd5Entry.insert(0, carvedMd5New)
-
-		wrappedFileNew = self.configDB.readConfigKey("wrapped_filename")
-		if (wrappedFileNew != None):
-			self.wrappedFileEntry.insert(0, wrappedFileNew)
-
-		wrapperLogNew = self.configDB.readConfigKey("wrapped_log_filename")
-		if (wrapperLogNew != None):
-			self.wrapperLogFileEntry.insert(0, wrapperLogNew)
-
-		reportFileNew = self.configDB.readConfigKey("report_filename")
-		if (reportFileNew != None):
-			self.reportFileEntry.insert(0, reportFileNew)
-
-		reportLogFileNew = self.configDB.readConfigKey("report_log_filename")
-		if (reportLogFileNew != None):
-			self.reportLogFileEntry.insert(0, reportLogFileNew)		
+		strings_keys = [
+			[self.carvedFileString, "carved_filename"],
+			[self.carverLogFileString, "carver_log_filename"],
+			[self.carvedFileMd5String, "carved_md5"],
+			[self.wrappedFileString, "wrapped_filename"],
+			[self.wrapperLogFileString, "wrapped_log_filename"],
+			[self.reportFileString, "report_filename"],
+			[self.reportLogFileString, "report_log_filename"]
+		]
+		
+		for string,key in strings_keys:
+			readValue = self.configDB.readConfigKey(key)
+			if (readValue != None):
+				string.set(readValue)
+				if (len(readValue) == 0):
+					string.set("---")
+			else:
+				string.set("---")		
 
 	def saveInvData(self):
 		self.log.info("Updating investigation data")
@@ -607,7 +598,7 @@ if (len(path) == 0):
 	path = "../wrapper/images/"
 
 root = Tk()
-root.title("SimBrush")
+root.title("SimBrush v. %s"%softwareVersion)
 app = SimUI(path=path)
 app.pack()
 app.mainloop()
