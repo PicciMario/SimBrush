@@ -595,6 +595,10 @@ def createNewProject(path):
 	printSwInfo()
 	print("Creating new project on path: %s"%path)
 	
+	# if needed add trailing slash to path
+	if (path[-1] != "/"):
+		path = "%s/"%path
+	
 	if (os.path.isdir(path) == 0):
 		print("The specified path \"%s\" doesn't seem to be an existing directory."%path)
 		#try to create dir
@@ -603,9 +607,28 @@ def createNewProject(path):
 			print("Created new directory \"%s\""%path)
 		except:
 			print("Error while trying to create dir \"%s\""%path)	
-			print("Error: %s"%sys.exc_info()[1])	
+			print("Error: %s\n"%sys.exc_info()[1])	
+			sys.exit(1)
+	else:
+		# check if directory is empty
+		dirList = os.listdir(path)
+		if (len(dirList) > 0):
+			print("The specified directory isn't empty. The new project path MUST be empty.\n")
 			sys.exit(1)
 	
+	# try to create database file
+	fullPath = "%ssimdata.sbr"%path
+	try:
+		configConn = sqlite3.connect("%s"%fullPath)
+		configCursor = configConn.cursor()
+		query = "CREATE TABLE simdata(id varchar(50) primary key not null, value varchar(1000));"
+		configCursor.execute(query)
+	except:
+		print("Unable to create database file \"%s\"."%fullPath)
+		print("Error: %s"%sys.exc_info()[1])
+		sys.exit(1)	
+
+	print("Done")
 	print("")
 	
 
@@ -644,6 +667,10 @@ if (len(path) == 0):
 	# DEBUG ONLY!!!
 	path = "../wrapper/images/"
 	print("Just for debug purposes, using %s"%path)
+
+# if needed add trailing slash to path
+if (path[-1] != "/"):
+	path = "%s/"%path
 
 root = Tk()
 root.title("SimBrush v. %s"%softwareVersion)
