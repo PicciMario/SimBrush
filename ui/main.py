@@ -586,17 +586,44 @@ class SimUI(Frame):
 
 #################################################################################################################
 
-def usage():
+def printSwInfo():
 	print("")
 	print("SimBrush Sim Manager v. %s"%softwareVersion)
+	print("")	
+
+def createNewProject(path):
+	printSwInfo()
+	print("Creating new project on path: %s"%path)
+	
+	if (os.path.isdir(path) == 0):
+		print("The specified path \"%s\" doesn't seem to be an existing directory."%path)
+		#try to create dir
+		try:
+			os.makedirs(path)
+			print("Created new directory \"%s\""%path)
+		except:
+			print("Error while trying to create dir \"%s\""%path)	
+			print("Error: %s"%sys.exc_info()[1])	
+			sys.exit(1)
+	
 	print("")
-	print("Usage: main.py -p projectpath")
+	
+
+def usage():
+	printSwInfo()
+	print("Usage: main.py [-p projectpath | -n projectpath]")
+	print("")
+	print("Options:")
+	print("-p path\t\tOpens project in path (the path must contain a valid simdata.sbr file)")
+	print("-n path\t\tCreates a new project in the path")
+	print("")
+	print("Creating a project means creating a clean simdata.sbr project file. The path must be empty.")
 	print("")
 
 path = ""
 
 try:
-	opts, args = getopt.getopt(sys.argv[1:], "hp:")
+	opts, args = getopt.getopt(sys.argv[1:], "hp:n:")
 except getopt.GetoptError:
 	usage()
 	sys.exit(0)
@@ -607,12 +634,16 @@ for o,a in opts:
 		sys.exit(0)
 	elif o == "-p":
 		path = a
+	elif o == "-n":
+		createNewProject(a)
+		sys.exit(0)
 
 if (len(path) == 0):
 	usage()
 	#sys.exit(0)
 	# DEBUG ONLY!!!
 	path = "../wrapper/images/"
+	print("Just for debug purposes, using %s"%path)
 
 root = Tk()
 root.title("SimBrush v. %s"%softwareVersion)
