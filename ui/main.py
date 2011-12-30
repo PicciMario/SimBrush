@@ -441,6 +441,8 @@ class SimUI(Frame):
 
 		self.updateUI()
 
+	# -------------------------------------------------------------------------------------------------------------
+
 	def wrapCarvedData(self):
 		self.log.info("Wrapping SimBrush carved data.")
 		
@@ -467,6 +469,18 @@ class SimUI(Frame):
 			wrappedFilename = "wrapped.xml"
 			self.configDB.writeConfigKey("wrapped_filename", wrappedFilename)
 
+		# carved MD5 filename
+		carvedMD5Filename = self.configDB.readConfigKey("carved_md5")
+		if (carvedMD5Filename != None):
+			if (os.path.isfile("%s%s"%(self.path, carvedMD5Filename)) == 0):
+				self.log.warning("Unable to find carved MD5 file %s%s, maybe forcefully removed?"%(self.path, carvedMD5Filename))
+				self.status("Carved MD5 file not available, aborting wrapper.")	
+				return 1
+		else:
+			self.log.warning("Carved MD5 data file not in database")
+			self.status("Carved MD5 file not available, aborting wrapper.")	
+			return 1	
+
 		# wrapper log filename (default if not present in config db)
 		wrapperLogFilename = self.configDB.readConfigKey("wrapper_log_filename")
 		if (wrapperLogFilename == None):
@@ -481,6 +495,7 @@ class SimUI(Frame):
 			"perl",
 			self.wrapperExe,
 			"%s%s"%(self.path, carvedFilename),
+			"%s%s"%(self.path, carvedMD5Filename),
 			"%s%s"%(self.path, wrappedFilename)
 		]	
 
@@ -514,6 +529,11 @@ class SimUI(Frame):
 		except:
 			self.log.warning("Error while trying to write wrapper log file %s%s."%(self.path, wrapperLogFilename))
 			self.log.debug("Error: %s"%sys.exc_info()[1])	
+
+		self.updateUI()
+		self.status("Wrapping completed.")
+
+	# -------------------------------------------------------------------------------------------------------------
 
 	def createReport(self):
 		self.log.info("Creating SimBrush report.")
