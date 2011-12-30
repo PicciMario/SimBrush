@@ -335,8 +335,14 @@ class SimUI(Frame):
 			self.log.critical("Unable to open configuration file. Quitting.")
 			sys.exit(1)	
 		
-		self.updateUI()		
-
+		self.updateUI()
+	
+	def error(self, text):
+		tkMessageBox.showerror("Error", text)	
+	
+	def info(self, text):
+		tkMessageBox.showinfo("Info", text)	
+		
 	def status(self, text):
 		self.statusLabelText.set(text)
 		self.update_idletasks()
@@ -475,10 +481,12 @@ class SimUI(Frame):
 			if (os.path.isfile("%s%s"%(self.path, carvedMD5Filename)) == 0):
 				self.log.warning("Unable to find carved MD5 file %s%s, maybe forcefully removed?"%(self.path, carvedMD5Filename))
 				self.status("Carved MD5 file not available, aborting wrapper.")	
+				self.error("Carved MD5 file not available, aborting wrapper.")
 				return 1
 		else:
 			self.log.warning("Carved MD5 data file not in database")
 			self.status("Carved MD5 file not available, aborting wrapper.")	
+			self.error("Carved MD5 file not available, aborting wrapper.")	
 			return 1	
 
 		# wrapper log filename (default if not present in config db)
@@ -532,6 +540,7 @@ class SimUI(Frame):
 
 		self.updateUI()
 		self.status("Wrapping completed.")
+		self.info("Wrapping completed.")
 
 	# -------------------------------------------------------------------------------------------------------------
 
@@ -556,9 +565,12 @@ class SimUI(Frame):
 		wrappedFilename = self.configDB.readConfigKey("wrapped_filename")
 		if (wrappedFilename == None):
 			self.log.error("Wrapped file not listed in config file.")
+			self.error("Wrapped file not listed in config file.")
 			return 1
 		if (os.path.isfile("%s%s"%(self.path, wrappedFilename)) == 0):
-			self.log.error("Trying to create report from unexisting wrapped file %s%s"%(self.path, wrappedFilename))
+			errorMessage = "Trying to create report from unexisting wrapped file %s%s"%(self.path, wrappedFilename)
+			self.log.error(errorMessage)
+			self.error(errorMessage)
 			return 1
 		
 		# carved filename
@@ -598,6 +610,8 @@ class SimUI(Frame):
 		except:
 			self.log.error("Unable to write investigation file data")
 			self.log.debug("Error: %s"%sys.exc_info()[1])
+			self.error("Error during the creation of the report.")
+			return 1
 		
 		# build command sequence
 		command = [
@@ -658,6 +672,7 @@ class SimUI(Frame):
 		
 		self.updateUI()
 		self.status("Report generation completed.")
+		self.info("Report generation completed.")
 				
 	def quitUi(self):
 		self.configDB.closeConfigFile()
