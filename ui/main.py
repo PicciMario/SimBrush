@@ -152,8 +152,8 @@ class SimUI(Frame):
 		self.configDB = ConfigDB(self.path, self.configFile)
 		
 		# executables for SimBrush tools
-		self.carveExe = ""
-		self.wrapperExe = ""
+		self.carverExe = ""
+		self.wrapperExe = "../wrapper/wrapper.pl"
 		self.reportExe = "../wrapper/report.py"
 		
 		# ---------- User Interface -------------------------------------------------------------------------
@@ -270,6 +270,8 @@ class SimUI(Frame):
 		self.wrappedFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
 		self.wrappedFileLabel.bind("<Double-Button-1>", 
 			lambda e: self.openFile("%s%s"%(self.path, self.wrappedFileString.get())))
+		self.wrapFileButton = Button(rightContentFrame, text="Wrap data", fg="blue", command=self.wrapCarvedData)
+		self.wrapFileButton.grid(row=rowNum, column=2)
 		rowNum += 1
 		
 		Label(rightContentFrame, text="Wrapper log").grid(row=rowNum, column=0, sticky="w")
@@ -408,7 +410,7 @@ class SimUI(Frame):
 			[self.carverLogFileString, "carver_log_filename"],
 			[self.carvedFileMd5String, "carved_md5"],
 			[self.wrappedFileString, "wrapped_filename"],
-			[self.wrapperLogFileString, "wrapped_log_filename"],
+			[self.wrapperLogFileString, "wrapper_log_filename"],
 			[self.reportFileString, "report_filename"],
 			[self.reportLogFileString, "report_log_filename"]
 		]
@@ -438,6 +440,80 @@ class SimUI(Frame):
 			tkMessageBox.showerror("Error", "Error while trying to update investigation data.")
 
 		self.updateUI()
+
+	def wrapCarvedData(self):
+		self.log.info("Wrapping SimBrush carved data.")
+		
+		self.status("Wrapping carved data, please wait...")		
+
+		# carved filename
+		carvedFilename = self.configDB.readConfigKey("carved_filename")
+		if (carvedFilename != None):
+			if (os.path.isfile("%s%s"%(self.path, carvedFilename)) == 0):
+				self.log.warning("Unable to find carved file %s%s, maybe forcefully removed?"%(self.path, carvedFilename))
+				self.status("Carved file not available, aborting wrapper.")	
+				return 1
+		else:
+			self.log.warning("Carved data file not in database")
+			self.status("Carved file not available, aborting wrapper.")	
+			return 1	
+	
+		# wrapped filename (default if not present in config db)
+		wrappedFilename = self.configDB.readConfigKey("wrapped_filename")
+		if (wrappedFilename == None):
+			wrappedFilename = "wrapped.xml"
+			self.configDB.writeConfigKey("wrapped_filename", wrappedFilename)
+		elif (len(wrappedFilename) == 0):
+			wrappedFilename = "wrapped.xml"
+			self.configDB.writeConfigKey("wrapped_filename", wrappedFilename)
+
+		# wrapper log filename (default if not present in config db)
+		wrapperLogFilename = self.configDB.readConfigKey("wrapper_log_filename")
+		if (wrapperLogFilename == None):
+			wrapperLogFilename = "wrapper_log.txt"
+			self.configDB.writeConfigKey("wrapper_log_filename", wrapperLogFilename)
+		elif (len(wrapperLogFilename) == 0):
+			wrapperLogFilename = "wrapper_log.txt"
+			self.configDB.writeConfigKey("wrapper_log_filename", wrapperLogFilename)
+
+		# build command sequence
+		command = [
+			"perl",
+			self.wrapperExe,
+			"%s%s"%(self.path, carvedFilename),
+			"%s%s"%(self.path, wrappedFilename)
+		]	
+
+		# print command sequence
+		commandString = ""
+		for element in command:
+			commandString = "%s %s"%(commandString, element)
+		self.log.debug("Executing: %s"%commandString)
+		
+		# run command
+		p = subprocess.Popen(command, shell=False, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+		
+		# save stdout to array for logging
+		reporterLogData = []
+		while True:
+			o = p.stdout.readline()
+			if o == '' and p.poll() != None: break
+			reporterLogData.append(o)
+		
+		retval = p.wait()
+		reporterLogData.append("Return Value: %i"%retval)
+		self.log.info("Reporter tool ended with exit status: %s"%retval)
+		
+		# write wrapper log file
+		try:
+			wrapperLogFile = open("%s%s"%(self.path, wrapperLogFilename), 'w')
+			for row in reporterLogData:
+				wrapperLogFile.write(row)
+			wrapperLogFile.close()
+			self.log.info("Written wrapper log to file %s%s"%(self.path, wrapperLogFilename))
+		except:
+			self.log.warning("Error while trying to write wrapper log file %s%s."%(self.path, wrapperLogFilename))
+			self.log.debug("Error: %s"%sys.exc_info()[1])	
 
 	def createReport(self):
 		self.log.info("Creating SimBrush report.")
@@ -580,7 +656,6 @@ class SimUI(Frame):
 		
 		# mac os:
 		os.system("open " + file);
-		
 		# windows:
 		#os.system("start " + file);
 
