@@ -981,21 +981,25 @@ EXT4          => "EF EXT4 '6F4E' (Extension4): This EF contains extension data o
 my $simple   = XML::Simple->new();         #Initialize the object
 my $file_in  = $ARGV[0];
 my $file_tmp = "./tmp.xml";
-my $file_md5 = $file_in;
-$file_md5 =~ s/\.\w+$//; #file name
+#my $file_md5 = $file_in;
+
+#$file_md5 =~ s/\.\w+$//;  #input file name
+my $file_hash = $ARGV[1]; #input hash file
+my $file_out  = $ARGV[2]; #output file
 
 my $argc = @ARGV;
-if ($argc != 1){
-        print "Usage: perl wrapper_simple.pl <image.xml> | e.g. perl wrapper_simple.pl image.xml\n";
-        print "Parser which converts the raw (U)SIM image in text plain format\n";
-	print "The md5 file of the raw image must be present where the xml image is located\n";
+if ($argc != 3){
+        print "Usage: perl wrapper_simple.pl <image.xml> <file.md5> <output.xml> | e.g. perl wrapper_simple.pl image.xml image.md5 output.xml\n";
+        print "<image.xml> represents the raw image carved out from the SIM/USIM\n";
+	print "<image.md5> represents the md5 file of the raw image\n";
+        print "<output.xml> represents the converted file\n";
         exit 1;
 }
 
 #hash file name
-my $file_hash = $file_md5.".md5";
+#my $file_hash = $file_md5.".md5";
 #hash contents
-my $hash_contents = "";
+#my $hash_contents = "";
 if ($file_hash eq ""){
 	print "Hash file $file_md5.md5 not present...\n";
         exit 1;
@@ -4114,9 +4118,9 @@ my $simple2 = XML::Simple->new();
 my $tree2 = $simple2->XMLout($ref);
 
 # Output File   
-my @name = split(/\./, $file_in);
-my $file_out = 'w_'."$name[0]".'.xml';
-open OUT, ">$file_out";                                                                                
+#my @name = split(/\./, $file_in);
+#my $file_out = 'w_'."$name[0]".'.xml';
+open OUT, ">$file_out" or die $!;                                                                                
 my $header = '<?xml version="1.0" encoding="ISO-8859-1"?>'."\n".'<?xml-stylesheet type="text/xsl" href="template.xml"?>'."\n";
 print OUT $header;
 print OUT $tree2;
