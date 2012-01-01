@@ -265,6 +265,8 @@ class SimUI(Frame):
 		self.carvedFileMd5Label.grid(row=rowNum, column=1, padx=5, pady=4)
 		self.carvedFileMd5Label.bind("<Double-Button-1>", 
 			lambda e: self.openFile("%s%s"%(self.path, self.carvedFileMd5String.get())))
+		self.setCarvedMD5Button = Button(rightContentFrame, text="...", fg="blue", command=self.setCarvedMD5File)
+		self.setCarvedMD5Button.grid(row=rowNum, column=2)
 		rowNum += 1		
 		
 		Label(rightContentFrame, text="Wrapped file").grid(row=rowNum, column=0, sticky="w")
@@ -477,6 +479,33 @@ class SimUI(Frame):
 					self.info("Selected carved file %s"%os.path.join(projectPath, fileName))
 					
 		self.updateUI()
+		
+		
+	def setCarvedMD5File(self):
+		file = tkFileDialog.askopenfilename(title='Choose a file')
+		if (len(file) == 0):
+			return
+		else:
+			# chech whether selected file is or not in the project path
+			projectPath = os.path.abspath(self.path)
+			filePath = os.path.abspath(os.path.dirname(file))
+			fileName = os.path.basename(file)
+			
+			if (projectPath == filePath):
+				self.info("Selected carved file %s"%file)
+				self.configDB.writeConfigKey("carved_md5", fileName)
+			else:
+				result = tkMessageBox.askyesno(
+					"Selecting carved MD5 filename", 
+					"In order to be used, the carved file has to be copied in the project path. Continue?"
+				)
+				if (result == True):
+					shutil.copy2(file, projectPath)
+					self.configDB.writeConfigKey("carved_md5", fileName)
+					self.info("Selected carved MD5 file %s"%os.path.join(projectPath, fileName))
+					
+		self.updateUI()		
+		
 
 	# -------------------------------------------------------------------------------------------------------------
 
