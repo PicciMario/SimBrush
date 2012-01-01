@@ -8,7 +8,9 @@
 softwareVersion = "1.0-beta1"
 
 from Tkinter import *
-import subprocess, logging, sys, os, sqlite3, tkMessageBox, codecs, getopt
+import tkMessageBox, tkFileDialog
+import subprocess, logging, sys, os, sqlite3, codecs, getopt
+import shutil
 
 #################################################################################################################
 
@@ -243,6 +245,8 @@ class SimUI(Frame):
 		self.carvedFileLabel.grid(row=rowNum, column=1, padx=5, pady=4)
 		self.carvedFileLabel.bind("<Double-Button-1>", 
 			lambda e: self.openFile("%s%s"%(self.path, self.carvedFileString.get())))
+		self.setCarvedFileButton = Button(rightContentFrame, text="...", fg="blue", command=self.setCarvedFile)
+		self.setCarvedFileButton.grid(row=rowNum, column=2)
 		rowNum += 1		
 
 		Label(rightContentFrame, text="Carver log").grid(row=rowNum, column=0, sticky="w")
@@ -445,6 +449,33 @@ class SimUI(Frame):
 			self.log.warning("Error while trying to update investigation data.")
 			tkMessageBox.showerror("Error", "Error while trying to update investigation data.")
 
+		self.updateUI()
+
+	# -------------------------------------------------------------------------------------------------------------
+
+	def setCarvedFile(self):
+		file = tkFileDialog.askopenfilename(title='Choose a file')
+		if (len(file) == 0):
+			return
+		else:
+			# chech whether selected file is or not in the project path
+			projectPath = os.path.abspath(self.path)
+			filePath = os.path.abspath(os.path.dirname(file))
+			fileName = os.path.basename(file)
+			
+			if (projectPath == filePath):
+				self.info("Selected carved file %s"%file)
+				self.configDB.writeConfigKey("carved_filename", fileName)
+			else:
+				result = tkMessageBox.askyesno(
+					"Selecting carved filename", 
+					"In order to be used, the carved file has to be copied in the project path. Continue?"
+				)
+				if (result == True):
+					shutil.copy2(file, projectPath)
+					self.configDB.writeConfigKey("carved_filename", fileName)
+					self.info("Selected carved file %s"%os.path.join(projectPath, fileName))
+					
 		self.updateUI()
 
 	# -------------------------------------------------------------------------------------------------------------
