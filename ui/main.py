@@ -418,21 +418,27 @@ class SimUI(Frame):
 			element.config(bg="white")
 
 		strings_keys = [
-			[self.carvedFileString, "carved_filename"],
-			[self.carverLogFileString, "carver_log_filename"],
-			[self.carvedFileMd5String, "carved_md5"],
-			[self.wrappedFileString, "wrapped_filename"],
-			[self.wrapperLogFileString, "wrapper_log_filename"],
-			[self.reportFileString, "report_filename"],
-			[self.reportLogFileString, "report_log_filename"]
+			[self.carvedFileString, "carved_filename", self.carvedFileLabel],
+			[self.carverLogFileString, "carver_log_filename", self.carverLogFileLabel],
+			[self.carvedFileMd5String, "carved_md5", self.carvedFileMd5Label],
+			[self.wrappedFileString, "wrapped_filename", self.wrappedFileLabel],
+			[self.wrapperLogFileString, "wrapper_log_filename", self.wrapperLogFileLabel],
+			[self.reportFileString, "report_filename", self.reportFileLabel],
+			[self.reportLogFileString, "report_log_filename", self.reportLogFileLabel]
 		]
 		
-		for string,key in strings_keys:
+		for string,key,element in strings_keys:
 			readValue = self.configDB.readConfigKey(key)
 			if (readValue != None):
 				string.set(readValue)
 				if (len(readValue) == 0):
 					string.set("---")
+				else:
+					#check file existence
+					projectPath = os.path.abspath(self.path)
+					fileName = os.path.join(projectPath, readValue)
+					if (os.path.exists(fileName) == False):
+						element.config(bg="red")				
 			else:
 				string.set("---")		
 
