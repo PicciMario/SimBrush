@@ -352,70 +352,43 @@ class SimUI(Frame):
 	def status(self, text):
 		self.statusLabelText.set(text)
 		self.update_idletasks()
+	
+	# -------------------------------------------------------------------------------------------------------------
 
 	def updateUI(self):
 	
 		self.log.info("Updating UI")
 		
 		# updating text fields in the left column
+		# third field: 
+		# 0 - entry
+		# 1 - text
 		
-		leftColumnEntries = [
-			self.invNameEntry,
-			self.caseNumberEntry,
-			self.caseNameEntry,
-			self.simNumberEntry			
+		leftColumnElements = [
+			[self.invNameEntry, "inv_name", 0],
+			[self.caseNumberEntry, "case_number", 0],
+			[self.caseNameEntry, "case_name", 0],
+			[self.simNumberEntry, "sim_number", 0],			
+			[self.simDescriptionText, "sim_descr", 1],
+			[self.noteText, "note", 1]
 		]
 		
-		leftColumnTexts = [
-			self.simDescriptionText,
-			self.noteText
-		]
+		# clear and reload data for left column elements
+		for element,key,kind in leftColumnElements:
+			
+			if (kind == 0):
+				start = 0
+			elif (kind == 1):
+				start = 1.0
 		
-		for element in leftColumnEntries:
-			element.delete(0,END)
-		for element in leftColumnTexts:
-			element.delete(1.0, END)
-		for element in leftColumnEntries+leftColumnTexts:
+			element.delete(start,END)
 			element.config(bg="white")
-		
-		invNameNew = self.configDB.readConfigKey("inv_name")
-		if (invNameNew != None):
-			self.invNameEntry.insert(0, invNameNew)
-		
-		caseNumberNew = self.configDB.readConfigKey("case_number")
-		if (caseNumberNew != None):
-			self.caseNumberEntry.insert(0, caseNumberNew)
-
-		caseNameNew = self.configDB.readConfigKey("case_name")
-		if (caseNameNew != None):
-			self.caseNameEntry.insert(0, caseNameNew)		
-
-		simNumberNew = self.configDB.readConfigKey("sim_number")
-		if (simNumberNew != None):
-			self.simNumberEntry.insert(0, simNumberNew)
-		
-		simDescrNew = self.configDB.readConfigKey("sim_descr")
-		if (simDescrNew != None):
-			self.simDescriptionText.insert(1.0, simDescrNew)
-
-		noteNew = self.configDB.readConfigKey("note")
-		if (noteNew != None):
-			self.noteText.insert(1.0, noteNew)
+			
+			data = self.configDB.readConfigKey(key)
+			if (data != None):
+				element.insert(start, data)
 		
 		# updating file names in right column
-		
-		rightColumnElements = [
-			self.carvedFileLabel,
-			self.carverLogFileLabel,
-			self.carvedFileMd5Label,
-			self.wrappedFileLabel,
-			self.wrapperLogFileLabel,
-			self.reportFileLabel,
-			self.reportLogFileLabel
-		]
-		
-		for element in rightColumnElements:
-			element.config(bg="white")
 
 		strings_keys = [
 			[self.carvedFileString, "carved_filename", self.carvedFileLabel],
@@ -428,6 +401,7 @@ class SimUI(Frame):
 		]
 		
 		for string,key,element in strings_keys:
+			element.config(bg="white")
 			readValue = self.configDB.readConfigKey(key)
 			if (readValue != None):
 				string.set(readValue)
@@ -442,6 +416,8 @@ class SimUI(Frame):
 			else:
 				string.set("---")		
 
+	# -------------------------------------------------------------------------------------------------------------
+	
 	def saveInvData(self):
 		self.log.info("Updating investigation data")
 		
@@ -485,7 +461,8 @@ class SimUI(Frame):
 					self.info("Selected carved file %s"%os.path.join(projectPath, fileName))
 					
 		self.updateUI()
-		
+	
+	# -------------------------------------------------------------------------------------------------------------	
 		
 	def setCarvedMD5File(self):
 		file = tkFileDialog.askopenfilename(title='Choose a file')
